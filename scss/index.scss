@@ -1,0 +1,256 @@
+@import 'auxilary/fonts';
+@import 'auxilary/config';
+
+
+#nameplate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#intro-text {
+    font-size: 1.6rem;
+    width: 975px;
+    max-width: 80vw;
+}
+
+
+$terminalwhoamimargin: 2rem;
+#lhs {
+    
+    margin-right: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    h4 {
+	margin-bottom: $terminalwhoamimargin;
+    }
+
+    
+}
+
+#rhs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+
+    .icons {
+	display: none;
+    }
+    
+}
+
+#portrait {
+    flex: 0 1 auto;
+    width: 250px;
+    height: 250px;
+    background: $portrait-image;
+    background-size: cover;
+    border-radius: 50%;
+    border: solid 4px $color-2;
+}
+
+
+
+.prim-heading {
+    font-size: 5rem;
+    font-weight: 500;
+    margin: 0.6rem 0 0.6rem 0;
+}
+
+    
+
+
+@keyframes blinker{
+    0%{     color: $color-1;    }
+    49%{    color: $color-1; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: $color-1;    }
+}
+
+.blink {
+    animation: blinker 1s infinite;
+}
+
+
+/*
+// Full desktop but not widescreen
+@include mXLarge {
+}
+*/
+
+
+// 2/3 Full Desktop
+@include mLarge {
+
+    #lhs {
+	margin-right: 2rem;
+	margin-left: 4rem;
+	flex: 1 0 auto;
+    }
+
+    #rhs {
+	flex: 1 2 auto;
+	margin-right: 4rem;
+    }
+    
+    
+    #portrait {
+	flex: 0 1 auto;
+	width: 200px;
+	height: 200px;
+    }
+
+    
+    .prim-heading{
+	font-size: 3.5rem;
+	//font-weight: 500;
+    }
+
+    .sec-heading {
+	font-size: 1.2rem;
+    }
+
+    
+    #intro-text {
+	width: 660px;
+    }
+
+    
+}
+
+
+
+// Half-desktop
+@include mMedium {
+
+    .insert-block {
+	.spacing-top {
+	    flex: 0 1 4vh;
+	}
+    }
+
+    #nameplate {
+	flex-direction: column;
+    }
+    
+    #lhs {
+	margin: 0;
+	
+	h4 {
+	    margin-bottom: 0;
+	    margin-top: $terminalwhoamimargin; 
+	    order: 5;
+	    //align-self: flex-start;
+	}
+    
+	
+	.icons {
+	    display: none;
+	}
+    }
+
+    #rhs {
+	margin: 0;
+	margin-top: 1rem;
+	
+	.icons {
+	    display: flex;
+	    align-self: center;
+	}
+    }
+
+    #intro-text {
+	width: 580px;
+	font-size: 1.2rem;
+    }
+
+    
+}
+
+
+
+// Tablet
+@include mSmall {
+
+    
+    #intro-text {
+	width: 460px;
+    }
+}
+
+
+
+// Smartphones
+@include mXSmall {
+
+    .icons{
+	top: 12rem;
+    }
+    #icons-container {
+	width: 12.2rem;
+    }
+
+    
+    #rhs {
+	margin: 0;
+	margin-top: 1rem;
+	align-items: center;
+    }
+
+    #intro-text {
+	width: 400px;
+    }
+}
+
+
+// Super small
+@include mXXSmall {
+
+    .nav-text {
+	font-size: small;
+    }
+    
+    .text-flex-container {
+
+	h1 {
+	    font-size: 2em;
+	}
+
+	h1.mono-text{
+	    font-size: 0.8em;
+	}
+	
+	h2 {
+	    font-size: 1.5em;
+	}
+
+	h3, h4{
+	    font-size: 1em;
+	}
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

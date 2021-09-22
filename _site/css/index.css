@@ -1,0 +1,218 @@
+/* merriweather-sans-regular - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/merriweather-sans-v14-latin-regular.woff2") format("woff2"), url("../fonts/merriweather-sans-v14-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-500 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/merriweather-sans-v14-latin-500.woff2") format("woff2"), url("../fonts/merriweather-sans-v14-latin-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-600 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("../fonts/merriweather-sans-v14-latin-600.woff2") format("woff2"), url("../fonts/merriweather-sans-v14-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-800 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local(""), url("../fonts/merriweather-sans-v14-latin-800.woff2") format("woff2"), url("../fonts/merriweather-sans-v14-latin-800.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-italic - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url("../fonts/merriweather-sans-v14-latin-italic.woff2") format("woff2"), url("../fonts/merriweather-sans-v14-latin-italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-regular - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/fira-code-v10-latin-regular.woff2") format("woff2"), url("../fonts/fira-code-v10-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-500 - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/fira-code-v10-latin-500.woff2") format("woff2"), url("../fonts/fira-code-v10-latin-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-700 - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/fira-code-v10-latin-700.woff2") format("woff2"), url("../fonts/fira-code-v10-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-regular - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/overpass-mono-v6-latin-regular.woff2") format("woff2"), url("../fonts/overpass-mono-v6-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-600 - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("../fonts/overpass-mono-v6-latin-600.woff2") format("woff2"), url("../fonts/overpass-mono-v6-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-700 - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/overpass-mono-v6-latin-700.woff2") format("woff2"), url("../fonts/overpass-mono-v6-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+#nameplate {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+#intro-text {
+  font-size: 1.6rem;
+  width: 975px;
+  max-width: 80vw; }
+
+#lhs {
+  margin-right: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  #lhs h4 {
+    margin-bottom: 2rem; }
+
+#rhs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; }
+  #rhs .icons {
+    display: none; }
+
+#portrait {
+  flex: 0 1 auto;
+  width: 250px;
+  height: 250px;
+  background: url(../images/portrait.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  border: solid 4px #786aa0; }
+
+.prim-heading {
+  font-size: 5rem;
+  font-weight: 500;
+  margin: 0.6rem 0 0.6rem 0; }
+
+@keyframes blinker {
+  0% {
+    color: #8892b0; }
+  49% {
+    color: #8892b0; }
+  60% {
+    color: transparent; }
+  99% {
+    color: transparent; }
+  100% {
+    color: #8892b0; } }
+
+.blink {
+  animation: blinker 1s infinite; }
+
+/*
+// Full desktop but not widescreen
+@include mXLarge {
+}
+*/
+@media screen and (max-width: 86.3em) {
+  #lhs {
+    margin-right: 2rem;
+    margin-left: 4rem;
+    flex: 1 0 auto; }
+  #rhs {
+    flex: 1 2 auto;
+    margin-right: 4rem; }
+  #portrait {
+    flex: 0 1 auto;
+    width: 200px;
+    height: 200px; }
+  .prim-heading {
+    font-size: 3.5rem; }
+  .sec-heading {
+    font-size: 1.2rem; }
+  #intro-text {
+    width: 660px; } }
+
+@media screen and (max-width: 60.1em) {
+  .insert-block .spacing-top {
+    flex: 0 1 4vh; }
+  #nameplate {
+    flex-direction: column; }
+  #lhs {
+    margin: 0; }
+    #lhs h4 {
+      margin-bottom: 0;
+      margin-top: 2rem;
+      order: 5; }
+    #lhs .icons {
+      display: none; }
+  #rhs {
+    margin: 0;
+    margin-top: 1rem; }
+    #rhs .icons {
+      display: flex;
+      align-self: center; }
+  #intro-text {
+    width: 580px;
+    font-size: 1.2rem; } }
+
+@media screen and (max-width: 52.5em) {
+  #intro-text {
+    width: 460px; } }
+
+@media screen and (max-width: 40em) {
+  .icons {
+    top: 12rem; }
+  #icons-container {
+    width: 12.2rem; }
+  #rhs {
+    margin: 0;
+    margin-top: 1rem;
+    align-items: center; }
+  #intro-text {
+    width: 400px; } }
+
+@media screen and (max-width: 30em) {
+  .nav-text {
+    font-size: small; }
+  .text-flex-container h1 {
+    font-size: 2em; }
+  .text-flex-container h1.mono-text {
+    font-size: 0.8em; }
+  .text-flex-container h2 {
+    font-size: 1.5em; }
+  .text-flex-container h3, .text-flex-container h4 {
+    font-size: 1em; } }
