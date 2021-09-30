@@ -1,23 +1,38 @@
 
 
-
-
 .nav-text {
+    
     @include font-mono;
-    white-space: nowrap;
+
+    // Shouldn't ever be any overflow anyway
     overflow: hidden;
-    font-size: large;
-    color: $color-1;
+    // ALign center (only comes into effect when text wraps onto multiple lines)
     text-align: center;
 
     
+    font-size: large;
+    
+    
+    p {
+	@include font-mono;
+	font-size: large;
+    }
+
     @include flex-hover-underline-p($color-1, 100% );
     
 }
 
+
 // current page (added in JS)
-.current-page {
-    color: $color-3;
+.current-page-link {
+
+    pointer-events: none;
+    
+    a {
+	p {
+	    color : $color-3;
+	}
+    }
 }
 
 
@@ -28,6 +43,8 @@
     }
 }
 
+
+// FRASER BROOKS | ... 
 #site-logo {
     .nav-text {
 	color: $color-3;

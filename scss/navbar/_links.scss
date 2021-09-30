@@ -46,21 +46,7 @@
     
     transition-delay: 0.6s;
     
-    flex: 0 0 auto;
-
-    // This may seem overkill on each single navlink/block item (coming from
-    // Android development, nested flexible layouts raises alarm bells for me)
-    // but it seems to be the most sensible way to center things in CSS these days.
-    // Apparently flexbox is pretty performant so not a big worry.
-    //display: flex;
-    // Main axis
-    //justify-content: center;
-    // Cross axis
-    //align-items: center;
-    // The combination of the above are responsible for the centering
-    
-    overflow: hidden;
-    
+    flex: 0 0 auto;       
     
     a {
 		

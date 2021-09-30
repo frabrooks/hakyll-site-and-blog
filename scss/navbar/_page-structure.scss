@@ -60,20 +60,9 @@
 }
 
 
-// FRASER BROOKS | ... 
-#site-logo {
-    .nav-text {
-	color: $color-3;
-    }
-}
-
 
 // e.g. Home / Blog / Contact 
 #page-title {
-
-    // Grow to claim empty space in navbar, thus
-    // separating lhs of navbar from rhs
-    flex-grow: 1;
     
     justify-content: left;
     padding: 0;

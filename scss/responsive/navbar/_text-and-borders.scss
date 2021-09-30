@@ -54,21 +54,30 @@
 
     #page-title {
 	&.show {
-	    border-bottom-width: $separator-width;
+	    border-bottom: initial;
 	}
     }	
     .end-block { // button block	
 	&.show {
-	    border-bottom: $separator-width solid $foreground-color-mid;
+	    border-bottom: initial;
 	}
     }
     #cv-link {
 	&.hide {
 	    // add the border to situate CV button within the rest of the context menu
 	    // as it is no longer being hidden
-	    border-bottom: $separator-width solid $foreground-color-mid;
+	    //border-bottom: $separator-width solid $foreground-color-mid;
 	}
     }
+
+    #nav-link1 {
+	border-top: ($separator-width) solid $foreground-color-mid;
+    }
+    #nav-link2 {
+	border-top: ($separator-width) solid $foreground-color-mid;
+    }
+
+    
     #nav-link3 {
 	border-right: initial;
 	border-bottom: ($separator-width / 2) solid $foreground-color-mid;

@@ -21,7 +21,10 @@ btnCont.addEventListener('click', toggleMenu);
 function toggleMenu() {
     if (!showMenu) {
 	
-	cvLink.classList.add('hide');
+	try{
+	    cvLink.classList.add('hide');
+	} catch (_) {}
+	
 
 	pageTitle.classList.add('show');
 	//siteLogo.classList.add('show');
@@ -30,14 +33,17 @@ function toggleMenu() {
 	menuBtn.classList.add('close');
 	navLinks.forEach(item => item.classList.add('show'));
     } else {
+
+	try{
+	    cvLink.classList.remove('hide');
+	} catch (err) {}
+	
 	pageTitle.classList.remove('show');
 	//siteLogo.classList.remove('show');
 	navEnd.classList.remove('show');
 	menuBtn.classList.remove('close');
 	navLinks.forEach(item => item.classList.remove('show'));
 
-	cvLink.classList.remove('hide');
-	
 	// ?
 	nav1.classList.remove('title-hidden');
     }
@@ -45,16 +51,17 @@ function toggleMenu() {
 }
 
 
+// Disable nav menu item corresponding to the current page.
 const cp = document.querySelector('meta[name="current-page"]').content;
-
-
 switch (cp) {
 
 case "Home":
     nav1.firstElementChild.href='';
+    nav1.classList.add('current-page-link');
     break;
 case "Contact":
     nav5.firstElementChild.href='';
+    nav5.classList.add('current-page-link');
     break;
 default:
     // Do something stupid so I don't forget to

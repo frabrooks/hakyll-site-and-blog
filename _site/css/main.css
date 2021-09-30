@@ -174,6 +174,129 @@
   src: local(""), url("../fonts/overpass-mono-v6-latin-700.woff2") format("woff2"), url("../fonts/overpass-mono-v6-latin-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
+h1, h2, h3, h4, h5 {
+  font-family: "Merriweather Sans", "Helvetica";
+  color: #8892b0;
+  margin: 0; }
+
+p {
+  font-family: "Merriweather Sans", "Helvetica";
+  color: #8892b0; }
+
+.mono-text {
+  font-family: "Fira Code", monospace; }
+
+.text {
+  font-family: "Merriweather Sans", "Helvetica";
+  color: #8892b0; }
+
+.text-symbol {
+  font-family: "Fira Code", monospace;
+  font-size: x-large; }
+
+.text-primary {
+  color: #8892b0; }
+
+.text-secondary {
+  color: #786aa0; }
+
+.highlight-text {
+  color: #d5a021; }
+
+a {
+  text-decoration: none;
+  color: #d5a021; }
+  a.pdf {
+    text-decoration: underline; }
+
+/* merriweather-sans-regular - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/merriweather-sans-v14-latin-regular.woff2") format("woff2"), url("../fonts/merriweather-sans-v14-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-500 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/merriweather-sans-v14-latin-500.woff2") format("woff2"), url("../fonts/merriweather-sans-v14-latin-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-600 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("../fonts/merriweather-sans-v14-latin-600.woff2") format("woff2"), url("../fonts/merriweather-sans-v14-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-800 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local(""), url("../fonts/merriweather-sans-v14-latin-800.woff2") format("woff2"), url("../fonts/merriweather-sans-v14-latin-800.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-italic - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url("../fonts/merriweather-sans-v14-latin-italic.woff2") format("woff2"), url("../fonts/merriweather-sans-v14-latin-italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-regular - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/fira-code-v10-latin-regular.woff2") format("woff2"), url("../fonts/fira-code-v10-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-500 - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/fira-code-v10-latin-500.woff2") format("woff2"), url("../fonts/fira-code-v10-latin-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-700 - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/fira-code-v10-latin-700.woff2") format("woff2"), url("../fonts/fira-code-v10-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-regular - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/overpass-mono-v6-latin-regular.woff2") format("woff2"), url("../fonts/overpass-mono-v6-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-600 - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("../fonts/overpass-mono-v6-latin-600.woff2") format("woff2"), url("../fonts/overpass-mono-v6-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-700 - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/overpass-mono-v6-latin-700.woff2") format("woff2"), url("../fonts/overpass-mono-v6-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
 #nav-bar {
   background: linear-gradient(to right, rgba(10, 25, 47, 0), #0a192f 35% 65%, rgba(10, 25, 47, 0));
   padding: 0 34px 0 34px;
@@ -216,11 +339,7 @@
   margin-left: 1.2rem;
   margin-right: 1.2rem; }
 
-#site-logo .nav-text {
-  color: #d5a021; }
-
 #page-title {
-  flex-grow: 1;
   justify-content: left;
   padding: 0;
   min-width: fit-content;
@@ -255,8 +374,7 @@
   padding: 0 1.5rem 0 1.5rem;
   visibility: visible;
   transition-delay: 0.6s;
-  flex: 0 0 auto;
-  overflow: hidden; }
+  flex: 0 0 auto; }
   #cv-link a {
     border: 2px solid #d5a021; }
   #cv-link a {
@@ -301,11 +419,12 @@
 
 .nav-text {
   font-family: "Fira Code", monospace;
-  white-space: nowrap;
   overflow: hidden;
-  font-size: large;
-  color: #8892b0;
-  text-align: center; }
+  text-align: center;
+  font-size: large; }
+  .nav-text p {
+    font-family: "Fira Code", monospace;
+    font-size: large; }
   .nav-text p {
     display: flex;
     flex-direction: column; }
@@ -321,8 +440,10 @@
     transform: scaleX(1);
     transform-origin: bottom left; }
 
-.current-page {
-  color: #d5a021; }
+.current-page-link {
+  pointer-events: none; }
+  .current-page-link a p {
+    color: #d5a021; }
 
 #site-logo .nav-text, #page-title .nav-text {
   font-size: x-large;
@@ -614,11 +735,13 @@
 
 @media screen and (max-width: 52.5em) {
   #page-title.show {
-    border-bottom-width: 3px; }
+    border-bottom: initial; }
   .end-block.show {
-    border-bottom: 3px solid #5f5286; }
-  #cv-link.hide {
-    border-bottom: 3px solid #5f5286; }
+    border-bottom: initial; }
+  #nav-link1 {
+    border-top: 3px solid #5f5286; }
+  #nav-link2 {
+    border-top: 3px solid #5f5286; }
   #nav-link3 {
     border-right: initial;
     border-bottom: 1.5px solid #5f5286; } }
@@ -639,10 +762,7 @@
   #nav-bar {
     flex-wrap: wrap; }
   #page-title {
-    order: 1;
-    flex-grow: 1; }
-    #page-title.show {
-      flex-grow: 0; }
+    order: 1; }
   #nav-link1 {
     order: 2;
     flex-grow: 1;
@@ -671,15 +791,13 @@
     flex-shrink: 1; } }
 
 @media screen and (max-width: 52.5em) {
-  #page-title {
-    flex-grow: 0; }
-    #page-title p {
-      padding: 0; }
+  #page-title p {
+    padding: 0; }
   #cv-link {
-    order: 2;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 10%; }
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0); }
   .end-block {
     order: 3; }
   #break1 {
@@ -753,41 +871,6 @@ footer {
 
 * {
   box-sizing: border-box; }
-
-h1, h2, h3, h4, h5 {
-  font-family: "Merriweather Sans", "Helvetica";
-  color: #8892b0;
-  margin: 0; }
-
-p {
-  font-family: "Merriweather Sans", "Helvetica";
-  color: #8892b0; }
-
-.mono-text {
-  font-family: "Fira Code", monospace; }
-
-.text {
-  font-family: "Merriweather Sans", "Helvetica";
-  color: #8892b0; }
-
-.text-symbol {
-  font-family: "Fira Code", monospace;
-  font-size: x-large; }
-
-.text-primary {
-  color: #8892b0; }
-
-.text-secondary {
-  color: #786aa0; }
-
-.highlight-text {
-  color: #d5a021; }
-
-a {
-  text-decoration: none;
-  color: #d5a021; }
-  a.pdf {
-    text-decoration: underline; }
 
 .icons {
   margin-top: 2rem;

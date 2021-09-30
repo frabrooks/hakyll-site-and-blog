@@ -10,8 +10,9 @@
 @import 'declarations/backgrounds';
 
 
-@import 'navbar';
+@import 'main/default-styles';
 
+@import 'navbar';
 
 // Responsive styles (for mobile, tablet, widescreen)
 @import 'responsive';
@@ -55,55 +56,13 @@ footer {
     background: $color-4;
 }
 
+
+
+// ?
 * {
     box-sizing: border-box;
 }
 
-
-// Headings
-h1,h2,h3,h4,h5{
-    @include font-header;
-    color: $color-1;
-    margin: 0;
-}
-
-p {
-    @include font-vw;
-    color: $color-1;
-}
-
-.mono-text{
-    @include font-mono;
-}
-.text {
-    @include font-vw;
-    color: $color-1;
-}
-.text-symbol {
-    @include font-mono;
-    font-size: x-large;
-    //color: $accent-color;
-}
-.text-primary {
-    color: $color-1;
-}
-.text-secondary {
-    color: $color-2;
-}
-.highlight-text {
-    color: $color-3;
-}
-
-
-a {
-    text-decoration: none;
-
-    &.pdf {
-	text-decoration: underline;
-    }
-    
-    color: $color-3;
-}
 
 .icons {
     margin-top: 2rem;
