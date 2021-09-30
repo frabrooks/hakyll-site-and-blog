@@ -1,8 +1,59 @@
-@import 'auxilary/fonts';
-@import 'auxilary/config';
-@import 'auxilary/navbar';
-@import 'auxilary/mobile';
 
+// SCSS imports, no css will be generated from the below imports
+// so, if my understanding is correct, they are safe to import
+// at the top of all files.
+@import 'declarations/fonts';
+@import 'declarations/vars';
+@import 'declarations/mixins';
+@import 'declarations/colours';
+@import 'declarations/dimens';
+@import 'declarations/backgrounds';
+
+
+@import 'navbar';
+
+
+// Responsive styles (for mobile, tablet, widescreen)
+@import 'responsive';
+
+
+
+body {
+    min-width: $minimum-width;
+    @include page-background;
+    margin: 0;
+    //line-height: 1.5;
+}
+
+main {
+    padding: $scale-padding $no-scale-padding $scale-padding $no-scale-padding;
+    padding-top: $bottom-nav-bar-gap;
+}
+// Half-desktop
+@include mXSmall {
+    main {
+	padding: ($scale-padding / 2);
+	padding-top: ($bottom-nav-bar-gap / 2);
+    }
+}
+
+footer {
+    @include section-background;
+    .content {
+	padding: 1rem;
+	margin-bottom: 2rem;
+	 a {
+	     color: $color-3;
+	 }
+    }
+    
+}
+
+.separator {
+    width: $separator-width;
+    height: 80%;
+    background: $color-4;
+}
 
 * {
     box-sizing: border-box;
@@ -21,7 +72,7 @@ p {
     color: $color-1;
 }
 
-.nav-text , .mono-text{
+.mono-text{
     @include font-mono;
 }
 .text {
@@ -54,6 +105,23 @@ a {
     color: $color-3;
 }
 
+.icons {
+    margin-top: 2rem;
+    display: flex;
+    a {
+	color: $color-1;
+	padding: 0.4rem;
+	
+	&:hover {
+	    color: $color-3;
+	    @include easeOutSlow;
+	}
+    }
+}
+
+
+
+//?
 .text-flex-container {
     display: inline-flex;
     white-space: nowrap;
@@ -70,39 +138,14 @@ a {
 }
 
 
+//?
 //.text-fade {
 //    color: $foreground-color-dark;
 //}
 
 
-body {
-    min-width: $minimum-width;
-    @include background;
-    margin: 0;
-    //line-height: 1.5;
-}
-
-
-main {
-    padding: $scale-padding $no-scale-padding $scale-padding $no-scale-padding;
-    padding-top: $bottom-nav-bar-gap;
-}
-
-
-footer {
-    @include foreground-background;
-    .content {
-	padding: 1rem;
-	margin-bottom: 2rem;
-	 a {
-	     color: $color-3;
-	 }
-    }
-    
-}
-
 .insert-block {
-    @include foreground-background;
+    @include section-background;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,35 +173,6 @@ footer {
     
     .l , .r {
 	flex: 1 1 0;
-    }
-}
-
-
-.icons {
-    margin-top: 2rem;
-    display: flex;
-    a {
-	color: $color-1;
-	padding: 0.4rem;
-	
-	&:hover {
-	    color: $color-3;
-	    @include easeOutSlow;
-	}
-    }
-}
-
-
-
-// Half-desktop
-@include mMedium {
-
-}
-
-@include mXSmall {
-    main {
-	padding: ($scale-padding / 2);
-	padding-top: ($bottom-nav-bar-gap / 2);
     }
 }
 

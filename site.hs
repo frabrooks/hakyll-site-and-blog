@@ -22,8 +22,11 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "CV/cv.pdf" $ do
+      route $ customRoute $ (\ _ -> "pdfs/cv.pdf")
+      compile copyFileCompiler
         
-    match "pdfs/con*" $ do
+    match "pdfs/*" $ do
         route   idRoute
         compile copyFileCompiler
 
@@ -34,17 +37,24 @@ main = hakyll $ do
         route $ customRoute $ T.unpack  . replace . T.pack  . toFilePath
         compile sassCompiler
 
+    match "scss/pages/*.scss" $ do
+        let css = (T.pack "css")
+        let scss = (T.pack "scss")
+        let replace = T.replace scss css
+        route $ customRoute $ T.unpack  . replace . T.pack  . toFilePath
+        compile sassCompiler
+
     match (fromList ["about.rst", "contact.markdown"]) $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= loadAndApplyTemplate "templates/root.html" defaultContext
             >>= relativizeUrls
 
     match "posts/*" $ do
         route $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
-            >>= loadAndApplyTemplate "templates/default.html" postCtx
+            >>= loadAndApplyTemplate "templates/root.html" postCtx
             >>= relativizeUrls
 
     create ["archive.html"] $ do
@@ -58,7 +68,7 @@ main = hakyll $ do
 
             makeItem ""
                 >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-                >>= loadAndApplyTemplate "templates/default.html" archiveCtx
+                >>= loadAndApplyTemplate "templates/root.html" archiveCtx
                 >>= relativizeUrls
 
 
@@ -72,7 +82,7 @@ main = hakyll $ do
 
             getResourceBody
                 >>= applyAsTemplate indexCtx
-                >>= loadAndApplyTemplate "templates/default.html" indexCtx
+                >>= loadAndApplyTemplate "templates/root.html" indexCtx
                 >>= relativizeUrls
 
     match "templates/*" $ compile templateBodyCompiler

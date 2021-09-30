@@ -1,0 +1,55 @@
+
+
+
+
+.nav-text {
+    @include font-mono;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: large;
+    color: $color-1;
+    text-align: center;
+
+    
+    @include flex-hover-underline-p($color-1, 100% );
+    
+}
+
+// current page (added in JS)
+.current-page {
+    color: $color-3;
+}
+
+
+#site-logo , #page-title {
+    .nav-text {
+	font-size: x-large;
+	font-weight: 550;
+    }
+}
+
+#site-logo {
+    .nav-text {
+	color: $color-3;
+    }
+}
+
+
+#cv-link {
+
+    a {
+	
+	p {color : $color-3}
+	&:hover {
+	    p {
+		color: black;
+	    }
+	}
+	
+	@include flex-hover-underline-p(black, 105%);
+    }
+}
+
+
+
+

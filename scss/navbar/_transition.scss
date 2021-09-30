@@ -1,0 +1,10 @@
+
+// Delay each nav item slide by 0.1s
+@for $x from 1 through 6 {
+    .nav-block:nth-child(#{8 - $x}){
+	@include easeOutHeight;
+	transition-delay: $x * 0.1s;
+    }
+}
+
+

@@ -1,0 +1,78 @@
+
+// For hack/DRY in CV button when we hide it in this file in mSmall layout
+@import '../../declarations/cv-animated-config';
+
+
+// Full desktop but not widescreen
+// @include mXLarge {   
+// }
+
+
+// 2/3 Full Desktop
+@include mLarge {
+    
+    // Hide the site logo (FRASER BROOKS) on large displays and under
+    // TODO: still show FRASER BROOKS somewhere
+    #site-logo {
+	display: none;
+    }
+
+    .nav-break {
+	display: initial
+    }
+
+    #page-title.show {
+	.separator {
+	    display: initial;
+	}
+    }
+    
+}
+
+
+// Half-desktop
+// @include mMedium {
+// }
+
+// Tablet
+@include mSmall {
+
+
+    // Don't need to hide the cv button in this layout so
+    // reinstate initial values for when hide tag applied
+    // (rather than faffing about with the JavaScript)
+    #cv-link {
+	&.hide {
+	    @include cv-link-animated-config;
+	}
+    }
+
+    #page-title {
+	padding-right: 0.2rem;
+    }
+
+    // Hide all separators from this layout onwards (smaller)
+    .separator {
+	display: none;
+    }
+    #page-title.show {
+	.separator {
+	    display: none;
+	}
+    }
+    
+}
+
+// Smartphones
+// @include mXSmall {
+// }
+
+// Smartphones
+// @include mXXSmall {
+// }
+
+
+
+
+
+

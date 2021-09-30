@@ -1,0 +1,44 @@
+
+
+// Full desktop but not widescreen
+// @include mXLarge {   
+// }
+
+
+// 2/3 Full Desktop
+@include mLarge {
+    
+    #page-title {
+
+	// If page-title is going to disappear then remove the transitions
+	// upon it else it will disappear slowly when changing window size
+
+	// TODO needed?
+	// transition: initial;
+	// transition-delay: initial;
+	
+    }
+    
+}
+
+// Half-desktop
+// @include mMedium {
+// }
+
+// Tablet
+// @include mSmall {
+// }
+
+// Smartphones
+// @include mXSmall {
+// }
+
+// Smartphones
+// @include mXXSmall {
+// }
+
+
+
+
+
+

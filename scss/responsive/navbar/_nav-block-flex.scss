@@ -1,0 +1,187 @@
+
+
+// Full desktop but not widescreen
+// @include mXLarge {
+// }
+
+
+// 2/3 Full Desktop
+@include mLarge {
+
+    // nav-bar now needs to wrap
+    #nav-bar {
+	flex-wrap: wrap;
+    }
+
+    #page-title {
+
+	order: 1;
+	flex-grow: 1;
+	
+	&.show {
+	    // Stop expanding into free space so nav-link1 & 2 can instead
+	    flex-grow: 0;
+	}	
+    }
+
+    // Allow growth and shrink
+    #nav-link1 {
+	order: 2;
+	flex-grow: 1;
+	flex-shrink: 1;
+    }
+    #nav-link2 {
+	order: 3;
+	flex-grow: 1;
+	flex-shrink: 1;
+    }
+
+    #cv-link {
+	order: 4;
+    }
+
+    .end-block { // button block
+	order: 5;
+    }
+    
+    #break1 { order: 6; }
+    
+    #nav-link3 {
+	order: 7;
+	flex-grow: 1;
+	flex-shrink: 1;
+    }
+    #nav-link4 {
+	order: 8;
+	flex-grow: 1;
+	flex-shrink: 1;
+    }
+    #nav-link5 {
+	order: 9;
+	flex-grow: 1;
+	flex-shrink: 1;
+    }
+    
+}
+
+// Half-desktop
+// @include mMedium {
+// }
+
+// Tablet (first smaller than half-desktop)
+@include mSmall {
+//  Now 3 rows:
+//
+//    HOME  |CV|    X
+//    --------------    
+//   |  1   |  2   |
+//   |     3      |
+//   |  4  |  5   |
+//   -------------
+//
+//  CV button now centered    
+
+    #page-title {
+
+	// Stop growing as CV button is now the
+	// block that will grow
+	flex-grow: 0;
+
+	p {
+	    padding: 0;
+	}
+		    
+	// TODO needed??
+	//justify-content: center;
+	
+    }
+    #cv-link {
+	order: 2;
+	flex-grow: 1;
+
+	// Not sure this actually does anything
+	// with 'wrap' enabled
+	flex-shrink: 1;
+
+	// Start very small to ensure Title, CV button, and Menu button
+	// on the same line. flex-grow will allow it to grow bigger than
+	// 10%
+	flex-basis: 10%;
+	
+    }
+    .end-block { // button block
+	order: 3; // top right still
+    }
+
+    
+    #break1 { order: 4; }
+
+    
+    #nav-link1 {
+	order: 5;
+    }
+    #nav-link2 {
+	order: 6;
+    }
+
+    #break2 { order: 7; }
+    
+    #nav-link3 {
+	order: 8;
+    }
+
+    #break3 { order: 9; }
+    
+    #nav-link4 {
+	order: 10;
+    }
+    #nav-link5 {
+	order: 11;
+    }
+}
+
+// Smartphones
+//@include mXSmall {
+//}
+
+// Smartphones
+@include mXXSmall {
+// Now single file:
+// i.e.
+//  |     nav-1     |
+//  ----------------
+//  |      nav-2    |
+//  ----------------
+//  |     nav-3     | 
+//  ----------------
+//         .
+//         .
+//         .
+
+
+    // No longer needed
+    #break2 , #break3 {
+	display: none;
+    }
+    
+    
+    // Set all to flexbasis 51%
+    // forcing newline for each
+    #nav-link1 {
+	flex-basis: 51%;
+    }
+    #nav-link2 {
+	flex-basis: 51%;
+    }
+    #nav-link3 {
+	flex-basis: 51%;
+    }
+    #nav-link4 {
+	flex-basis: 51%;
+    }
+    #nav-link5 {
+	flex-basis: 51%;
+    }
+}
+
+

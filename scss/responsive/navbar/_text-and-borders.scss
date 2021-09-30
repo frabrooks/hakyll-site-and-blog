@@ -1,0 +1,115 @@
+
+////////////////////////////////////////////////////////////////////
+// Mostly borders and one text change in this file
+
+
+
+// Full desktop but not widescreen
+@include mXLarge {
+    // Shrink Nav-bar text-size
+    .nav-text {
+	font-size: medium;
+    } 
+}
+
+
+// 2/3 Full Desktop
+@include mLarge {
+
+    #page-title {
+	&.show {
+	    border-bottom: ($separator-width / 2) solid $foreground-color-mid;
+	}	
+    }
+    .end-block { // button block
+	&.show {
+	    border-bottom: ($separator-width / 2) solid $foreground-color-mid;
+	    // Separator-width / 2 so border between nav-link buttons are slighlty
+	    // thinner than between all buttons and pagetitle/button
+	}	
+    }
+    #nav-link1 {
+	border-bottom: ($separator-width / 2) solid $foreground-color-mid;
+	border-right: ($separator-width / 2) solid $foreground-color-mid;
+    }
+    #nav-link2 {
+	border-bottom: ($separator-width / 2) solid $foreground-color-mid;
+    }
+    #nav-link3 {
+	border-right: ($separator-width / 2) solid $foreground-color-mid;
+    }
+    #nav-link4 {
+	border-right: ($separator-width / 2) solid $foreground-color-mid;
+    }
+
+    // CV button is still being hidden so no border necessary in this layout
+}
+
+// Half-desktop
+// @include mMedium {
+// }
+
+// Tablet
+@include mSmall {
+
+    #page-title {
+	&.show {
+	    border-bottom-width: $separator-width;
+	}
+    }	
+    .end-block { // button block	
+	&.show {
+	    border-bottom: $separator-width solid $foreground-color-mid;
+	}
+    }
+    #cv-link {
+	&.hide {
+	    // add the border to situate CV button within the rest of the context menu
+	    // as it is no longer being hidden
+	    border-bottom: $separator-width solid $foreground-color-mid;
+	}
+    }
+    #nav-link3 {
+	border-right: initial;
+	border-bottom: ($separator-width / 2) solid $foreground-color-mid;
+    }
+}
+
+// Smartphones
+// @include mXSmall {
+// }
+
+// Smartphones
+@include mXXSmall {
+// Now single file:
+// i.e.
+//  |     nav-1     |
+//  ----------------
+//  |      nav-2    |
+//  ----------------
+//  |     nav-3     | 
+//  ----------------
+//         .
+//         .
+//         .
+
+    
+    // Declare borders for this configuration
+    #nav-link1 {
+	border-right: initial;
+    }
+    #nav-link3 {
+	border-right: initial;
+	border-bottom: ($separator-width / 2) solid $foreground-color-mid;
+    }
+    #nav-link4 {
+	border-right: initial;
+	border-bottom: ($separator-width / 2) solid $foreground-color-mid;
+    }
+    #nav-link5 {
+	border-bottom: ($separator-width / 2) solid $foreground-color-mid;
+    }
+}
+
+
+

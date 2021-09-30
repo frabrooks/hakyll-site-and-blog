@@ -1,0 +1,64 @@
+
+// Full desktop but not widescreen
+// @include mXLarge {
+// }
+
+
+// 2/3 Full Desktop
+@include mLarge {
+
+    // TODO needed?
+    // Remove padding on bottom 3 links
+    #nav-link3 {
+	padding: 0;
+    }
+    #nav-link4 {
+	padding: 0;
+    }
+    #nav-link5 {
+	padding: 0;
+    }
+}
+
+// Half-desktop
+@include mMedium {
+
+    // TODO shrink + in dimen
+    // Remove padding on navbar
+    #nav-bar {
+	padding-right: 0;
+	padding-left: 0;
+    }
+}
+
+// Tablet
+@include mSmall {
+
+
+    // Add padding to page-title TODO why + in dimen
+    #page-title {
+	padding-left: 16px;
+    }
+}
+
+// Smartphones
+// @include mXSmall {
+// }
+
+// Smartphones
+// @include mXXSmall {
+// Now single file:
+// i.e.
+//  |     nav-1     |
+//  ----------------
+//  |      nav-2    |
+//  ----------------
+//  |     nav-3     | 
+//  ----------------
+//         .
+//         .
+//         .
+// }
+
+
+

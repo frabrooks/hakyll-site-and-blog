@@ -1,0 +1,123 @@
+
+
+$ease-out-slow: 0.2s;
+$eos: $ease-out-slow;
+$ease-out-fast: 0.05s;
+$eo: ease-out;
+$eof: $ease-out-fast;
+
+
+@mixin easeOutSlow{
+    transition: all $ease-out-slow $eo;
+}
+@mixin easeOutFast{
+    transition: all $ease-out-fast $eo;
+}
+
+
+@mixin easeOutHeight{
+    transition: height $eof $eo, visibility $eof $eo, opacity $eof $eo;
+}
+@mixin easeOutWidth{
+    transition: width $eof $eo, visibility $eof $eo, opacity $eof $eo, padding $eof $eo;
+}
+
+
+@mixin font-mono {
+    font-family: "Fira Code", monospace;
+}
+@mixin font-vw {
+    font-family: "Merriweather Sans", "Helvetica";
+}
+@mixin font-header {
+    //font-family: "Overpass Mono", "Merriweather Sans", "Helvetica";
+    font-family: "Merriweather Sans", "Helvetica";
+}
+
+
+@mixin flex-hover-underline($color, $width) {
+    &:after {
+	content: '';	
+	height: 2px;
+	width: $width;
+	transform: scaleX(0);
+	background-color: $color;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;		
+    }
+    &:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+    }
+}
+
+@mixin flex-hover-underline-p($color, $width) {
+    & {
+	p {	    
+	    display: flex;
+	    
+	    // Underline animation (requires flex box with vertical direction)
+	    flex-direction: column;
+	}
+	
+	p:after {
+	    content: '';	
+	    height: 2px;
+	    width: $width;
+	    transform: scaleX(0);
+	    background-color: $color;
+	    transform-origin: bottom right;
+	    transition: transform 0.25s ease-out;
+	}
+    }
+	
+    &:hover {
+	p:after {
+	    transform: scaleX(1);
+	    transform-origin: bottom left;
+	}	
+    }
+}
+
+
+// Media Query Mixins
+// (Widescreen) Desktop First 
+@mixin mXLarge {
+    @media screen and (max-width: 120.4em) {
+	@content;
+    }
+}
+
+@mixin mLarge {
+    @media screen and (max-width: 86.3em) {
+	@content;
+    }
+}
+
+@mixin mMedium {
+    @media screen and (max-width: 60.1em) {
+	@content;
+    }
+}
+
+@mixin mSmall {
+    @media screen and (max-width: 52.5em) {
+	@content;
+    }
+}
+
+@mixin mXSmall {
+    @media screen and (max-width: 40em) {
+	@content;
+    }
+}
+
+// Small screen & massive font-size only
+@mixin mXXSmall {
+    @media screen and (max-width: 30em) {
+	@content;
+    }
+}
+
+
+

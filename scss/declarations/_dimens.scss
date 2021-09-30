@@ -1,0 +1,66 @@
+
+
+// TODO 
+$minimum-width: 360px;
+$scale-padding: 4rem;
+$no-scale-padding: 34px;
+$bottom-nav-bar-gap: 1rem;
+$separator-width: 3px;
+
+
+// TODO rem-ify
+
+//-------------------------------------------------Navbar
+
+$nav-block-height: 6.5rem;
+
+$nav-block-padding: 1.5rem;
+$nav-link-padding: $nav-block-padding;
+
+$nav-bar-menu-button-padding: $nav-block-padding;
+
+
+$page-title-padding-top: 0;
+$page-title-padding-right: 1rem;
+$page-title-padding-bottom: 0;
+$page-title-padding-left: 0;
+
+
+//Separator Widths
+//
+$logo-title-separator-width: 1.2rem;
+// Both use the same def. for symmetry
+$button-separator-and-page-title-separator-width: 0.2rem;
+
+$cv-button-width: 9rem;
+$cv-button-height: $nav-block-height;
+$cv-button-link-width: auto;
+$cv-button-link-height: auto;
+
+$cv-button-padding-top: 1rem;
+$cv-button-padding-right: 2rem;
+$cv-button-padding-bottom: 1rem;
+$cv-button-padding-left: 2rem;
+
+
+// Navbar container dimens
+$navbar-padding-top: 0; 
+$navbar-padding-right: $no-scale-padding;
+$navbar-padding-bottom: 0;
+$navbar-padding-left: $no-scale-padding;
+//-
+$navbar-margin-top: 0;
+$navbar-margin-right: $no-scale-padding;
+$navbar-margin-bottom: 0;
+$navbar-margin-left: $no-scale-padding;
+
+
+// nav-link Home/Contact/Blog etc. buttons
+$nav-link-padding-top: 0; // could also be as below
+$nav-link-padding-right: $nav-link-padding;
+$nav-link-padding-bottom: 0; // could also be as below
+$nav-link-padding-left: $nav-link-padding;
+
+
+
+

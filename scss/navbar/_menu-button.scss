@@ -1,0 +1,39 @@
+
+// Menu Button animation
+#menu-btn {
+
+    width: 42px;
+    
+    .btn-line {
+	width: 42px;
+	height: 6px;
+	margin: 0 0 8px 0;
+	background: $color-1;
+	@include easeOutSlow;
+    }
+
+    .line-top {
+	margin-top: 8px;
+    }
+    
+    // Rotate Into X
+    &.close {
+	transform: rotate(180deg);
+	
+	.btn-line {
+	    // Line 1 - Rotate
+	    &:nth-child(1) {
+		transform: translate( 0 , 15px) rotate(45deg);
+	    }
+	    // Line 2 - Hide
+	    &:nth-child(2) {
+		opacity: 0;
+	    }
+	    // Line 3 - Rotate
+	    &:nth-child(3) {
+		transform: translate(0 , -13px) rotate(-45deg);
+	    }
+	}
+	
+    }
+}

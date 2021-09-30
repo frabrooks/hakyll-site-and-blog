@@ -5,13 +5,14 @@
 const pageTitle = document.querySelector('#page-title');
 const navLinks = document.querySelectorAll('.nav-link');
 const navEnd   = document.querySelector('.end-block');
-const btnCont = document.querySelector('#button-container');
+const btnCont = document.querySelector('#show-button-container');
 const menuBtn = document.querySelector('#menu-btn');
 const nav1   = document.querySelector('#nav-link1');
 const nav2   = document.querySelector('#nav-link2');
 const nav3   = document.querySelector('#nav-link3');
 const nav4   = document.querySelector('#nav-link4');
 const nav5   = document.querySelector('#nav-link5');
+const cvLink = document.querySelector('#cv-link');
 
 let showMenu = false;
 
@@ -19,6 +20,9 @@ btnCont.addEventListener('click', toggleMenu);
 
 function toggleMenu() {
     if (!showMenu) {
+	
+	cvLink.classList.add('hide');
+
 	pageTitle.classList.add('show');
 	//siteLogo.classList.add('show');
 	navEnd.classList.add('show');
@@ -29,9 +33,13 @@ function toggleMenu() {
 	pageTitle.classList.remove('show');
 	//siteLogo.classList.remove('show');
 	navEnd.classList.remove('show');
-	nav1.classList.remove('title-hidden');
 	menuBtn.classList.remove('close');
 	navLinks.forEach(item => item.classList.remove('show'));
+
+	cvLink.classList.remove('hide');
+	
+	// ?
+	nav1.classList.remove('title-hidden');
     }
     showMenu = !showMenu;
 }
@@ -43,12 +51,10 @@ const cp = document.querySelector('meta[name="current-page"]').content;
 switch (cp) {
 
 case "Home":
-    nav1.classList.add('current');
-    nav1.classList.remove('clickable');
+    nav1.firstElementChild.href='';
     break;
 case "Contact":
-    nav5.classList.add('current');
-    nav5.classList.remove('clickable');
+    nav5.firstElementChild.href='';
     break;
 default:
     // Do something stupid so I don't forget to
