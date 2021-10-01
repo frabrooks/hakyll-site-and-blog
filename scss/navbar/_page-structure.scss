@@ -13,9 +13,7 @@
     align-items: center;
     // The combination of the above are responsible for the centering
     
-    overflow: hidden;
     height: $nav-block-height;
-
 
     a {
 	// Probably a better way of doing this but to get the text
@@ -34,6 +32,16 @@
 	margin: 0;
     }
 	
+}
+
+#title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+    
+#small-site-logo {
+    display: none;
 }
 
 .end-block .separator {

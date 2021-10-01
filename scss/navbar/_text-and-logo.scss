@@ -37,7 +37,7 @@
 
 
 #site-logo , #page-title {
-    .nav-text {
+    .nav-text {	
 	font-size: x-large;
 	font-weight: 550;
     }
@@ -47,13 +47,20 @@
 // FRASER BROOKS | ... 
 #site-logo {
     .nav-text {
+	white-space: nowrap;
 	color: $color-3;
     }
+}
+#small-site-logo {
+    color: $color-3;
 }
 
 
 #cv-link {
 
+    overflow: hidden;
+
+    
     a {
 	
 	p {color : $color-3}

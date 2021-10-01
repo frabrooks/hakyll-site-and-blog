@@ -218,6 +218,11 @@
     font-size: medium; } }
 
 @media screen and (max-width: 86.3em) {
+  #small-site-logo {
+    display: flex;
+    flex-direction: column; }
+  #page-title #title-container #small-site-logo {
+    font-size: medium; }
   #page-title.show {
     border-bottom: 1.5px solid #5f5286; }
   .end-block.show {

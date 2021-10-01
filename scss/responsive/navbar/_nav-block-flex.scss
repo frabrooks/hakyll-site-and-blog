@@ -13,18 +13,6 @@
 	flex-wrap: wrap;
     }
 
-//    #page-title {
-//
-//	order: 1;
-//	flex-grow: 1;
-//	
-//	&.show {
-//	    // Stop expanding into free space so nav-link1 & 2 can instead
-//	    flex-grow: 0;
-//	}	
-//    }
-
-
     #page-title {
 	order: 1;
     }
@@ -104,23 +92,7 @@
 	transform: translate(-50%, 0);
     }
 
-    
-    
-//    #cv-link {
-//	order: 2;
-//	flex-grow: 1;
-//
-//	// Not sure this actually does anything
-//	// with 'wrap' enabled
-//	flex-shrink: 1;
-//
-//	// Start very small to ensure Title, CV button, and Menu button
-//	// on the same line. flex-grow will allow it to grow bigger than
-//	// 10%
-//	flex-basis: 10%;
-//	
-//    }
-    
+        
     .end-block { // button block
 	order: 3; // top right still
     }

@@ -16,6 +16,22 @@
 // 2/3 Full Desktop
 @include mLarge {
 
+
+    // Switch to second logo
+    #small-site-logo {
+       display: flex;
+       flex-direction: column;
+    }
+
+    #page-title {
+	#title-container {
+	    #small-site-logo {
+		font-size: medium;
+	    }
+	}
+    }
+
+    
     #page-title {
 	&.show {
 	    border-bottom: ($separator-width / 2) solid $foreground-color-mid;
@@ -42,16 +58,16 @@
 	border-right: ($separator-width / 2) solid $foreground-color-mid;
     }
 
-    // CV button is still being hidden so no border necessary in this layout
 }
 
 // Half-desktop
-// @include mMedium {
-// }
+//@include mMedium {
+//    
+//}
 
 // Tablet
 @include mSmall {
-
+   
     #page-title {
 	&.show {
 	    border-bottom: initial;
@@ -60,13 +76,6 @@
     .end-block { // button block	
 	&.show {
 	    border-bottom: initial;
-	}
-    }
-    #cv-link {
-	&.hide {
-	    // add the border to situate CV button within the rest of the context menu
-	    // as it is no longer being hidden
-	    //border-bottom: $separator-width solid $foreground-color-mid;
 	}
     }
 

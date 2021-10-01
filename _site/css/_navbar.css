@@ -106,7 +106,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   height: 6.5rem; }
   .nav-block a {
     display: flex;
@@ -114,6 +113,14 @@
     align-items: center; }
   .nav-block p {
     margin: 0; }
+
+#title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+#small-site-logo {
+  display: none; }
 
 .end-block .separator {
   margin-left: 0.2rem;
@@ -239,30 +246,32 @@
   font-weight: 550; }
 
 #site-logo .nav-text {
+  white-space: nowrap;
   color: #d5a021; }
 
-#cv-link a p {
+#small-site-logo {
   color: #d5a021; }
 
-#cv-link a:hover p {
-  color: black; }
-
-#cv-link a p {
-  display: flex;
-  flex-direction: column; }
-
-#cv-link a p:after {
-  content: '';
-  height: 2px;
-  width: 105%;
-  transform: scaleX(0);
-  background-color: black;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out; }
-
-#cv-link a:hover p:after {
-  transform: scaleX(1);
-  transform-origin: bottom left; }
+#cv-link {
+  overflow: hidden; }
+  #cv-link a p {
+    color: #d5a021; }
+  #cv-link a:hover p {
+    color: black; }
+  #cv-link a p {
+    display: flex;
+    flex-direction: column; }
+  #cv-link a p:after {
+    content: '';
+    height: 2px;
+    width: 105%;
+    transform: scaleX(0);
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out; }
+  #cv-link a:hover p:after {
+    transform: scaleX(1);
+    transform-origin: bottom left; }
 
 .nav-block:nth-child(7) {
   transition: height 0.05s ease-out, visibility 0.05s ease-out, opacity 0.05s ease-out;
