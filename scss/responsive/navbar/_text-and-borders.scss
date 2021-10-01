@@ -111,6 +111,14 @@
 //         .
 //         .
 
+
+    // Hide logo on smallest screens (most smartphones)
+    // as url will generally be visible and center screen anyway
+    #small-site-logo {
+       display: none;
+    }
+
+    
     
     // Declare borders for this configuration
     #nav-link1 {
