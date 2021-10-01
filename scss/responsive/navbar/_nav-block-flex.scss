@@ -85,13 +85,28 @@
     }
 
 
+    
     #cv-link {
+	// This has the effect of telling the button
+	// to not affect anything else on the page
+	// in terms of positioning but without
+	// any top, left, etc. will result in
+	// the button just floating in the center
+	// of the navbar
 	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translate(-50%, 0);
-    }
 
+	// Center
+	justify-content: center;
+
+	// Remove padding else it may overlap button
+	// now we are positioning absolutely
+	padding: 0;
+
+	// Below menu button
+	z-index: 1;
+	
+    }
+    
         
     .end-block { // button block
 	order: 3; // top right still
@@ -143,6 +158,19 @@
 //         .
 
 
+    #cv-link {
+	a {
+	    padding: $cv-button-padding-top/2
+		     $cv-button-padding-right/2
+		     $cv-button-padding-bottom/2
+		     $cv-button-padding-left/2;
+	}
+    }
+    #show-button-container {
+	padding: $nav-bar-menu-button-padding/2;
+    }
+
+
     // No longer needed
     #break2 , #break3 {
 	display: none;
@@ -167,5 +195,19 @@
 	flex-basis: 51%;
     }
 }
+
+
+// Galaxy folds and kin
+@include mStupidSmall {
+    #cv-link {
+	a {
+	    p {
+		font-size: small;
+	    }
+	}
+    }
+}
+
+
 
 

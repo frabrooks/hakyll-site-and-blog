@@ -18,37 +18,13 @@
 @import 'responsive';
 
 
+// ?
+@import 'main/default-styles';
 
-body {
-    min-width: $minimum-width;
-    @include page-background;
-    margin: 0;
-    //line-height: 1.5;
-}
 
-main {
-    padding: $scale-padding $no-scale-padding $scale-padding $no-scale-padding;
-    padding-top: $bottom-nav-bar-gap;
-}
-// Half-desktop
-@include mXSmall {
-    main {
-	padding: ($scale-padding / 2);
-	padding-top: ($bottom-nav-bar-gap / 2);
-    }
-}
+@import 'main/section-styles';
+@import 'main/text-styles';
 
-footer {
-    @include section-background;
-    .content {
-	padding: 1rem;
-	margin-bottom: 2rem;
-	 a {
-	     color: $color-3;
-	 }
-    }
-    
-}
 
 .separator {
     width: $separator-width;
@@ -79,22 +55,6 @@ footer {
 }
 
 
-
-//?
-.text-flex-container {
-    display: inline-flex;
-    white-space: nowrap;
-    flex-wrap: wrap;
-
-    
-    *:nth-child(2) {
-	margin: 0;
-	align-self: center;
-    }
-
-    
-    
-}
 
 
 //?

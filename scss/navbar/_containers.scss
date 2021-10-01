@@ -26,12 +26,15 @@
     // Main axis spacing
     // Center =   ...|||....
     justify-content: center;
-
+    
 }
 
 #show-button-container {
     padding: $nav-bar-menu-button-padding;
     cursor: pointer;
+
+    // To place above cv button on small layouts
+    z-index: 2;
 }
 
 #show-button-container:hover {

@@ -7,8 +7,8 @@
     // but it seems to be the most sensible way to center things in CSS these days.
     // Apparently flexbox is pretty performant so not a big worry.
     display: flex;
-    // Main axis
-    justify-content: center;
+    // Main axis (not needed)
+    //justify-content: center;
     // Cross axis
     align-items: center;
     // The combination of the above are responsible for the centering

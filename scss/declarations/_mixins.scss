@@ -120,4 +120,18 @@ $eof: $ease-out-fast;
 }
 
 
+// Small screen & massive font-size only
+@mixin mXXSmall {
+    @media screen and (max-width: 30em) {
+	@content;
+    }
+}
+
+// Ridiculously small/narrow for galaxy fold and kin
+@mixin mStupidSmall {
+    @media screen and (max-width: 15em) {
+	@content;
+    }
+}
+
 
