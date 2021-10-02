@@ -3,7 +3,6 @@
 site.exe
 *old*.*
 
-fonts/
 dist-newstyle/
 _cache/
 

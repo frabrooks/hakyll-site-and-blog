@@ -19,12 +19,15 @@ html {
 body {
     min-width: $minimum-width;
     margin: 0;
-    //line-height: 1.5;
+    line-height: 1.5;
 }
 
 main {
-    padding: 0 $no-scale-padding $scale-padding $no-scale-padding;
-
+    // Main content area padding
+    padding: $main-content-area-padding-top
+	     $main-content-area-padding-right
+	     $main-content-area-padding-bottom
+	     $main-content-area-padding-left;
 }
 
 .insert-block {
@@ -33,16 +36,17 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 75rem;
-    margin-bottom: 0.2vh;
+    height: auto;
 
-    .spacing-top {
-	flex: 2 2 auto;
-    }
-
-    .spacing-bottom {
-	flex: 6 2 auto;
-    }    
+    padding: $insert-block-padding-top
+             $insert-block-padding-right
+             $insert-block-padding-bottom
+	     $insert-block-padding-left;
+    
+    margin: $insert-block-margin-top
+            $insert-block-margin-right
+            $insert-block-margin-bottom
+	    $insert-block-margin-left;
 }
 
 

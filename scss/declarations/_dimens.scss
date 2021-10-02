@@ -7,8 +7,43 @@ $no-scale-padding: 34px;
 $bottom-nav-bar-gap: 1rem;
 $separator-width: 3px;
 
+// TODO rem-ify above
 
-// TODO rem-ify
+
+
+
+//------------------------------------------------ Site-wide
+
+// Left and right margins/padding can be zero for
+// insert block as there is padding on main element
+$insert-block-margin-top: 0;
+$insert-block-margin-right: 0;
+$insert-block-margin-bottom: 32px;
+$insert-block-margin-left: 0;
+
+$insert-block-padding-top: 32px;
+$insert-block-padding-right: 0;
+$insert-block-padding-bottom: 0;
+$insert-block-padding-left: 0;
+
+$default-font-size: 1.25rem;
+
+$default-article-text-width: 700px;
+$large-article-text-width: 700px; // TODO
+$medium-article-text-width: 700px; // TODO
+$small-article-text-width: 700px; // TODO
+$xsmall-article-text-width: 700px;
+$xxsmall-article-text-width: 700px;
+
+
+
+$main-content-area-padding-top: 0; // Hug navbar
+$main-content-area-padding-right: 15vw;
+$main-content-area-padding-bottom: 4rem;
+$main-content-area-padding-left: 15vw;
+
+
+
 
 //-------------------------------------------------Navbar
 

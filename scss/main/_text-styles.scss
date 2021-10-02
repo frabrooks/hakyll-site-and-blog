@@ -20,7 +20,9 @@ h1,h2,h3,h4,h5{
 
 p {
     @include font-vw;
+    font-size: $default-font-size;
     color: $color-1;
+    max-width: $default-article-text-width;
 }
 
 .text-symbol {

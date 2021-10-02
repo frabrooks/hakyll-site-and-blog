@@ -18,13 +18,11 @@
 
 
 #intro-text {
-    font-size: 1.6rem;
-    width: 975px;
-    max-width: 80vw;
+//    width: 50rem;
 }
 
-
 $terminalwhoamimargin: 2rem;
+
 #lhs {
     
     margin-right: 6rem;
@@ -62,7 +60,6 @@ $terminalwhoamimargin: 2rem;
     border-radius: 50%;
     border: solid 4px $color-2;
 }
-
 
 
 .prim-heading {
@@ -112,14 +109,6 @@ $terminalwhoamimargin: 2rem;
 	flex: 1 2 auto;
 	margin-right: 4rem;
     }
-    
-    
-    #portrait {
-	flex: 0 1 auto;
-	width: 200px;
-	height: 200px;
-    }
-
     
     .prim-heading{
 	font-size: 3.5rem;

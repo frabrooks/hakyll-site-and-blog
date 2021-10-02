@@ -307,10 +307,11 @@ html {
 
 body {
   min-width: 360px;
-  margin: 0; }
+  margin: 0;
+  line-height: 1.5; }
 
 main {
-  padding: 0 34px 4rem 34px; }
+  padding: 0 15vw 4rem 15vw; }
 
 .insert-block {
   background: linear-gradient(to right, rgba(10, 25, 47, 0), #0a192f 35% 65%, rgba(10, 25, 47, 0));
@@ -318,12 +319,9 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 75rem;
-  margin-bottom: 0.2vh; }
-  .insert-block .spacing-top {
-    flex: 2 2 auto; }
-  .insert-block .spacing-bottom {
-    flex: 6 2 auto; }
+  height: auto;
+  padding: 32px 0 0 0;
+  margin: 0 0 32px 0; }
 
 footer {
   background: linear-gradient(to right, rgba(10, 25, 47, 0), #0a192f 35% 65%, rgba(10, 25, 47, 0)); }
@@ -427,7 +425,9 @@ h1, h2, h3, h4, h5 {
 
 p {
   font-family: "Merriweather Sans", "Helvetica";
-  color: #8892b0; }
+  font-size: 1.25rem;
+  color: #8892b0;
+  max-width: 700px; }
 
 .text-symbol {
   font-family: "Fira Code", monospace;
