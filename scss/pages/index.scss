@@ -68,7 +68,12 @@ $terminalwhoamimargin: 2rem;
 .prim-heading {
     font-size: 5rem;
     font-weight: 500;
-    margin: 0.6rem 0 0.6rem 0;
+
+    // Only set top and bottom here
+    // as left and right are handled
+    // by text-flex-container
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
 }
 
     

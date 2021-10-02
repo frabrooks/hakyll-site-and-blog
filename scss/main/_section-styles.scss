@@ -11,26 +11,47 @@
 
 
 
+html {
+    @include page-background;
+}
+
+
 body {
     min-width: $minimum-width;
-    @include page-background;
     margin: 0;
     //line-height: 1.5;
 }
 
 main {
-    padding: $scale-padding $no-scale-padding $scale-padding $no-scale-padding;
-    padding-top: $bottom-nav-bar-gap;
+    padding: 0 $no-scale-padding $scale-padding $no-scale-padding;
+
 }
+
+.insert-block {
+    @include section-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75rem;
+    margin-bottom: 0.2vh;
+
+    .spacing-top {
+	flex: 2 2 auto;
+    }
+
+    .spacing-bottom {
+	flex: 6 2 auto;
+    }    
+}
+
 
 footer {
     @include section-background;
     .content {
+	width: 100%;
 	padding: 1rem;
 	margin-bottom: 2rem;
-	 a {
-	     color: $color-3;
-	 }
     }
     
 }

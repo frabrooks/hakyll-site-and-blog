@@ -10,90 +10,15 @@
 @import 'declarations/backgrounds';
 
 
-@import 'main/default-styles';
+@import 'main/site-wide-styles';
+@import 'main/section-styles';
+@import 'main/text-styles';
+
 
 @import 'navbar';
 
 // Responsive styles (for mobile, tablet, widescreen)
 @import 'responsive';
-
-
-// ?
-@import 'main/default-styles';
-
-
-@import 'main/section-styles';
-@import 'main/text-styles';
-
-
-.separator {
-    width: $separator-width;
-    height: 80%;
-    background: $color-4;
-}
-
-
-
-// ?
-* {
-    box-sizing: border-box;
-}
-
-
-.icons {
-    margin-top: 2rem;
-    display: flex;
-    a {
-	color: $color-1;
-	padding: 0.4rem;
-	
-	&:hover {
-	    color: $color-3;
-	    @include easeOutSlow;
-	}
-    }
-}
-
-
-
-
-//?
-//.text-fade {
-//    color: $foreground-color-dark;
-//}
-
-
-.insert-block {
-    @include section-background;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 75rem;
-    margin-bottom: 0.2vh;
-
-    .spacing-top {
-	flex: 2 2 auto;
-    }
-
-    .spacing-bottom {
-	flex: 6 2 auto;
-    }
-    
-}
-
-.flex-container {
-    display: flex;
-    justify-content: center;
-
-    * {
-	flex: 1 0 340px;
-    }
-    
-    .l , .r {
-	flex: 1 1 0;
-    }
-}
 
 
 
