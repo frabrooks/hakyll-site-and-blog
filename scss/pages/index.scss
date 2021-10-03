@@ -10,41 +10,62 @@
 @import '../declarations/backgrounds';
 
 
+.terminal-text {
+    font-family: "Overpass Mono", monospace;
+    align-self: flex-start;
+    margin-bottom: 2rem;
+
+    &:nth-child(n + 2) {
+	align-self: center;
+    }
+    
+}
+
+
+
 #nameplate {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    justify-content: space-between;
+
+    padding-bottom: 2rem;
+    
 }
 
 
 #intro-text {
+    font-size: 1rem;
+    margin-bottom: 4rem;
 //    width: 50rem;
 }
 
-$terminalwhoamimargin: 2rem;
 
 #lhs {
     
-    margin-right: 6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    h4 {
-	margin-bottom: $terminalwhoamimargin;
-    }
-
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: center;
+//    align-items: center;    
     
 }
 
 #rhs {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
 
+    padding-left: 2.5rem;
+    padding-bottom: 0.5rem;
 
+    h4 {
+	padding-left: 1rem;
+    }
+
+    h2 {
+	padding-left: 1rem;
+    }
+    
     .icons {
 	display: none;
     }
@@ -53,8 +74,9 @@ $terminalwhoamimargin: 2rem;
 
 #portrait {
     flex: 0 1 auto;
-    width: 125px;
-    height: 125px;
+    width: 175px;
+    height: 175px;
+    margin: 25px;
     background: $portrait-image;
     background-size: cover;
     border-radius: 50%;
@@ -147,7 +169,7 @@ $terminalwhoamimargin: 2rem;
 	
 	h4 {
 	    margin-bottom: 0;
-	    margin-top: $terminalwhoamimargin; 
+//	    margin-top: $terminalwhoamimargin; 
 	    order: 5;
 	    //align-self: flex-start;
 	}
@@ -181,6 +203,15 @@ $terminalwhoamimargin: 2rem;
 // Tablet
 @include mSmall {
 
+
+    #rhs {
+	h1 {
+	    span {
+		margin-top: 0;
+		margin-bottom: -1rem;
+	    }
+	}
+    }
     
     #intro-text {
 	width: 460px;

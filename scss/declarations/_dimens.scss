@@ -18,15 +18,15 @@ $separator-width: 3px;
 // insert block as there is padding on main element
 $insert-block-margin-top: 0;
 $insert-block-margin-right: 0;
-$insert-block-margin-bottom: 32px;
+$insert-block-margin-bottom: 2rem;
 $insert-block-margin-left: 0;
 
-$insert-block-padding-top: 32px;
+$insert-block-padding-top: 4rem;
 $insert-block-padding-right: 0;
-$insert-block-padding-bottom: 0;
+$insert-block-padding-bottom: 4rem;
 $insert-block-padding-left: 0;
 
-$default-font-size: 1.25rem;
+$default-font-size: 1rem;
 
 $default-article-text-width: 700px;
 $large-article-text-width: 700px; // TODO
@@ -38,9 +38,9 @@ $xxsmall-article-text-width: 700px;
 
 
 $main-content-area-padding-top: 0; // Hug navbar
-$main-content-area-padding-right: 15vw;
+$main-content-area-padding-right: 20vw;
 $main-content-area-padding-bottom: 4rem;
-$main-content-area-padding-left: 15vw;
+$main-content-area-padding-left: 20vw;
 
 
 

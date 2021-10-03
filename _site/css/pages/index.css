@@ -86,32 +86,42 @@
   src: local(""), url("../fonts/overpass-mono-v6-latin-700.woff2") format("woff2"), url("../fonts/overpass-mono-v6-latin-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
+.terminal-text {
+  font-family: "Overpass Mono", monospace;
+  align-self: flex-start;
+  margin-bottom: 2rem; }
+  .terminal-text:nth-child(n + 2) {
+    align-self: center; }
+
 #nameplate {
   display: flex;
-  align-items: center;
-  justify-content: center; }
-
-#lhs {
-  margin-right: 6rem;
-  display: flex;
-  flex-direction: column;
+  align-items: stretch;
   justify-content: space-between;
-  align-items: center; }
-  #lhs h4 {
-    margin-bottom: 2rem; }
+  padding-bottom: 2rem; }
+
+#intro-text {
+  font-size: 1rem;
+  margin-bottom: 4rem; }
 
 #rhs {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; }
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-left: 2.5rem;
+  padding-bottom: 0.5rem; }
+  #rhs h4 {
+    padding-left: 1rem; }
+  #rhs h2 {
+    padding-left: 1rem; }
   #rhs .icons {
     display: none; }
 
 #portrait {
   flex: 0 1 auto;
-  width: 125px;
-  height: 125px;
+  width: 175px;
+  height: 175px;
+  margin: 25px;
   background: url(../../images/portrait.jpg);
   background-size: cover;
   border-radius: 50%;
@@ -167,7 +177,6 @@
     margin: 0; }
     #lhs h4 {
       margin-bottom: 0;
-      margin-top: 2rem;
       order: 5; }
     #lhs .icons {
       display: none; }
@@ -182,6 +191,9 @@
     font-size: 1.2rem; } }
 
 @media screen and (max-width: 52.5em) {
+  #rhs h1 span {
+    margin-top: 0;
+    margin-bottom: -1rem; }
   #intro-text {
     width: 460px; } }
 
