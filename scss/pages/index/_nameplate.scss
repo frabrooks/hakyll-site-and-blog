@@ -1,0 +1,78 @@
+
+// SCSS imports, no css will be generated from the below imports
+// so, if my understanding is correct, they are safe to import
+// at the top of all files.
+@import '../../declarations/fonts';
+@import '../../declarations/vars';
+@import '../../declarations/mixins';
+@import '../../declarations/colours';
+@import '../../declarations/dimens';
+@import '../../declarations/backgrounds';
+
+
+/**
+ *   Nameplate container:
+ *
+ *
+ *     ******  |   Hello, my name is
+ *    ******** |   
+ *    ******** |   FRASER BROOKS 
+ *     ******  |   M.Sci Computer Science
+ *     icons   |
+ *    =====================================
+ * 
+ *     I am a bla bla bla foo bar fee thi
+ *     dee da ...                 .......
+ */
+#nameplate {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: $nameplate-padding-bottom;
+}
+#top, #bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    #icon-stack {
+	display: none;
+    }    
+}
+#portrait {
+    width: $portrait-size;
+    height: $portrait-size;
+    background: $portrait-image;
+    background-size: cover;
+    border-radius: 50%;
+    border: solid 4px $color-2;
+}
+
+#top-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-left: $top-text-padding-left;
+    
+    .icons {
+	display: none;
+    }
+    
+    h4 {
+	padding-left: 1rem;
+	word-spacing: $hello-my-name-is-spacing;
+    }
+
+    h2 {
+	padding-left: 1rem;
+    }    
+}
+
+#spacer {
+    width: $portrait-size + $top-text-padding-left;
+    margin-right: 1rem;
+}
+
+
+

@@ -14,6 +14,12 @@ $separator-width: 3px;
 
 //------------------------------------------------ Site-wide
 
+
+$insert-block-height: auto;
+$insert-block-max-height: none;
+$insert-block-min-height: 90vh;
+
+
 // Left and right margins/padding can be zero for
 // insert block as there is padding on main element
 $insert-block-margin-top: 0;
@@ -26,9 +32,13 @@ $insert-block-padding-right: 0;
 $insert-block-padding-bottom: 4rem;
 $insert-block-padding-left: 0;
 
-$default-font-size: 1rem;
+$default-font-size: 1.25rem;
 
-$default-article-text-width: 700px;
+
+$default-article-text-width: 44rem;
+
+
+
 $large-article-text-width: 700px; // TODO
 $medium-article-text-width: 700px; // TODO
 $small-article-text-width: 700px; // TODO
@@ -36,18 +46,9 @@ $xsmall-article-text-width: 700px;
 $xxsmall-article-text-width: 700px;
 
 
-
-$main-content-area-padding-top: 0; // Hug navbar
-$main-content-area-padding-right: 20vw;
-$main-content-area-padding-bottom: 4rem;
-$main-content-area-padding-left: 20vw;
-
-
-
-
 //-------------------------------------------------Navbar
 
-$nav-block-height: 6.5rem;
+$nav-block-height: 6rem;
 
 $nav-block-padding: 1.5rem;
 $nav-link-padding: $nav-block-padding;
@@ -96,5 +97,53 @@ $cv-button-padding-bottom: 0.8rem;
 $cv-button-padding-left: 1rem;
 
 
+
+
+// ---------------------------------------- page map ( icon stack + traffic light)
+
+$page-map-width: 120px;
+$page-map-height: 18rem;
+$page-map-margin-left: 4vw;
+
+$map-line-width: 10px;
+$map-circle-width: 0.125rem;
+$map-style: double;
+
+$stem-height: 90px;
+$stem-width: $map-circle-width;
+$icon-stack-padding-top: 0.5rem;
+
+
+$circle-size: 2rem;
+$s-c-margin: 0.16;
+$sub-circle-margin: $s-c-margin * $circle-size;
+$sub-circle-size: $circle-size - (2 * $sub-circle-margin) - (2 * $map-circle-width);
+
+
+//                                  -- Border counts in width --
+//$sub-circle-radius: ($sub-circle-size + (2 * $map-circle-width)) / 2;
+
+$icon-stem-padding-top: 16px;
+$fixed-icon-size: $circle-size - ($s-c-margin * $circle-size);;
+$fixed-icon-padding: 4px;
+
+
+// ----------------------------------------- Index (page contents)
+
+$terminal-font-size: 1.4rem;
+$hello-my-name-is-spacing: 0.2rem;
+$terminal-text-heading-margin-bottom: 1rem;
+$nameplate-padding-bottom: 30px;
+
+$portrait-size: 160px;
+$top-text-padding-left: 40px;
+
+$Fraser-Brooks-font-size: 5rem;
+$Fraser-Brooks-font-weight: 500;
+$Fraser-Brooks-margin-top-bottom: 0.6rem;
+$Sec-Heading-font-size: 2.2rem;
+
+$recent-activity-font-size: medium;
+$recent-activity-item-sep: 4rem;
 
 

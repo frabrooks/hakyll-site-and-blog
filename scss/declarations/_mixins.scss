@@ -79,57 +79,103 @@ $eof: $ease-out-fast;
     }
 }
 
+@mixin flex-hover-underline($color, $width) {
+    & {
+	display: flex;
+	
+	// Underline animation (requires flex box with vertical direction)
+	flex-direction: column;
+    }
+    &:after {
+	content: '';	
+	height: 2px;
+	width: $width;
+	transform: scaleX(0);
+	background-color: $color;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+    }
+    	
+    &:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+    }	
+}
 
+
+////////////////////////////////////////////////
 // Media Query Mixins
+
+
+// Roughly 4k
+@mixin mStupidLarge {
+    @media screen and (min-width: 235rem){
+	@content;
+    }
+}
+
+// Above roughly 3000px width
+@mixin mXXLarge {
+    @media screen and (min-width: 180rem){
+	@content;
+    }
+}
+
 // (Widescreen) Desktop First 
 @mixin mXLarge {
-    @media screen and (max-width: 120.4em) {
+    @media screen and (max-width: 120.4rem) {
 	@content;
     }
 }
 
+// 2/3rd desktop
 @mixin mLarge {
-    @media screen and (max-width: 86.3em) {
+    @media screen and (max-width: 86.3rem) {
 	@content;
     }
 }
 
+// Exactly half desktop
 @mixin mMedium {
-    @media screen and (max-width: 60.1em) {
+    @media screen and (max-width: 60.1rem) {
 	@content;
     }
 }
 
-@mixin mSmall {
-    @media screen and (max-width: 52.5em) {
+// First smaller than half desktop
+// Size of some tablets
+// Navbar now 3 rows & CV button now centered:
+//
+//    HOME  |CV|    X
+//    --------------    
+//   |  1   |  2   |
+//   |     3      |
+//   |  4  |  5   |
+//   -------------
+//
+@mixin mSmall { // 832px w/ default font-size
+    @media screen and (max-width: 52.5rem) {
 	@content;
     }
 }
 
-@mixin mXSmall {
-    @media screen and (max-width: 40em) {
+// All Tablets now
+@mixin mXSmall { // 640px w/ default font-size
+    @media screen and (max-width: 40rem) {
 	@content;
     }
 }
 
 // Small screen & massive font-size only
-@mixin mXXSmall {
-    @media screen and (max-width: 30em) {
-	@content;
-    }
-}
-
-
-// Small screen & massive font-size only
-@mixin mXXSmall {
-    @media screen and (max-width: 30em) {
+@mixin mXXSmall { // 480px w/ default font-size
+    @media screen and (max-width: 30rem) {
 	@content;
     }
 }
 
 // Ridiculously small/narrow for galaxy fold and kin
-@mixin mStupidSmall {
-    @media screen and (max-width: 15em) {
+@mixin mStupidSmall { // 240px w/ default font-size
+    @media screen and (max-width: 15rem) {
 	@content;
     }
 }

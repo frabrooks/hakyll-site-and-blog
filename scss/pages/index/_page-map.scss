@@ -1,0 +1,164 @@
+
+// SCSS imports, no css will be generated from the below imports
+// so, if my understanding is correct, they are safe to import
+// at the top of all files.
+@import '../../declarations/fonts';
+@import '../../declarations/vars';
+@import '../../declarations/mixins';
+@import '../../declarations/colours';
+@import '../../declarations/dimens';
+@import '../../declarations/backgrounds';
+
+
+#page-map-root {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-left: $page-map-margin-left;
+    width: $page-map-width;
+    height: $page-map-height;
+    max-height: 50vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+#traffic-light, #icon-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#traffic-light {
+    height: 100%;
+}
+
+#icon-stack {
+    height: 100%;
+}
+
+#icon-stack {
+    // Position icon stack on rhs of page
+    position: fixed;
+    height: $page-map-height;
+    margin-right: $page-map-margin-left;
+    right: 0;
+    bottom: 0;
+    a {
+	@include easeOutSlow;
+	width: $fixed-icon-size;
+	height: $fixed-icon-size;
+	margin: $fixed-icon-padding;
+	text-align: center;
+    }
+    a:hover{
+	transform: scaleX(1.1) scaleY(1.1);
+    }	
+    .stem {
+	background-color: $map-color;
+	// Background not include padding
+	background-clip: content-box;
+	padding-top: $icon-stem-padding-top;
+    }
+}
+
+.stem {
+    height: $stem-height;
+    width: $stem-width;
+    background-color: $branch-color;
+}
+
+.map-sep {
+    width: $stem-width;
+    flex-grow: 1;
+    flex-basis: 1%;
+    background-color: $branch-color;
+}
+#icon-stack {
+    .map-sep {
+	background: none;
+    }
+}
+
+.svg-icon {
+    width: 100%;
+    height: 100%;
+    filter: $color-2-filter-2;
+    &:hover {
+	filter: $color-3-filter;
+    }
+}
+
+
+//////////////////////////////////
+// Circles
+    
+.circle {
+    width: $circle-size;
+    height: $circle-size;
+    border: $map-circle-width solid $branch-color;
+    border-radius: $circle-size / 2;
+    position: relative;
+}
+
+
+.subCircle {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: $sub-circle-margin;
+    width: $sub-circle-size;
+    height: $sub-circle-size;
+    border-radius: 50%;
+    background-color: $branch-color;
+
+    @include easeOutFast;
+    opacity: 0;
+
+}
+.circle {
+
+    &.current-circ {
+	.subCircle {
+	    opacity: 1;
+	    background-color: $color-2-half-opacity;
+	}
+    }
+    
+    &:hover {
+	.subCircle {
+	    opacity: 100%;
+	    @include easeOutSlow;
+	}
+    }
+}
+
+
+/////////////////////////////////////////
+// Branches:
+
+.branch {
+    position: absolute;
+    pointer-events: none;
+}
+
+#branch1 {
+    border-top: $map-line-width $map-style $branch-color;
+    border-left: $map-line-width $map-style $branch-color;
+}
+
+#branch12, #branch22, #branch32, #branch42 {
+    border-left: $map-line-width $map-style $branch-color;
+}
+
+
+.b-top {
+    border-top: $map-line-width $map-style $branch-color;
+}
+
+.b-bottom {
+    border-bottom: $map-line-width $map-style $branch-color;
+}
+
+

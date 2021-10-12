@@ -5,16 +5,19 @@ $show-bg-image: true;
 $bg-image: url(../images/bg.jpg);
 
 //overlay-gradient-start/ens for translucent shapes
-$ogs: 35%;
-$oge: 65%;
+$ogs: 25%;
+$oge: 75%;
 
-$background-opacity: 0.95;
+$background-opacity: 0.96;
 $overlay-opacity: 1;
 
 
 // Should only be used once
 @mixin page-background{
-    background-color: rgba($background-color , $background-opacity);
+
+    // This is needed to have background past edge of page
+    background: rgba($background-color , $background-opacity);
+    
     @if $show-bg-image {	
 	background-image: $bg-image;
 	background-attachment: fixed;

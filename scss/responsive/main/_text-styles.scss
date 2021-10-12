@@ -1,5 +1,16 @@
 
+// SCSS imports, no css will be generated from the below imports
+// so, if my understanding is correct, they are safe to import
+// at the top of all files.
+@import '../../declarations/fonts';
+@import '../../declarations/vars';
+@import '../../declarations/mixins';
+@import '../../declarations/colours';
+@import '../../declarations/dimens';
+@import '../../declarations/backgrounds';
 
+////////////////////////////////////////////////////
+// Responsive styles for styles concerning text elements
 
 
 // Roughly 4k
@@ -16,30 +27,10 @@
 
 // 2/3rd desktop
 @include mLarge {
-
-    // TODO needed?
-    // Remove padding on bottom 3 links
-    #nav-link3 {
-	padding: 0;
-    }
-    #nav-link4 {
-	padding: 0;
-    }
-    #nav-link5 {
-	padding: 0;
-    }
-    
 }
 
 // Exactly half desktop
 @include mMedium {
-
-    // TODO shrink + in dimen
-    // Remove padding on navbar
-    #nav-bar {
-	padding-right: 0;
-	padding-left: 0;
-    }
 }
 
 // First smaller than half desktop
@@ -54,16 +45,31 @@
 //   -------------
 //
 @include mSmall { // 832px w/ default font-size
-    
-    // Add padding to page-title TODO why + in dimen
-    #page-title {
-	padding-left: 16px;
+
+   
+    p {
+	max-width: 2 * ($default-article-text-width / 3);
+	margin-top: 1rem;
     }
 
+    #recent-activity-text {
+	.terminal-text {
+	    margin-top: 2rem;
+	}
+    }
 }
 
 // All Tablets now
 @include mXSmall { // 640px w/ default font-size
+
+    .terminal-text {
+	align-self: center;
+    }
+    
+    p {
+	max-width: 65vw;
+	font-size: 4 * ($default-font-size / 5);
+    }    
 }
 
 // Small screen & massive font-size only
@@ -80,10 +86,6 @@
 //         .
 //
 @include mXXSmall { // 480px w/ default font-size
-    #nav-bar {
-	 margin-right: $nav-link-padding-right/2;
-	 margin-left: $nav-link-padding-left/2;
-     }
 }
 
 // Ridiculously small/narrow for galaxy fold and kin

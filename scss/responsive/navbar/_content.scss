@@ -3,12 +3,23 @@
 @import '../../declarations/cv-animated-config';
 
 
-// Full desktop but not widescreen
-// @include mXLarge {   
-// }
+////////////////////////////////////////////////
+// Responsive styles for nameplate
 
 
-// 2/3 Full Desktop
+// Roughly 4k
+@include mStupidLarge {
+}
+
+// Above roughly 3000px width
+@include mXXLarge {
+}
+
+// (Widescreen) Desktop First 
+@include mXLarge {
+}
+
+// 2/3rd desktop
 @include mLarge {
     
     // Hide the site logo (FRASER BROOKS) on large displays and under
@@ -26,17 +37,24 @@
 	    display: initial;
 	}
     }
-    
 }
 
+// Exactly half desktop
+@include mMedium {
+}
 
-// Half-desktop
-// @include mMedium {
-// }
-
-// Tablet
-@include mSmall {
-
+// First smaller than half desktop
+// Size of some tablets
+// Navbar now 3 rows & CV button now centered:
+//
+//    HOME  |CV|    X
+//    --------------    
+//   |  1   |  2   |
+//   |     3      |
+//   |  4  |  5   |
+//   -------------
+//
+@include mSmall { // 832px w/ default font-size
 
     // Don't need to hide the cv button in this layout so
     // reinstate initial values for when hide tag applied
@@ -60,19 +78,30 @@
 	    display: none;
 	}
     }
-    
 }
 
-// Smartphones
-// @include mXSmall {
-// }
-
-// Smartphones
-// @include mXXSmall {
-// }
+// All Tablets now
+@include mXSmall { // 640px w/ default font-size
+}
 
 
+// Small screen & massive font-size only
+// Now single file:
+// i.e.
+//  |     nav-1     |
+//  ----------------
+//  |      nav-2    |
+//  ----------------
+//  |     nav-3     | 
+//  ----------------
+//         .
+//         .
+//         .
+//
+@include mXXSmall { // 480px w/ default font-size
+}
 
-
-
+// Ridiculously small/narrow for galaxy fold and kin
+@include mStupidSmall { // 240px w/ default font-size
+}
 

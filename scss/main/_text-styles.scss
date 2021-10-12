@@ -23,6 +23,16 @@ p {
     font-size: $default-font-size;
     color: $color-1;
     max-width: $default-article-text-width;
+    margin: 0;
+}
+
+#terminal2 {
+    align-self: center;
+}
+
+	
+.small {
+    font-size: 1rem;
 }
 
 .text-symbol {
@@ -40,19 +50,22 @@ p {
     color: $color-3;
 }
 
-p {
-    text-color: $color-1;
-}
-
 
 .mono-text {
     @include font-mono;
 }
 
 
+.insert-block {
+    a {
+	@include flex-hover-underline($color-3, 100% );
+    }
+}
+
+
 a {
     text-decoration: none;
-
+    
     &.pdf {
 	text-decoration: underline;
     }

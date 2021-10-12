@@ -91,54 +91,128 @@
 
     <main role="main" id="insert">
       <link rel="stylesheet" href="./css/pages/index.css" />
-<div class="insert-block">
-  <h4 class="mono-text text-secondary terminal-text">fraser@fraserbrooks.io:~$<span class="text-primary"> whoami<span class="blink">_</span></span></h4>
-  <div id="nameplate">
-    <div id="lhs">
-      <div id="portrait"></div>
+<div id="page-map-root">
+  <div id="icon-stack">
+    <a href="#!">
+      <img src="images/twitter.svg" class="svg-icon" />      
+    </a>
+    <div class="map-sep"></div>
+    <a href="#!">
+      <img src="images/banana-line.svg" class="svg-icon" />
+    </a>
+    <div class="map-sep"></div>
+    <a href="#!">
+      <img src="images/linkedin.svg" class="svg-icon" />      
+    </a>
+    <div class="map-sep"></div>
+    <a href="#!">
+      <img src="images/github.svg" class="svg-icon" />
+    </a>
+    <div class="stem">
     </div>
-    <div id="rhs">
-      <h4 class="highlight-text">Hello, my name is</h4>
-      <h1 class="text-flex-container">
-	<span class="prim-heading text-secondary">
-	  Fraser
-	</span>
-	<span class="prim-heading text-secondary">
-	  Brooks
-	</span>
-      </h1>
-      <h2 class="text-flex-container">
-	<span class="mono-text sec-heading">
-	  M.Sci Computer
-	</span>
-	<span class="mono-text sec-heading">
-	  Science
-	</span>
-      </h2>
-      <div class="icons">
-	<a href="#!">
-	  <i class="fab fa-twitter fa-2x"></i>
-	</a>
-	<a href="#!">
-	  <i class="fab fa-facebook fa-2x"></i>
-	</a>
-	<a href="#!">
-	  <i class="fab fa-linkedin fa-2x"></i>
-	</a>
-	<a href="#!">
-	  <i class="fab fa-github fa-2x"></i>
-	</a>
+  </div>
+  <div id="traffic-light">
+    <a href="#!" id="circle1" class="circle">
+      <div id="subCircle1" class="subCircle"></div>      
+      <div id="branch1" class="branch hidden"></div>
+      <div id="branch11" class="branchSub branch hidden"></div>
+      <div id="branch12" class="branchSub branch hidden"></div>
+    </a>
+    <div class="map-sep"></div>
+    <a href="#!" id="circle2" class="circle">
+      <div id="subCircle2" class="subCircle"></div>      
+      <div id="branch21" class="branchSub branch hidden"></div>
+      <div id="branch22" class="branchSub branch hidden"></div>
+    </a>
+    <div class="map-sep"></div>
+    <a href="#!" id="circle3" class="circle">
+      <div id="subCircle3" class="subCircle"></div>      
+      <div id="branch31" class="branchSub branch hidden"></div>
+      <div id="branch32" class="branchSub branch hidden"></div>
+    </a>
+    <div class="map-sep"></div>
+    <a href="#!" id="circle4" class="circle">
+      <div id="subCircle4" class="subCircle"></div>
+      <div id="branch41" class="branchSub branch hidden"></div>
+      <div id="branch42" class="branchSub branch hidden"></div>
+    </a>
+    <div class="stem"></div>
+  </div>
+</div>
+<div class="insert-block">
+  <h4 id="terminal1" class="mono-text text-secondary terminal-text">~$<span class="text-primary"> whoami<span class="blink">_</span></span></h4>
+  <div id="nameplate">
+    <div id="top">
+      <div id="portrait"></div>	
+      <div id="top-text">
+	<div class="icons">
+	  <a href="#!">
+	    <i class="fab fa-twitter fa-2x"></i>
+	  </a>
+	  <a href="#!">
+	    <i class="fab fa-facebook fa-2x"></i>
+	  </a>
+	  <a href="#!">
+	    <i class="fab fa-linkedin fa-2x"></i>
+	  </a>
+	  <a href="#!">
+	    <i class="fab fa-github fa-2x"></i>
+	  </a>
+	</div>
+	<h4 class="highlight-text">Hello, my name is
+	</h4>
+	<h1 class="text-flex-container">
+	  <span class="prim-heading text-secondary">
+	    Fraser
+	  </span>
+	  <span class="prim-heading text-secondary">
+	    Brooks
+	  </span>
+	</h1>
+	<h2 class="text-flex-container">
+	  <span class="mono-text sec-heading">
+	    M.Sci
+	  </span>
+	  <span class="mono-text sec-heading">
+	    Computer Science
+	  </span>
+	</h2>
+	<div id="icon-stack">
+	  <a href="#!">
+	    <img src="images/twitter.svg" class="svg-icon" />      
+	  </a>
+	  <div class="map-sep"></div>
+	  <a href="#!">
+	    <img src="images/banana-line.svg" class="svg-icon" />
+	  </a>
+	  <div class="map-sep"></div>
+	  <a href="#!">
+	    <img src="images/linkedin.svg" class="svg-icon" />      
+	  </a>
+	  <div class="map-sep"></div>
+	  <a href="#!">
+	    <img src="images/github.svg" class="svg-icon" />
+	  </a>
+	</div>
+      </div>
+    </div>
+    <div id="bottom">
+      <div id="spacer"></div>
+      <div id="intro-text">
+	<p>I'm a recent M.Sci Computer Science graduate with a history in design, a budding open-source software enthusiast, and wannabe Haskeller.</p>
+	<p>I love to create beautiful and useful software and am looking for work in software development, data science,  or DevOps. I also have a blog ↴</p>
       </div>
     </div>
   </div>
-  <p id="intro-text">I'm a recent computer science graduate with a history in design looking for work in software development, data science,  or DevOps; a budding open-source enthusiast, and wannabe Haskeller. There's also a blog where I write about things that interest me.</p>
-  <h4 class="mono-text text-secondary terminal-text">fraser@fraserbrooks.io:~$<span class="text-primary"> recent-activity<span class="blink">_</span></span></h4>
-  <p>The quick fox jumped over the lazy rabbit and said hello to the postman or something.</p>
-  <p>The quick fox jumped over the lazy rabbit and said hello to the postman or something.</p>
-  <p>The quick fox jumped over the lazy rabbit and said hello to the postman or something.</p>
+  <div id="recent-activity-text">
+    <h4 id="terminal2" class="mono-text text-secondary terminal-text">~$<span class="text-primary"> recent-activity<span class="blink">_</span></span></h4>
+    <p><span> 29/09/2021 - New Blog Post:</span><span class="sep"></span><a href="#!">Undergeneralisation and the Prosecutors Fallacy</a></p>
+    <p><span>14/09/2021 - New Merge:</span><span class="sep"></span><a href="https://github.com/haskell/cabal/pull/7310">First contribution to haskell toolchain: a bugfix for cabal</a></span></p>
+<p><span>21/08/2021 - New Blog Post:</span><span class="sep"></span><a href="#!">Parkinson's Law vs. Goodhart's Law</a></p>    
+</div>
 </div>
 <div class="insert-block">
-  <h4 class="mono-text text-secondary terminal-text">fraser@fraserbrooks.io:~$<span class="text-primary"> academic-work<span class="blink">_</span></span></h4>
+  <h4 id="terminal3" class="mono-text text-secondary terminal-text">~$<span class="text-primary"> academic-work<span class="blink">_</span></span></h4>
   <div class="icons">
     <a href="#!">
       <i class="fab fa-twitter fa-2x"></i>
@@ -153,7 +227,7 @@
       <i class="fab fa-github fa-2x"></i>
     </a>
   </div>
-  <p id="intro-text">I'm a recent computer science graduate with a history in design looking for work in software development, data science,  or DevOps; a budding open-source enthusiast, and wannabe Haskeller. There's also a blog where I write about things that interest me.</p>
+  <p id="intro-text">I'm a recent M.Sci Computer Science graduate with a history in design, a budding open-source software enthusiast, and wannabe Haskeller.</p>
     <div class="icons">
     <a href="#!">
       <i class="fab fa-twitter fa-2x"></i>
@@ -168,10 +242,10 @@
       <i class="fab fa-github fa-2x"></i>
     </a>
   </div>
-  <p id="intro-text">I'm a recent computer science graduate with a history in design looking for work in software development, data science,  or DevOps; a budding open-source enthusiast, and wannabe Haskeller. There's also a blog where I write about things that interest me.</p>
+  <p id="intro-text">I'm a recent M.Sci Computer Science graduate with a history in design, a budding open-source software enthusiast, and wannabe Haskeller.</p>
 </div>
 <div class="insert-block">
-  <h4 class="mono-text text-secondary terminal-text">fraser@fraserbrooks.io:~$<span class="text-primary"> project-portfolio<span class="blink">_</span></span></h4>
+  <h4 id="terminal4" class="mono-text text-secondary terminal-text">~$<span class="text-primary"> project-portfolio<span class="blink">_</span></span></h4>
   <div class="icons">
     <a href="#!">
       <i class="fab fa-twitter fa-2x"></i>
@@ -186,7 +260,7 @@
       <i class="fab fa-github fa-2x"></i>
     </a>
   </div>
-  <p id="intro-text">I'm a recent computer science graduate with a history in design looking for work in software development, data science,  or DevOps; a budding open-source enthusiast, and wannabe Haskeller. There's also a blog where I write about things that interest me.</p>
+  <p id="intro-text">I'm a recent M.Sci Computer Science graduate with a history in design, a budding open-source software enthusiast, and wannabe Haskeller.</p>
     <div class="icons">
     <a href="#!">
       <i class="fab fa-twitter fa-2x"></i>
@@ -201,8 +275,42 @@
       <i class="fab fa-github fa-2x"></i>
     </a>
   </div>
-  <p id="intro-text">I'm a recent computer science graduate with a history in design looking for work in software development, data science,  or DevOps; a budding open-source enthusiast, and wannabe Haskeller. There's also a blog where I write about things that interest me.</p>
+  <p id="intro-text">I'm a recent M.Sci Computer Science graduate with a history in design, a budding open-source software enthusiast, and wannabe Haskeller.</p>
 </div>
+<div id="insert-block-last" class="insert-block">
+  <h4 id="terminal5" class="mono-text text-secondary terminal-text">~$<span class="text-primary"> contact-me<span class="blink">_</span></span></h4>
+  <div class="icons">
+    <a href="#!">
+      <i class="fab fa-twitter fa-2x"></i>
+    </a>
+    <a href="#!">
+      <i class="fab fa-facebook fa-2x"></i>
+    </a>
+    <a href="#!">
+      <i class="fab fa-linkedin fa-2x"></i>
+    </a>
+    <a href="#!">
+      <i class="fab fa-github fa-2x"></i>
+    </a>
+  </div>
+  <p id="intro-text">I'm a recent M.Sci Computer Science graduate with a history in design, a budding open-source software enthusiast, and wannabe Haskeller.</p>
+    <div class="icons">
+    <a href="#!">
+      <i class="fab fa-twitter fa-2x"></i>
+    </a>
+    <a href="#!">
+      <i class="fab fa-facebook fa-2x"></i>
+    </a>
+    <a href="#!">
+      <i class="fab fa-linkedin fa-2x"></i>
+    </a>
+    <a href="#!">
+      <i class="fab fa-github fa-2x"></i>
+    </a>
+  </div>
+  <p id="intro-text">I'm a recent M.Sci Computer Science graduate with a history in design, a budding open-source software enthusiast, and wannabe Haskeller.</p>
+</div>
+<script src="js/index.js"></script>
 
     </main>
 

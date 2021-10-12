@@ -1,13 +1,21 @@
 
 
-// Full desktop but not widescreen
-// @include mXLarge {
-// }
 
+// Roughly 4k
+@include mStupidLarge {
+}
 
-// 2/3 Full Desktop
+// Above roughly 3000px width
+@include mXXLarge {
+}
+
+// (Widescreen) Desktop First 
+@include mXLarge {
+}
+
+// 2/3rd desktop
 @include mLarge {
-    
+
     // nav-bar now needs to wrap
     #nav-bar {
 	flex-wrap: wrap;
@@ -54,16 +62,15 @@
 	flex-grow: 1;
 	flex-shrink: 1;
     }
-    
 }
 
-// Half-desktop
-// @include mMedium {
-// }
+// Exactly half desktop
+@include mMedium {
+}
 
-// Tablet (first smaller than half-desktop)
-@include mSmall {
-//  Now 3 rows:
+// First smaller than half desktop
+// Size of some tablets
+// Navbar now 3 rows & CV button now centered:
 //
 //    HOME  |CV|    X
 //    --------------    
@@ -72,9 +79,8 @@
 //   |  4  |  5   |
 //   -------------
 //
-//  CV button now centered    
-
-    #page-title {
+@include mSmall { // 832px w/ default font-size
+        #page-title {
 
 	// TODO needed??
 	p {
@@ -139,12 +145,11 @@
     }
 }
 
-// Smartphones
-//@include mXSmall {
-//}
+// All Tablets now
+@include mXSmall { // 640px w/ default font-size
+}
 
-// Smartphones
-@include mXXSmall {
+// Small screen & massive font-size only
 // Now single file:
 // i.e.
 //  |     nav-1     |
@@ -156,8 +161,8 @@
 //         .
 //         .
 //         .
-
-
+//
+@include mXXSmall { // 480px w/ default font-size
     #cv-link {
 	a {
 	    padding: $cv-button-padding-top/2
@@ -168,14 +173,7 @@
     }
     #show-button-container {
 	padding: $nav-bar-menu-button-padding/2;
-    }
-
-
-    // No longer needed
-    #break2 , #break3 {
-	display: none;
-    }
-    
+    }    
     
     // Set all to flexbasis 51%
     // forcing newline for each
@@ -196,9 +194,8 @@
     }
 }
 
-
-// Galaxy folds and kin
-@include mStupidSmall {
+// Ridiculously small/narrow for galaxy fold and kin
+@include mStupidSmall { // 240px w/ default font-size
     #cv-link {
 	a {
 	    p {

@@ -1,44 +1,65 @@
 
 
-// Full desktop but not widescreen
-// @include mXLarge {   
-// }
 
+// TODO THIS FILE IS CURRENTLY NOT SETTING ANYTHING (IS IT STILL NEEDED?)
 
-// 2/3 Full Desktop
-@include mLarge {
-    
-    #page-title {
-
-	// If page-title is going to disappear then remove the transitions
-	// upon it else it will disappear slowly when changing window size
-
-	// TODO needed?
-	// transition: initial;
-	// transition-delay: initial;
-	
-    }
-    
-}
-
-// Half-desktop
-// @include mMedium {
-// }
-
-// Tablet
-// @include mSmall {
-// }
-
-// Smartphones
-// @include mXSmall {
-// }
-
-// Smartphones
-// @include mXXSmall {
-// }
-
-
-
-
-
-
+//// Roughly 4k
+//@include mStupidLarge {
+//}
+//
+//// Above roughly 3000px width
+//@include mXXLarge {
+//}
+//
+//// (Widescreen) Desktop First 
+//@include mXLarge {
+//}
+//
+//// 2/3rd desktop
+//@include mLarge {
+//}
+//
+//// Exactly half desktop
+//@include mMedium {
+//}
+//
+//// First smaller than half desktop
+//// Size of some tablets
+//// Navbar now 3 rows & CV button now centered:
+////
+////    HOME  |CV|    X
+////    --------------    
+////   |  1   |  2   |
+////   |     3      |
+////   |  4  |  5   |
+////   -------------
+////
+//@include mSmall { // 832px w/ default font-size
+//}
+//
+//// All Tablets now
+//@include mXSmall { // 640px w/ default font-size
+//}
+//
+//// Small screen & massive font-size only
+//// Now single file:
+//// i.e.
+////  |     nav-1     |
+////  ----------------
+////  |      nav-2    |
+////  ----------------
+////  |     nav-3     | 
+////  ----------------
+////         .
+////         .
+////         .
+////
+//@include mXXSmall { // 480px w/ default font-size
+//}
+//
+//// Ridiculously small/narrow for galaxy fold and kin
+//@include mStupidSmall { // 240px w/ default font-size
+//}
+//
+//
+//

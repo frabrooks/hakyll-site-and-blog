@@ -18,7 +18,6 @@ $easy-peeler: #fd6d26;
 $banana-yellow: #f3c937;
 $light-grey: #bbbbbb;
 
-
 $background-color: $oxford-blue;
 $foreground-color-light: $razzmic-berry;
 $foreground-color-mid: $cyber-grape;
@@ -34,5 +33,31 @@ $color-4: $cyber-grape;
 $primary-color: #444;
 $secondary-color: $light-grey;
 
+
+// -------- Index
+
+$map-opacity: 0.4;
+
+$cool-grey-filter: brightness(0) saturate(100%) invert(63%) sepia(3%) saturate(2287%) hue-rotate(188deg) brightness(92%) contrast(88%);
+
+$yee1-filter: brightness(0) saturate(100%) invert(45%) sepia(29%) saturate(564%) hue-rotate(215deg) brightness(92%) contrast(89%) opacity($map-opacity);
+
+$yee1-filter-half-opacity: brightness(0) saturate(100%) invert(45%) sepia(29%) saturate(564%) hue-rotate(215deg) brightness(92%) contrast(89%) opacity($map-opacity * 2);
+
+$goldenrod-filter: brightness(0) saturate(100%) invert(88%) sepia(35%) saturate(4051%) hue-rotate(346deg) brightness(89%) contrast(86%);
+
+
+$color-2-filter: $yee1-filter;
+$color-3-filter: $goldenrod-filter;
+
+$color-2-half-opacity: rgba( $color-2 , $map-opacity * 2);
+$color-2-filter-2: $yee1-filter-half-opacity;
+
+
+$map-color: rgba( $color-2, $map-opacity);
+$map-color-current: rgba( $color-2, $map-opacity * 2);
+
+
+$branch-color: $map-color;
 
 

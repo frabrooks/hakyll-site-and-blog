@@ -1,5 +1,22 @@
 
+// SCSS imports, no css will be generated from the below imports
+// so, if my understanding is correct, they are safe to import
+// at the top of all files.
+@import '../../declarations/fonts';
+@import '../../declarations/vars';
+@import '../../declarations/mixins';
+@import '../../declarations/colours';
+@import '../../declarations/dimens';
+@import '../../declarations/backgrounds';
 
+
+@import 'index/page-map';
+@import 'index/html-styles';
+@import 'index/nameplate';
+
+
+//////////////////////////////////////////////////////
+// Responsive styles for main content of Index page
 
 
 // Roughly 4k
@@ -16,30 +33,18 @@
 
 // 2/3rd desktop
 @include mLarge {
-
-    // TODO needed?
-    // Remove padding on bottom 3 links
-    #nav-link3 {
-	padding: 0;
-    }
-    #nav-link4 {
-	padding: 0;
-    }
-    #nav-link5 {
-	padding: 0;
-    }
-    
 }
 
 // Exactly half desktop
 @include mMedium {
 
-    // TODO shrink + in dimen
-    // Remove padding on navbar
-    #nav-bar {
-	padding-right: 0;
-	padding-left: 0;
+    #recent-activity-text {
+	p {
+	    flex-direction: column;
+	    align-items: center;
+	}
     }
+    
 }
 
 // First smaller than half desktop
@@ -55,11 +60,22 @@
 //
 @include mSmall { // 832px w/ default font-size
     
-    // Add padding to page-title TODO why + in dimen
-    #page-title {
-	padding-left: 16px;
-    }
+    #recent-activity-text {
+    
+	p {
+	    // Now need to constrain width and put wrap on post links
+	    max-width: 65vw;
 
+	    * {
+		white-space: initial;
+		text-align: center;
+	    }
+
+	    a {
+		margin-top: 0.5rem;
+	    }
+	}
+    }
 }
 
 // All Tablets now
@@ -80,15 +96,9 @@
 //         .
 //
 @include mXXSmall { // 480px w/ default font-size
-    #nav-bar {
-	 margin-right: $nav-link-padding-right/2;
-	 margin-left: $nav-link-padding-left/2;
-     }
 }
 
 // Ridiculously small/narrow for galaxy fold and kin
 @include mStupidSmall { // 240px w/ default font-size
 }
-
-
 

@@ -1,0 +1,48 @@
+
+// SCSS imports, no css will be generated from the below imports
+// so, if my understanding is correct, they are safe to import
+// at the top of all files.
+@import '../../declarations/fonts';
+@import '../../declarations/vars';
+@import '../../declarations/mixins';
+@import '../../declarations/colours';
+@import '../../declarations/dimens';
+@import '../../declarations/backgrounds';
+
+
+// whoami_  , recent-activity_ etc. 
+.terminal-text {   
+    align-self: flex-start;
+    margin-bottom: $terminal-text-heading-margin-bottom;
+    font-size: $terminal-font-size;
+}
+
+
+// Fraser Brooks
+// (actually, <span>Fraser</span> <span>Brooks</span> )
+.prim-heading {
+    font-size: $Fraser-Brooks-font-size;
+    font-weight: $Fraser-Brooks-font-weight;
+
+    // Only set top and bottom here
+    // as left and right are handled
+    // by text-flex-container
+    margin-top: $Fraser-Brooks-margin-top-bottom;
+    margin-bottom: $Fraser-Brooks-margin-top-bottom;
+}
+
+// M.Sci Computer Science
+.sec-heading {
+    font-size: $Sec-Heading-font-size;
+}
+
+
+
+
+
+
+
+
+
+
+

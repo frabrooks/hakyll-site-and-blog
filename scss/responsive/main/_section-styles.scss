@@ -1,6 +1,16 @@
 
+// SCSS imports, no css will be generated from the below imports
+// so, if my understanding is correct, they are safe to import
+// at the top of all files.
+@import '../../declarations/fonts';
+@import '../../declarations/vars';
+@import '../../declarations/mixins';
+@import '../../declarations/colours';
+@import '../../declarations/dimens';
+@import '../../declarations/backgrounds';
 
-
+////////////////////////////////////////////////////
+// Responsive styles for sections (body, footer, .insert-blocks etc)
 
 // Roughly 4k
 @include mStupidLarge {
@@ -16,30 +26,26 @@
 
 // 2/3rd desktop
 @include mLarge {
+    .insert-block {
+	// Give ourselves a little bit more space for page-map
+//	margin-left: 3.5rem;
 
-    // TODO needed?
-    // Remove padding on bottom 3 links
-    #nav-link3 {
-	padding: 0;
+	// Half the top padding
+	padding-top: $insert-block-padding-top / 2;
+	
+	width: auto;
+	min-width: initial;
     }
-    #nav-link4 {
-	padding: 0;
-    }
-    #nav-link5 {
-	padding: 0;
-    }
-    
 }
 
 // Exactly half desktop
 @include mMedium {
-
-    // TODO shrink + in dimen
-    // Remove padding on navbar
-    #nav-bar {
-	padding-right: 0;
-	padding-left: 0;
-    }
+    // Remove extra space given above
+//    .insert-block {
+//	margin-left: 0;
+    //    }
+    
+    
 }
 
 // First smaller than half desktop
@@ -54,12 +60,6 @@
 //   -------------
 //
 @include mSmall { // 832px w/ default font-size
-    
-    // Add padding to page-title TODO why + in dimen
-    #page-title {
-	padding-left: 16px;
-    }
-
 }
 
 // All Tablets now
@@ -80,15 +80,14 @@
 //         .
 //
 @include mXXSmall { // 480px w/ default font-size
-    #nav-bar {
-	 margin-right: $nav-link-padding-right/2;
-	 margin-left: $nav-link-padding-left/2;
-     }
 }
 
 // Ridiculously small/narrow for galaxy fold and kin
 @include mStupidSmall { // 240px w/ default font-size
 }
+
+
+
 
 
 

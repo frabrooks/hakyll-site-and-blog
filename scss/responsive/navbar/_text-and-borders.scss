@@ -3,20 +3,26 @@
 // Mostly borders and one text change in this file
 
 
+// Roughly 4k
+@include mStupidLarge {
+}
 
-// Full desktop but not widescreen
+// Above roughly 3000px width
+@include mXXLarge {
+}
+
+// (Widescreen) Desktop First 
 @include mXLarge {
+    // TODO why is this here?
     // Shrink Nav-bar text-size
     .nav-text {
 	font-size: medium;
     } 
 }
 
-
-// 2/3 Full Desktop
+// 2/3rd desktop
 @include mLarge {
-
-
+    
     // Switch to second logo
     #small-site-logo {
        display: flex;
@@ -57,17 +63,25 @@
     #nav-link4 {
 	border-right: ($separator-width / 2) solid $foreground-color-mid;
     }
-
 }
 
-// Half-desktop
-//@include mMedium {
-//    
-//}
+// Exactly half desktop
+@include mMedium {
+}
 
-// Tablet
-@include mSmall {
-   
+// First smaller than half desktop
+// Size of some tablets
+// Navbar now 3 rows & CV button now centered:
+//
+//    HOME  |CV|    X
+//    --------------    
+//   |  1   |  2   |
+//   |     3      |
+//   |  4  |  5   |
+//   -------------
+//
+@include mSmall { // 832px w/ default font-size
+    
     #page-title {
 	&.show {
 	    border-bottom: initial;
@@ -93,12 +107,11 @@
     }
 }
 
-// Smartphones
-// @include mXSmall {
-// }
+// All Tablets now
+@include mXSmall { // 640px w/ default font-size
+}
 
-// Smartphones
-@include mXXSmall {
+// Small screen & massive font-size only
 // Now single file:
 // i.e.
 //  |     nav-1     |
@@ -110,16 +123,15 @@
 //         .
 //         .
 //         .
-
-
+//
+@include mXXSmall { // 480px w/ default font-size
+    
     // Hide logo on smallest screens (most smartphones)
     // as url will generally be visible and center screen anyway
     #small-site-logo {
        display: none;
     }
 
-    
-    
     // Declare borders for this configuration
     #nav-link1 {
 	border-right: initial;
@@ -137,5 +149,8 @@
     }
 }
 
+// Ridiculously small/narrow for galaxy fold and kin
+@include mStupidSmall { // 240px w/ default font-size
+}
 
 

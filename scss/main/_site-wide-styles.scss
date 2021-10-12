@@ -16,6 +16,11 @@
     box-sizing: border-box;
 }
 
+// (i.e, all branches by default)
+.hidden {
+    display: none;
+}
+
 
 // Used to control the way text will break when
 // displayed on smaller layouts
@@ -42,6 +47,8 @@
 }
 
 
+
+// TODO, what is this doing at this point?
 .icons {
     margin-top: 2rem;
     display: flex;

@@ -10,92 +10,35 @@
 @import '../declarations/backgrounds';
 
 
-.terminal-text {
-    font-family: "Overpass Mono", monospace;
-    align-self: flex-start;
-    margin-bottom: 2rem;
+// Page map (fixed)(icons + traffic-light
+// elem indicating where you are on page)
+@import 'index/page-map';
+//
+@import 'index/nameplate';
+@import 'index/html-styles';
 
-    &:nth-child(n + 2) {
-	align-self: center;
-    }
-    
-}
-
-
-
-#nameplate {
+// Main content
+#recent-activity-text {
     display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-
-    padding-bottom: 2rem;
-    
-}
-
-
-#intro-text {
-    font-size: 1rem;
-    margin-bottom: 4rem;
-//    width: 50rem;
-}
-
-
-#lhs {
-    
-//    display: flex;
-//    flex-direction: column;
-//    justify-content: center;
-//    align-items: center;    
-    
-}
-
-#rhs {
-    display: flex;
+    align-items: center;    
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-
-    padding-left: 2.5rem;
-    padding-bottom: 0.5rem;
-
-    h4 {
-	padding-left: 1rem;
-    }
-
-    h2 {
-	padding-left: 1rem;
-    }
     
-    .icons {
-	display: none;
+    p {
+	// Allow this text to be longer than normal paragraphs as
+	// it's not a typical paragraph
+	max-width: none;
+	margin-bottom: 0.5rem;
+	display: inline-flex;
+
+	* {
+	    white-space: nowrap;
+	}
+
     }
-    
+    .sep {
+	width: $recent-activity-item-sep;
+    }
 }
-
-#portrait {
-    flex: 0 1 auto;
-    width: 175px;
-    height: 175px;
-    margin: 25px;
-    background: $portrait-image;
-    background-size: cover;
-    border-radius: 50%;
-    border: solid 4px $color-2;
-}
-
-
-.prim-heading {
-    font-size: 5rem;
-    font-weight: 500;
-
-    // Only set top and bottom here
-    // as left and right are handled
-    // by text-flex-container
-    margin-top: 0.6rem;
-    margin-bottom: 0.6rem;
-}
-
-    
 
 
 @keyframes blinker{
@@ -105,185 +48,11 @@
     99%{    color:transparent;  }
     100%{   color: $color-1;    }
 }
-
 .blink {
     animation: blinker 1s infinite;
 }
 
 
-/*
-// Full desktop but not widescreen
-@include mXLarge {
-}
-*/
 
-
-// 2/3 Full Desktop
-@include mLarge {
-
-    #lhs {
-	margin-right: 2rem;
-	margin-left: 4rem;
-	flex: 1 0 auto;
-    }
-
-    #rhs {
-	flex: 1 2 auto;
-	margin-right: 4rem;
-    }
-    
-    .prim-heading{
-	font-size: 3.5rem;
-	//font-weight: 500;
-    }
-
-    .sec-heading {
-	font-size: 1.2rem;
-    }
-
-    
-    #intro-text {
-	width: 660px;
-    }
-
-    
-}
-
-
-
-// Half-desktop
-@include mMedium {
-
-    .insert-block {
-	.spacing-top {
-	    flex: 0 1 4vh;
-	}
-    }
-
-    #nameplate {
-	flex-direction: column;
-    }
-    
-    #lhs {
-	margin: 0;
-	
-	h4 {
-	    margin-bottom: 0;
-//	    margin-top: $terminalwhoamimargin; 
-	    order: 5;
-	    //align-self: flex-start;
-	}
-    
-	
-	.icons {
-	    display: none;
-	}
-    }
-
-    #rhs {
-	margin: 0;
-	margin-top: 1rem;
-	
-	.icons {
-	    display: flex;
-	    align-self: center;
-	}
-    }
-
-    #intro-text {
-	width: 580px;
-	font-size: 1.2rem;
-    }
-
-    
-}
-
-
-
-// Tablet
-@include mSmall {
-
-
-    #rhs {
-	h1 {
-	    span {
-		margin-top: 0;
-		margin-bottom: -1rem;
-	    }
-	}
-    }
-    
-    #intro-text {
-	width: 460px;
-    }
-}
-
-
-
-// Smartphones
-@include mXSmall {
-
-    .icons{
-	top: 12rem;
-    }
-    #icons-container {
-	width: 12.2rem;
-    }
-
-    
-    #rhs {
-	margin: 0;
-	margin-top: 1rem;
-	align-items: center;
-    }
-
-    #intro-text {
-	width: 400px;
-    }
-}
-
-
-// Super small
-@include mXXSmall {
-
-    .nav-text {
-	font-size: small;
-    }
-    
-    .text-flex-container {
-
-	h1 {
-	    font-size: 2em;
-	}
-
-	h1.mono-text{
-	    font-size: 0.8em;
-	}
-	
-	h2 {
-	    font-size: 1.5em;
-	}
-
-	h3, h4{
-	    font-size: 1em;
-	}
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@import '../responsive/pages/index';
 
