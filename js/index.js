@@ -2,7 +2,10 @@
  * Index.js handles the displaying, sizing, and updating of the 'site-map', the fixed
  * traffic-light structure that shows where you are on the page with lines (branches)
  * dynamically pointing to the .terminal-text headings as you navigate the page.
-*/
+ */
+
+
+console.log("foofoo");
 
 ////////////////////////////////////////////////////////////
 // Get DOM elements
@@ -50,8 +53,9 @@ const n = 700;
 const marginPx = 5;
 // Branch width
 const bw = parseInt(window.getComputedStyle(branch1).getPropertyValue("border-top-width"));
-// Circle border width
-const cbw = parseInt(window.getComputedStyle(circ1).getPropertyValue("border-width"));
+// Circle border width (Need to ask a specific (-top-) width as firefox throughs a wobbly if not)
+const cbw = parseInt(window.getComputedStyle(circ1).getPropertyValue("border-top-width"));
+
 // Min proportion of gap between circle and heading for branch bend / vertical start
 const min = 0.1;
 // Max proportion of gap between circle and heading for branch bend / vertical start 
@@ -209,10 +213,10 @@ function updateTopBranch(cRect) {
     circleOffset = computeCircleOffset(cWidth);
     
     branchHeight = computeHeight(cRect, t1Rect, circleOffset) - circleOffset - bw;
-
+    
     branch1.style.height = branchHeight + 'px';
     branch1.style.top = '-'+ branchHeight + 'px';
-
+    
     branchWidth = (t1Rect.left - cRect.right) + cWidth/2;
     branch1.style.width = branchWidth - marginPx + 'px';
     branch1.style.left = circleOffset + 'px';
@@ -334,6 +338,6 @@ window.onload = function () {
 setInterval(function(){ 
     //code goes here that will be run every 0.25 seconds.
     updateBranches();
-}, 250);
+}, 250); 
 
 
