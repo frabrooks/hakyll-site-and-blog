@@ -115,8 +115,8 @@
     display: none; }
 
 #portrait {
-  width: 160px;
-  height: 160px;
+  width: 9rem;
+  height: 9rem;
   background: url(../../images/portrait.jpg);
   background-size: cover;
   border-radius: 50%;
@@ -127,7 +127,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-left: 40px; }
+  padding-left: 2.25rem; }
   #top-text .icons {
     display: none; }
   #top-text h4 {
@@ -138,7 +138,7 @@
     padding-left: 1rem; }
 
 #spacer {
-  width: 200px;
+  width: 11.25rem;
   margin-right: 1rem; }
 
 #terminal2 {
@@ -158,7 +158,7 @@
     #recent-activity-text p * {
       white-space: nowrap; }
   #recent-activity-text .sep {
-    width: 4rem; }
+    width: 2rem; }
 
 @keyframes blinker {
   0% {
@@ -171,3 +171,153 @@
     color: transparent; }
   100% {
     color: #8892b0; } }
+
+/* merriweather-sans-regular - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/merriweather-sans-v14-latin-regular.woff2") format("woff2"), url("../fonts/merriweather-sans-v14-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-500 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/merriweather-sans-v14-latin-500.woff2") format("woff2"), url("../fonts/merriweather-sans-v14-latin-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-600 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("../fonts/merriweather-sans-v14-latin-600.woff2") format("woff2"), url("../fonts/merriweather-sans-v14-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-800 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local(""), url("../fonts/merriweather-sans-v14-latin-800.woff2") format("woff2"), url("../fonts/merriweather-sans-v14-latin-800.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-italic - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url("../fonts/merriweather-sans-v14-latin-italic.woff2") format("woff2"), url("../fonts/merriweather-sans-v14-latin-italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-regular - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/fira-code-v10-latin-regular.woff2") format("woff2"), url("../fonts/fira-code-v10-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-500 - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/fira-code-v10-latin-500.woff2") format("woff2"), url("../fonts/fira-code-v10-latin-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-700 - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/fira-code-v10-latin-700.woff2") format("woff2"), url("../fonts/fira-code-v10-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-regular - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/overpass-mono-v6-latin-regular.woff2") format("woff2"), url("../fonts/overpass-mono-v6-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-600 - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("../fonts/overpass-mono-v6-latin-600.woff2") format("woff2"), url("../fonts/overpass-mono-v6-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-700 - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/overpass-mono-v6-latin-700.woff2") format("woff2"), url("../fonts/overpass-mono-v6-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+@media screen and (max-width: 86.3rem) {
+  #top {
+    flex-direction: column;
+    align-items: center; }
+    #top #icon-stack {
+      position: static;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      height: auto;
+      margin: 1rem 0 2rem 0; }
+      #top #icon-stack a {
+        width: 2.28774rem;
+        height: 2.28774rem; }
+        #top #icon-stack a .svg-icon {
+          filter: brightness(0) saturate(100%) invert(45%) sepia(29%) saturate(564%) hue-rotate(215deg) brightness(92%) contrast(89%) opacity(0.8); }
+          #top #icon-stack a .svg-icon:hover {
+            filter: brightness(0) saturate(100%) invert(88%) sepia(35%) saturate(4051%) hue-rotate(346deg) brightness(89%) contrast(86%); }
+    #top #top-text {
+      padding-left: 0;
+      padding-top: 1rem;
+      align-items: center; }
+      #top #top-text h1 span {
+        margin-top: -0.5rem;
+        margin-bottom: -1rem; }
+      #top #top-text h4 {
+        align-self: flex-start; }
+      #top #top-text h2 {
+        align-self: flex-start; }
+  #bottom #spacer {
+    display: none; } }
+
+@media screen and (max-width: 60.1rem) {
+  #nameplate {
+    padding-bottom: 15px; } }
+
+@media screen and (max-width: 52.5rem) {
+  #portrait {
+    width: 7.5rem;
+    height: 7.5rem; }
+  #nameplate {
+    align-items: center; }
+  #top {
+    max-width: 65vw; }
+    #top #top-text .text-flex-container {
+      display: flex;
+      flex-direction: column;
+      align-self: center; }
+    #top #top-text h2.text-flex-container {
+      align-items: center;
+      padding: 0; }
+    #top #top-text h4 {
+      padding-left: 0;
+      padding-right: 1rem;
+      align-self: center; }
+    #top #icon-stack {
+      margin: 0.5rem 0 1rem 0; }
+      #top #icon-stack a {
+        width: 1.52516rem;
+        height: 1.52516rem; } }

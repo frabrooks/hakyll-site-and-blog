@@ -40,10 +40,10 @@ $insert-block-padding-right: 0;
 $insert-block-padding-bottom: 4rem;
 $insert-block-padding-left: 0;
 
-$default-font-size: 1.25rem;
+$default-font-size: 1.125rem;
 
 
-$default-article-text-width: 44rem;
+$default-article-text-width: 39.6rem;
 
 
 $large-article-text-width: 700px; // TODO
@@ -118,7 +118,7 @@ $cv-button-padding-left: 1rem;
 // ---------------------------------------- page map ( icon stack + traffic light)
 
 $page-map-width: 120px;
-$page-map-height: 18rem;
+$page-map-height: 16.2rem;
 $page-map-margin-left: 4vw;
 
 $map-line-width: 10px;
@@ -130,8 +130,8 @@ $stem-width: $map-circle-width;
 $icon-stack-padding-top: 0.5rem;
 
 
-$circle-size: 2rem;
-$s-c-margin: 0.16;
+$circle-size: 1.82rem;
+$s-c-margin: 0.162;
 $sub-circle-margin: $s-c-margin * $circle-size;
 $sub-circle-size: $circle-size - (2 * $sub-circle-margin) - (2 * $map-circle-width);
 
@@ -146,20 +146,19 @@ $fixed-icon-padding: 4px;
 
 // ----------------------------------------- Index (page contents)
 
-$terminal-font-size: 1.4rem;
+$terminal-font-size: 1.25rem;
 $hello-my-name-is-spacing: 0.2rem;
 $terminal-text-heading-margin-bottom: 1rem;
 $nameplate-padding-bottom: 30px;
 
-$portrait-size: 160px;
-$top-text-padding-left: 40px;
+$portrait-size: 9rem;
+$top-text-padding-left: 2.25rem;
 
-$Fraser-Brooks-font-size: 5rem;
-$Fraser-Brooks-font-weight: 500;
-$Fraser-Brooks-margin-top-bottom: 0.6rem;
-$Sec-Heading-font-size: 2.2rem;
+$fraser-brooks-font-size: 4.5rem;
+$fraser-brooks-font-weight: 500;
+$fraser-brooks-margin-top-bottom: 0.6rem;
+$sec-heading-font-size: 2rem;
 
-$recent-activity-font-size: medium;
-$recent-activity-item-sep: 4rem;
+$recent-activity-item-sep: 2rem;
 
 

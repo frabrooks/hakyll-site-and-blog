@@ -124,18 +124,18 @@ h1,h2,h3,h4,h5{
 // Fraser Brooks
 // (actually, <span>Fraser</span> <span>Brooks</span> )
 .prim-heading {
-    font-size: $Fraser-Brooks-font-size;
-    font-weight: $Fraser-Brooks-font-weight;
+    font-size: $fraser-brooks-font-size;
+    font-weight: $fraser-brooks-font-weight;
 
     // Only set top and bottom here
     // as left and right are handled
     // by text-flex-container
-    margin-top: $Fraser-Brooks-margin-top-bottom;
-    margin-bottom: $Fraser-Brooks-margin-top-bottom;
+    margin-top: $fraser-brooks-margin-top-bottom;
+    margin-bottom: $fraser-brooks-margin-top-bottom;
 }
 // M.Sci Computer Science
 .sec-heading {
-    font-size: $Sec-Heading-font-size;
+    font-size: $sec-heading-font-size;
 }
 
 

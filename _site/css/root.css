@@ -165,22 +165,22 @@ h1, h2, h3, h4, h5 {
 .terminal-text {
   align-self: flex-start;
   margin-bottom: 1rem;
-  font-size: 1.4rem; }
+  font-size: 1.25rem; }
 
 .prim-heading {
-  font-size: 5rem;
+  font-size: 4.5rem;
   font-weight: 500;
   margin-top: 0.6rem;
   margin-bottom: 0.6rem; }
 
 .sec-heading {
-  font-size: 2.2rem; }
+  font-size: 2rem; }
 
 p {
   font-family: "Merriweather Sans", "Helvetica";
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: #8892b0;
-  max-width: 44rem; }
+  max-width: 39.6rem; }
 
 .small {
   font-size: 1rem; }
@@ -326,21 +326,36 @@ a {
   .insert-block {
     padding-top: 2rem;
     width: auto;
-    min-width: initial; } }
+    min-width: initial; }
+  .terminal-text {
+    padding-bottom: 1rem;
+    font-size: 1.04167rem;
+    align-self: center; }
+  .terminal-text:before {
+    content: '';
+    width: 60vw;
+    height: 2rem;
+    position: absolute;
+    left: 20vw;
+    background: rgba(120, 106, 160, 0.1); } }
 
 @media screen and (max-width: 52.5rem) {
   p {
-    max-width: 29.33333rem;
+    max-width: 26.4rem;
     margin-top: 1rem; }
   #recent-activity-text .terminal-text {
-    margin-top: 2rem; } }
+    margin-top: 2rem; }
+  .prim-heading {
+    font-size: 3.75rem; }
+  .sec-heading {
+    font-size: 1.33333rem; } }
 
 @media screen and (max-width: 40rem) {
   .terminal-text {
     align-self: center; }
   p {
     max-width: 65vw;
-    font-size: 1rem; } }
+    font-size: 0.9rem; } }
 
 #nav-bar {
   background: linear-gradient(to right, rgba(10, 25, 47, 0), #0a192f 25% 75%, rgba(10, 25, 47, 0));
@@ -821,7 +836,7 @@ a {
   left: 0;
   margin-left: 4vw;
   width: 120px;
-  height: 18rem;
+  height: 16.2rem;
   max-height: 50vh;
   display: flex;
   justify-content: space-between; }
@@ -839,14 +854,14 @@ a {
 
 #icon-stack {
   position: fixed;
-  height: 18rem;
+  height: 16.2rem;
   margin-right: 4vw;
   right: 0;
   bottom: 0; }
   #icon-stack a {
     transition: all 0.2s ease-out;
-    width: 1.68rem;
-    height: 1.68rem;
+    width: 1.52516rem;
+    height: 1.52516rem;
     margin: 4px;
     text-align: center; }
   #icon-stack a:hover {
@@ -878,19 +893,19 @@ a {
     filter: brightness(0) saturate(100%) invert(88%) sepia(35%) saturate(4051%) hue-rotate(346deg) brightness(89%) contrast(86%); }
 
 .circle {
-  width: 2rem;
-  height: 2rem;
+  width: 1.82rem;
+  height: 1.82rem;
   border: 0.125rem solid rgba(120, 106, 160, 0.4);
-  border-radius: 1rem;
+  border-radius: 0.91rem;
   position: relative; }
 
 .subCircle {
   position: absolute;
   top: 0;
   left: 0;
-  margin: 0.32rem;
-  width: 1.11rem;
-  height: 1.11rem;
+  margin: 0.29484rem;
+  width: 0.98032rem;
+  height: 0.98032rem;
   border-radius: 50%;
   background-color: rgba(120, 106, 160, 0.4);
   transition: all 0.05s ease-out;
@@ -1008,3 +1023,11 @@ a {
   font-weight: 700;
   src: local(""), url("../fonts/overpass-mono-v6-latin-700.woff2") format("woff2"), url("../fonts/overpass-mono-v6-latin-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+@media screen and (max-width: 86.3rem) {
+  #page-map-root {
+    margin-left: 2vw; }
+  #icon-stack {
+    display: none; }
+  .branch {
+    display: none; } }

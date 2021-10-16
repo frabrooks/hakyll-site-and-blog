@@ -10,19 +10,19 @@
 @import '../../declarations/backgrounds';
 
 // Roughly 4k
-@mixin mStupidLarge {
+@include mStupidLarge {
 }
 
 // Above roughly 3000px width
-@mixin mXXLarge {
+@include mXXLarge {
 }
 
 // (Widescreen) Desktop First 
-@mixin mXLarge {
+@include mXLarge {
 }
 
 // 2/3rd desktop
-@mixin mLarge {
+@include mLarge {
 
     #page-map-root {
 	margin-left: $page-map-margin-left / 2;
@@ -34,23 +34,10 @@
     .branch {
 	display: none;
     }
-
-    .terminal-text {
-	padding-bottom: 1rem;
-    }
-    
-    .terminal-text:before {
-	content:'';
-	width: 40%;
-	height: 2rem;
-	position: absolute;
-	background: rgba($map-color , 0.1);
-	// TODO make this gradient
-    }
 }
 
 // Exactly half desktop
-@mixin mMedium {
+@include mMedium {
 }
 
 // First smaller than half desktop
@@ -64,19 +51,19 @@
 //   |  4  |  5   |
 //   -------------
 //
-@mixin mSmall { // 832px w/ default font-size
+@include mSmall { // 832px w/ default font-size
 }
 
 // All Tablets now
-@mixin mXSmall { // 640px w/ default font-size
+@include mXSmall { // 640px w/ default font-size
 }
 
 // Small screen & massive font-size only
-@mixin mXXSmall { // 480px w/ default font-size
+@include mXXSmall { // 480px w/ default font-size
 }
 
 // Ridiculously small/narrow for galaxy fold and kin
-@mixin mStupidSmall { // 240px w/ default font-size
+@include mStupidSmall { // 240px w/ default font-size
 }
 
 

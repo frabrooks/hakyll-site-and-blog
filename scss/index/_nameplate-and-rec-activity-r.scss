@@ -1,3 +1,189 @@
 
+// SCSS imports, no css will be generated from the below imports
+// so, if my understanding is correct, they are safe to import
+// at the top of all files.
+@import '../declarations/fonts';
+@import '../declarations/vars';
+@import '../declarations/mixins';
+@import '../declarations/colours';
+@import '../declarations/dimens';
+@import '../declarations/backgrounds';
+
+
+//////////////////////////////////////////////////////////////////////////
+// Responsive styles for nameplate and recent-activity section (the stuff
+// that is visible when you land on index page.)
+
+
+
+// Roughly 4k
+@include mStupidLarge {
+}
+
+// Above roughly 3000px width
+@include mXXLarge {
+}
+
+// (Widescreen) Desktop First 
+@include mXLarge {
+}
+
+// 2/3rd desktop
+@include mLarge {
+
+    #top {
+	flex-direction: column;
+	align-items: center;
+
+	#icon-stack {
+	    position: static;
+	    display: flex;
+	    flex-direction: row;
+	    justify-content: space-around;
+	    width: 100%;
+	    height: auto;
+	    margin: 1rem 0 2rem 0;
+	    
+
+	    a {
+		width: $fixed-icon-size * 1.5;
+		height: $fixed-icon-size * 1.5;
+
+		.svg-icon {
+		    filter: $color-2-filter-2;
+		    &:hover {
+			filter: $color-3-filter;
+		    }
+		}
+
+	    }
+	    
+	}
+
+	
+	#top-text {
+	    padding-left: 0;
+	    padding-top: 1rem;
+	    align-items: center;
+	    h1 {
+		span {
+		    margin-top: -0.5rem;
+		    margin-bottom: -1rem;
+		}
+	    }
+	    h4 {
+		align-self: flex-start;
+	    }
+	    h2 {
+		align-self: flex-start;
+	    }
+	    
+	}
+	
+    }
+    #bottom {
+	#spacer {
+	    display: none;
+	}
+    }
+    
+}
+
+// Exactly half desktop
+@include mMedium {
+
+    #nameplate {
+	padding-bottom: $nameplate-padding-bottom / 2;
+    }
+    
+}
+
+// First smaller than half desktop
+// Size of some tablets
+// Navbar now 3 rows & CV button now centered:
+//
+//    HOME  |CV|    X
+//    --------------    
+//   |  1   |  2   |
+//   |     3      |
+//   |  4  |  5   |
+//   -------------
+//
+@include mSmall { // 832px w/ default font-size
+
+    #portrait {
+	width: 5 * ($portrait-size / 6);
+	height: 5 * ($portrait-size / 6);
+    }
+    
+    #nameplate {
+	align-items: center;
+    }
+
+
+    #top {
+
+	max-width: 65vw;
+
+	#top-text {
+
+	    .text-flex-container {
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+	    }
+		
+	    h2.text-flex-container{
+		align-items: center;
+		padding: 0;
+	    }	
+	    
+	    
+	    h4 {
+		padding-left: 0;
+		padding-right: 1rem;
+		align-self: center;
+	    }
+	}
+	
+    	#icon-stack {
+	    margin: 0.5rem 0 1rem 0;
+	    
+
+	    a {
+		width: $fixed-icon-size;
+		height: $fixed-icon-size;
+		
+	    }
+	
+	}
+    }
+    
+}
+
+// All Tablets now
+@include mXSmall { // 640px w/ default font-size
+}
+
+// Small screen & massive font-size only
+// Now single file:
+// i.e.
+//  |     nav-1     |
+//  ----------------
+//  |      nav-2    |
+//  ----------------
+//  |     nav-3     | 
+//  ----------------
+//         .
+//         .
+//         .
+//
+@include mXXSmall { // 480px w/ default font-size
+}
+
+// Ridiculously small/narrow for galaxy fold and kin
+@include mStupidSmall { // 240px w/ default font-size
+}
+
 
 

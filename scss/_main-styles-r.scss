@@ -47,6 +47,23 @@
 	width: auto;
 	min-width: initial;
     }
+
+    
+    .terminal-text {
+	padding-bottom: 1rem;
+	font-size: 5  * $terminal-font-size / 6;
+	align-self: center;
+    }    
+    .terminal-text:before {
+	content:'';
+	width: 60vw;
+	height: 2rem;
+	position: absolute;
+	left: 20vw;
+	background: rgba($map-color , 0.1);
+	// TODO make this gradient
+    }
+
     
 }
 
@@ -78,6 +95,15 @@
 	    margin-top: 2rem;
 	}
     }
+
+    .prim-heading {
+	font-size: 5 * ($fraser-brooks-font-size / 6);
+    }
+
+    .sec-heading {
+	font-size: 2 * ($sec-heading-font-size / 3);
+    }
+    
 }
 
 // All Tablets now
