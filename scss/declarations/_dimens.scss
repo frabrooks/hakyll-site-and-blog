@@ -6,6 +6,7 @@ $scale-padding: 4rem;
 $no-scale-padding: 34px;
 $bottom-nav-bar-gap: 1rem;
 $separator-width: 3px;
+$separator-height: 80%;
 
 // TODO rem-ify above
 
@@ -13,6 +14,13 @@ $separator-width: 3px;
 
 
 //------------------------------------------------ Site-wide
+
+// Min-width in pix, actual width in rem. The value of 55rem ensures
+// that when font size is set to default, min-pixel steps in to set
+// width at 1000px, while on larger font sizes 55rem > 1000px
+// The end result is that the insert-block width can grow with the font
+$insert-block-width: 55rem;
+$insert-block-min-width: 1000px;    
 
 
 $insert-block-height: auto;
@@ -38,12 +46,17 @@ $default-font-size: 1.25rem;
 $default-article-text-width: 44rem;
 
 
-
 $large-article-text-width: 700px; // TODO
 $medium-article-text-width: 700px; // TODO
 $small-article-text-width: 700px; // TODO
 $xsmall-article-text-width: 700px;
 $xxsmall-article-text-width: 700px;
+
+$word-spacing-text-flex: 0.125em;
+
+$footer-padding: 1rem;
+$footer-margin-bottom: 2rem;
+
 
 
 //-------------------------------------------------Navbar
@@ -82,7 +95,10 @@ $nav-link-padding-left: $nav-link-padding;
 
 //Separator Widths
 //
+//
+// TODO, this is actually margin, not width
 $logo-title-separator-width: 1.2rem;
+//
 // Both use the same def. for symmetry
 $button-separator-and-page-title-separator-width: 0.2rem;
 

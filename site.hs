@@ -30,12 +30,13 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
-    match "scss/*.scss" $ do
+    match (fromRegex "scss/[^_]*.scss|scss/*/[^_]*.scss") $ do
         let css = (T.pack "css")
         let scss = (T.pack "scss")
         let replace = T.replace scss css
         route $ customRoute $ T.unpack  . replace . T.pack  . toFilePath
         compile sassCompiler
+
 
     match "scss/pages/*.scss" $ do
         let css = (T.pack "css")

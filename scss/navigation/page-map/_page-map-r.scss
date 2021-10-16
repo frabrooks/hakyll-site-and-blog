@@ -9,38 +9,48 @@
 @import '../../declarations/dimens';
 @import '../../declarations/backgrounds';
 
-////////////////////////////////////////////////////
-// Responsive styles for site wide styles
-
-
 // Roughly 4k
-@include mStupidLarge {
+@mixin mStupidLarge {
 }
 
 // Above roughly 3000px width
-@include mXXLarge {
-    html {
-	font-size: 250%;
-    }
+@mixin mXXLarge {
 }
 
 // (Widescreen) Desktop First 
-@include mXLarge {
+@mixin mXLarge {
 }
 
 // 2/3rd desktop
-@include mLarge {
-    html {
-	font-size: 85%
+@mixin mLarge {
+
+    #page-map-root {
+	margin-left: $page-map-margin-left / 2;
+    }
+    #icon-stack {
+	display: none;
+    }
+
+    .branch {
+	display: none;
+    }
+
+    .terminal-text {
+	padding-bottom: 1rem;
+    }
+    
+    .terminal-text:before {
+	content:'';
+	width: 40%;
+	height: 2rem;
+	position: absolute;
+	background: rgba($map-color , 0.1);
+	// TODO make this gradient
     }
 }
 
 // Exactly half desktop
-@include mMedium {
-    // Remove extra space given above
-    .insert-block {
-	margin-left: 0;
-    }
+@mixin mMedium {
 }
 
 // First smaller than half desktop
@@ -54,32 +64,19 @@
 //   |  4  |  5   |
 //   -------------
 //
-@include mSmall { // 832px w/ default font-size
+@mixin mSmall { // 832px w/ default font-size
 }
 
 // All Tablets now
-@include mXSmall { // 640px w/ default font-size
+@mixin mXSmall { // 640px w/ default font-size
 }
 
 // Small screen & massive font-size only
-// Now single file:
-// i.e.
-//  |     nav-1     |
-//  ----------------
-//  |      nav-2    |
-//  ----------------
-//  |     nav-3     | 
-//  ----------------
-//         .
-//         .
-//         .
-//
-@include mXXSmall { // 480px w/ default font-size
+@mixin mXXSmall { // 480px w/ default font-size
 }
 
 // Ridiculously small/narrow for galaxy fold and kin
-@include mStupidSmall { // 240px w/ default font-size
+@mixin mStupidSmall { // 240px w/ default font-size
 }
-
 
 
