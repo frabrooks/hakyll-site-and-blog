@@ -43,14 +43,16 @@ $insert-block-padding-left: 0;
 $default-font-size: 1.125rem;
 
 
-$default-article-text-width: 39.6rem;
+// Aim for max 75 character width as per
+// the dictates of the typography cartel
+$default-text-width: 39.6rem;
 
+// Smaller layouts aim for 38 character size
+// as about 44 seems to be common on mobile apps
+// where the text runs edge to edge. So aim
+// a bit less leaving room for margin/page-map
+$small-text-width: 27rem;
 
-$large-article-text-width: 700px; // TODO
-$medium-article-text-width: 700px; // TODO
-$small-article-text-width: 700px; // TODO
-$xsmall-article-text-width: 700px;
-$xxsmall-article-text-width: 700px;
 
 $word-spacing-text-flex: 0.125em;
 
@@ -118,22 +120,30 @@ $cv-button-padding-left: 1rem;
 // ---------------------------------------- page map ( icon stack + traffic light)
 
 $page-map-width: 120px;
-$page-map-height: 16.2rem;
+$page-map-height: 17.5rem;
 $page-map-margin-left: 4vw;
 
 $map-line-width: 10px;
 $map-circle-width: 0.125rem;
 $map-style: double;
 
-$stem-height: 90px;
+$stem-height: 50px;
 $stem-width: $map-circle-width;
 $icon-stack-padding-top: 0.5rem;
 
 
-$circle-size: 1.82rem;
-$s-c-margin: 0.162;
+$circle-size: 1.875rem;
+$s-c-margin: 0.16666;
 $sub-circle-margin: $s-c-margin * $circle-size;
 $sub-circle-size: $circle-size - (2 * $sub-circle-margin) - (2 * $map-circle-width);
+
+// Circles on small page when they're half off screen
+$circ-grow-factor: 1.5;
+$circle-size-small: $circle-size * $circ-grow-factor;
+$s-c-margin-small: 0.16666;
+$sub-circle-margin-small: $s-c-margin-small * $circle-size-small;
+$sub-circle-size-small: $circle-size-small - (2 * $sub-circle-margin-small) - (2 * $map-circle-width * $circ-grow-factor);
+
 
 
 //                                  -- Border counts in width --

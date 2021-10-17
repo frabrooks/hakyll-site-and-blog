@@ -21,13 +21,41 @@
 @include mXLarge {
 }
 
+@media screen and (max-width: 100.4rem) {
+
+    .icon-stack {
+
+	margin-right: $page-map-margin-left * 2;
+	
+	p {
+	    position: fixed;
+	    margin: 0;
+	    right: 3vw;
+	    bottom: $stem-height + 36px;
+	    top: initial;
+	}
+	
+	p:after {
+	    position: fixed;
+	    right: 3.8vw;
+	    bottom: 0;
+	    left: initial;
+	    height: $stem-height;
+	}	
+    }
+
+    
+    
+}
+
 // 2/3rd desktop
 @include mLarge {
 
     #page-map-root {
+
 	margin-left: $page-map-margin-left / 2;
     }
-    #icon-stack {
+    .icon-stack {
 	display: none;
     }
 
@@ -56,6 +84,39 @@
 
 // All Tablets now
 @include mXSmall { // 640px w/ default font-size
+
+
+    // Change page-map to half-hidden/off-page version
+    #page-map-root {
+	left: - $circle-size-small / 2.125;
+	height: 100vh;
+	max-height: 100vh;
+	margin: 0;
+    }
+    
+    #traffic-light {
+
+	.invisible {
+	    opacity: 1;
+	}
+
+	.stem, .map-sep {
+	    width: $stem-width * 6;
+	}	
+    }
+    
+    .circle {
+	width: $circle-size-small;
+	height: $circle-size-small;
+	border: ($map-circle-width * $circ-grow-factor) solid $branch-color;
+    }
+
+    .subCircle {
+	width: $sub-circle-size-small;
+	height: $sub-circle-size-small;
+	margin: $sub-circle-margin-small;
+    }
+    
 }
 
 // Small screen & massive font-size only
@@ -63,7 +124,23 @@
 }
 
 // Ridiculously small/narrow for galaxy fold and kin
-@include mStupidSmall { // 240px w/ default font-size
+@include mStupidSmall { // 280px w/ default font-size
+
+
+    // Seems to be some weird visual thing going on with
+    // fold where 100vh or 100% don't return 100vh but
+    // rather 100vh - height of scroll bar. Not sure if
+    // it is just in the emulator or on the actual device
+    // but the workaround for now is just make the top
+    // separator invisible again and accept that the
+    // page-map won't extend the full height of the page.
+    #traffic-light {
+
+	.invisible {
+	    opacity: 0;
+	}
+    }
+    
 }
 
 

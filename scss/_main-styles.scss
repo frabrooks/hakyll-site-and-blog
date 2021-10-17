@@ -28,6 +28,11 @@
     display: none;
 }
 
+.invisible {
+    opacity: 0;
+}
+
+
 // Used to control the way text will break when
 // displayed on smaller layouts
 .text-flex-container {
@@ -143,9 +148,9 @@ p {
     @include font-vw;
     font-size: $default-font-size;
     color: $default-font-color;
-    max-width: $default-article-text-width;
+    max-width: $default-text-width;
 }
-// TODO: I don't these are currently being used anywhere
+// TODO: I don't think these are currently being used anywhere
 .small {
     font-size: 1rem;
 }

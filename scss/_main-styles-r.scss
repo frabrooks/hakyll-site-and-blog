@@ -37,7 +37,7 @@
 // 2/3rd desktop
 @include mLarge {
     html {
-	font-size: 85%
+	font-size: 90%
     }
 
     .insert-block {
@@ -48,10 +48,9 @@
 	min-width: initial;
     }
 
-    
     .terminal-text {
 	padding-bottom: 1rem;
-	font-size: 5  * $terminal-font-size / 6;
+	font-size: $terminal-font-size;
 	align-self: center;
     }    
     .terminal-text:before {
@@ -86,7 +85,7 @@
 
 
     p {
-	max-width: 2 * ($default-article-text-width / 3);
+	max-width: $small-text-width;
 	margin-top: 1rem;
     }
 
@@ -107,15 +106,14 @@
 }
 
 // All Tablets now
-@include mXSmall { // 640px w/ default font-size
+@include mXSmall { // 640px w/ default font-size (40rem)
 
     .terminal-text {
 	align-self: center;
     }
     
     p {
-	max-width: 65vw;
-	font-size: 4 * ($default-font-size / 5);
+	max-width: 65vw;	
     }    
 }
 
@@ -124,7 +122,7 @@
 }
 
 // Ridiculously small/narrow for galaxy fold and kin
-@include mStupidSmall { // 240px w/ default font-size
+@include mStupidSmall { // 280px w/ default font-size
 }
 
 

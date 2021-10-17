@@ -98,6 +98,9 @@
 .hidden {
   display: none; }
 
+.invisible {
+  opacity: 0; }
+
 .text-flex-container {
   display: inline-flex;
   white-space: nowrap;
@@ -322,14 +325,14 @@ a {
 
 @media screen and (max-width: 86.3rem) {
   html {
-    font-size: 85%; }
+    font-size: 90%; }
   .insert-block {
     padding-top: 2rem;
     width: auto;
     min-width: initial; }
   .terminal-text {
     padding-bottom: 1rem;
-    font-size: 1.04167rem;
+    font-size: 1.25rem;
     align-self: center; }
   .terminal-text:before {
     content: '';
@@ -341,7 +344,7 @@ a {
 
 @media screen and (max-width: 52.5rem) {
   p {
-    max-width: 26.4rem;
+    max-width: 27rem;
     margin-top: 1rem; }
   #recent-activity-text .terminal-text {
     margin-top: 2rem; }
@@ -354,8 +357,7 @@ a {
   .terminal-text {
     align-self: center; }
   p {
-    max-width: 65vw;
-    font-size: 0.9rem; } }
+    max-width: 65vw; } }
 
 #nav-bar {
   background: linear-gradient(to right, rgba(10, 25, 47, 0), #0a192f 25% 75%, rgba(10, 25, 47, 0));
@@ -694,7 +696,7 @@ a {
   #nav-link5 {
     flex-basis: 51%; } }
 
-@media screen and (max-width: 15rem) {
+@media screen and (max-width: 17.6rem) {
   #cv-link a p {
     font-size: small; } }
 
@@ -836,12 +838,12 @@ a {
   left: 0;
   margin-left: 4vw;
   width: 120px;
-  height: 16.2rem;
+  height: 17.5rem;
   max-height: 50vh;
   display: flex;
   justify-content: space-between; }
 
-#traffic-light, #icon-stack {
+#traffic-light, .icon-stack {
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -849,30 +851,28 @@ a {
 #traffic-light {
   height: 100%; }
 
-#icon-stack {
+.icon-stack {
   height: 100%; }
 
-#icon-stack {
+.icon-stack {
   position: fixed;
-  height: 16.2rem;
+  height: 17.5rem;
   margin-right: 4vw;
   right: 0;
   bottom: 0; }
-  #icon-stack a {
+  .icon-stack a {
     transition: all 0.2s ease-out;
-    width: 1.52516rem;
-    height: 1.52516rem;
+    width: 1.56251rem;
+    height: 1.56251rem;
     margin: 4px;
     text-align: center; }
-  #icon-stack a:hover {
+  .icon-stack a:hover {
     transform: scaleX(1.1) scaleY(1.1); }
-  #icon-stack .stem {
-    background-color: rgba(120, 106, 160, 0.4);
-    background-clip: content-box;
-    padding-top: 16px; }
+  .icon-stack .stem {
+    background-color: rgba(120, 106, 160, 0.4); }
 
 .stem {
-  height: 90px;
+  height: 50px;
   width: 0.125rem;
   background-color: rgba(120, 106, 160, 0.4); }
 
@@ -882,8 +882,22 @@ a {
   flex-basis: 1%;
   background-color: rgba(120, 106, 160, 0.4); }
 
-#icon-stack .map-sep {
-  background: none; }
+.icon-stack p {
+  position: absolute;
+  letter-spacing: 0.25rem;
+  top: -25.375rem;
+  color: #786aa0;
+  writing-mode: vertical-lr;
+  text-orientation: sideways; }
+
+.icon-stack p:after {
+  position: absolute;
+  left: 0.6875rem;
+  bottom: -48px;
+  content: '';
+  width: 0.125rem;
+  height: 32px;
+  background-color: rgba(120, 106, 160, 0.4); }
 
 .svg-icon {
   width: 100%;
@@ -893,19 +907,19 @@ a {
     filter: brightness(0) saturate(100%) invert(88%) sepia(35%) saturate(4051%) hue-rotate(346deg) brightness(89%) contrast(86%); }
 
 .circle {
-  width: 1.82rem;
-  height: 1.82rem;
+  width: 1.875rem;
+  height: 1.875rem;
   border: 0.125rem solid rgba(120, 106, 160, 0.4);
-  border-radius: 0.91rem;
+  border-radius: 50%;
   position: relative; }
 
 .subCircle {
   position: absolute;
   top: 0;
   left: 0;
-  margin: 0.29484rem;
-  width: 0.98032rem;
-  height: 0.98032rem;
+  margin: 0.31249rem;
+  width: 1.00002rem;
+  height: 1.00002rem;
   border-radius: 50%;
   background-color: rgba(120, 106, 160, 0.4);
   transition: all 0.05s ease-out;
@@ -1024,10 +1038,49 @@ a {
   src: local(""), url("../fonts/overpass-mono-v6-latin-700.woff2") format("woff2"), url("../fonts/overpass-mono-v6-latin-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
+@media screen and (max-width: 100.4rem) {
+  .icon-stack {
+    margin-right: 8vw; }
+    .icon-stack p {
+      position: fixed;
+      margin: 0;
+      right: 3vw;
+      bottom: 86px;
+      top: initial; }
+    .icon-stack p:after {
+      position: fixed;
+      right: 3.8vw;
+      bottom: 0;
+      left: initial;
+      height: 50px; } }
+
 @media screen and (max-width: 86.3rem) {
   #page-map-root {
     margin-left: 2vw; }
-  #icon-stack {
+  .icon-stack {
     display: none; }
   .branch {
     display: none; } }
+
+@media screen and (max-width: 40rem) {
+  #page-map-root {
+    left: -1.32353rem;
+    height: 100vh;
+    max-height: 100vh;
+    margin: 0; }
+  #traffic-light .invisible {
+    opacity: 1; }
+  #traffic-light .stem, #traffic-light .map-sep {
+    width: 0.75rem; }
+  .circle {
+    width: 2.8125rem;
+    height: 2.8125rem;
+    border: 0.1875rem solid rgba(120, 106, 160, 0.4); }
+  .subCircle {
+    width: 1.50004rem;
+    height: 1.50004rem;
+    margin: 0.46873rem; } }
+
+@media screen and (max-width: 17.6rem) {
+  #traffic-light .invisible {
+    opacity: 0; } }

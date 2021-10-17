@@ -175,7 +175,7 @@ $eof: $ease-out-fast;
 
 // Ridiculously small/narrow for galaxy fold and kin
 @mixin mStupidSmall { // 240px w/ default font-size
-    @media screen and (max-width: 15rem) {
+    @media screen and (max-width: 17.6rem) {
 	@content;
     }
 }

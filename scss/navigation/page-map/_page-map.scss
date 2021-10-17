@@ -22,7 +22,7 @@
     justify-content: space-between;
 }
 
-#traffic-light, #icon-stack {
+#traffic-light, .icon-stack {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,11 +33,11 @@
     height: 100%;
 }
 
-#icon-stack {
+.icon-stack {
     height: 100%;
 }
 
-#icon-stack {
+.icon-stack {
     // Position icon stack on rhs of page
     position: fixed;
     height: $page-map-height;
@@ -56,9 +56,6 @@
     }	
     .stem {
 	background-color: $map-color;
-	// Background not include padding
-	background-clip: content-box;
-	padding-top: $icon-stem-padding-top;
     }
 }
 
@@ -74,9 +71,25 @@
     flex-basis: 1%;
     background-color: $branch-color;
 }
-#icon-stack {
-    .map-sep {
-	background: none;
+.icon-stack {
+
+    p {
+	position: absolute;
+	letter-spacing: 0.25rem;
+	top: - $page-map-height * 1.45;
+	color: $color-2;
+	writing-mode: vertical-lr;
+	text-orientation: sideways;
+    }
+
+    p:after {
+	position: absolute;
+	left: $default-font-size / 2 + 0.125rem;
+	bottom: -48px;
+	content: '';
+	width: 0.125rem;
+	height: 32px;
+	background-color: $map-color;
     }
 }
 
@@ -97,7 +110,7 @@
     width: $circle-size;
     height: $circle-size;
     border: $map-circle-width solid $branch-color;
-    border-radius: $circle-size / 2;
+    border-radius: 50%;
     position: relative;
 }
 

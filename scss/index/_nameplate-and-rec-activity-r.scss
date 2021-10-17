@@ -31,18 +31,28 @@
 // 2/3rd desktop
 @include mLarge {
 
+
+    #portrait {
+	width: $portrait-size * 1.2;
+	height: $portrait-size * 1.2;
+    }
+    
+    #terminal1 {
+	display: none;
+    }
+    
     #top {
 	flex-direction: column;
 	align-items: center;
 
-	#icon-stack {
+	.icon-stack {
 	    position: static;
 	    display: flex;
 	    flex-direction: row;
 	    justify-content: space-around;
 	    width: 100%;
 	    height: auto;
-	    margin: 1rem 0 2rem 0;
+	    margin: 1rem 0 1rem 0;
 	    
 
 	    a {
@@ -59,7 +69,6 @@
 	    }
 	    
 	}
-
 	
 	#top-text {
 	    padding-left: 0;
@@ -71,13 +80,9 @@
 		    margin-bottom: -1rem;
 		}
 	    }
-	    h4 {
-		align-self: flex-start;
-	    }
 	    h2 {
-		align-self: flex-start;
-	    }
-	    
+		margin-top: 0
+	    }	    
 	}
 	
     }
@@ -92,8 +97,24 @@
 // Exactly half desktop
 @include mMedium {
 
-    #nameplate {
-	padding-bottom: $nameplate-padding-bottom / 2;
+    #recent-activity-text {
+
+	p {
+	    max-width: $small-text-width;
+	    flex-direction: column;
+	    align-items: center;
+	    
+	    * {
+		white-space: normal;
+	    }
+	}
+
+	a {
+	    margin-top: 1rem;
+	    max-width: 15rem;
+	    text-align: center;
+	}	    
+	
     }
     
 }
@@ -112,12 +133,13 @@
 @include mSmall { // 832px w/ default font-size
 
     #portrait {
-	width: 5 * ($portrait-size / 6);
-	height: 5 * ($portrait-size / 6);
+	width: $portrait-size;
+	height: $portrait-size;
     }
     
     #nameplate {
 	align-items: center;
+	padding-bottom: $nameplate-padding-bottom / 2;
     }
 
 
@@ -146,7 +168,7 @@
 	    }
 	}
 	
-    	#icon-stack {
+    	.icon-stack {
 	    margin: 0.5rem 0 1rem 0;
 	    
 
@@ -158,7 +180,11 @@
 	
 	}
     }
-    
+
+    #intro-text {
+	text-align: center;
+    }
+		
 }
 
 // All Tablets now
@@ -182,7 +208,7 @@
 }
 
 // Ridiculously small/narrow for galaxy fold and kin
-@include mStupidSmall { // 240px w/ default font-size
+@include mStupidSmall { // 280px w/ default font-size
 }
 
 
