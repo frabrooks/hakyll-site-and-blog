@@ -80,10 +80,6 @@
 //         .
 //
 @include mXXSmall { // 480px w/ default font-size
-    #nav-bar {
-	 margin-right: $nav-link-padding-right/2;
-	 margin-left: $nav-link-padding-left/2;
-     }
 }
 
 // Ridiculously small/narrow for galaxy fold and kin

@@ -717,11 +717,6 @@ a {
   #page-title {
     padding-left: 16px; } }
 
-@media screen and (max-width: 30rem) {
-  #nav-bar {
-    margin-right: 0.75rem;
-    margin-left: 0.75rem; } }
-
 @media screen and (max-width: 86.3rem) {
   #site-logo {
     display: none; }
