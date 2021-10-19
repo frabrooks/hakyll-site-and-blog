@@ -1,0 +1,28 @@
+
+A Constructive Formalisation of Hoare Logic within the Interactive Theorem Prover Agda
+
+
+#{
+
+./content/pdfs/constructive-hoare-logic.pdf
+
+https://github.com/frabrooks/hakyll-site-and-blog
+
+}#
+
+
+#{
+
+A <a class="inline-link" href="https://en.wikipedia.org/wiki/Constructivism_(philosophy_of_mathematics)">constructive</a> formalisation of <a class="inline-link" href="https://en.wikipedia.org/wiki/Hoare_logic">Hoare Logic</a> in the interactive theorem prover <a class="inline-link" href="https://en.wikipedia.org/wiki/Agda_(programming_language)">Agda.</a> The final result is a constructive formalisation of Hoare logic and an Agda library that is fit for the purpose of proving correct simple imperative-style programs using the formalised Hoare logic.
+
+}#
+
+@tags{
+
+Agda
+Formal Logic
+Type Theory
+Programming Language Semantics
+Formal Proof
+
+}@tags

@@ -1,7 +1,358 @@
 // Root/main styling loaded for all pages
 
-@import 'main-styles';
-@import 'main-styles-r';
+// SCSS imports, no css will be generated from the below imports
+// so they are safe to import at the top of all files.
+@import 'declarations/fonts';
+@import 'declarations/mixins';
+@import 'declarations/colours';
+@import 'declarations/dimens';
+@import 'declarations/backgrounds';
+
+///////////////////////////////////////////////////////
+/*
+      Main styles applied across whole site
+
+      e.g. html elements, text, 
+           sections (body, footer, .insert-blocks etc)
+ */
+///////////////////////////////////////////////////////
+
+
+// Include padding and border when specifying elements size
+// with width or height commands
+* {
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.separator {
+    width: $separator-width;
+    height: $separator-height;
+    background: $map-color;
+}
+
+///////////////////////////////////////////////////////
+// SECTIONING / LAYOUT: ///////////////////////////////
+
+html {
+    font-size: 90%;
+    @include page-background;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    line-height: 1.5;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: $default-text-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.insert-block {
+    @include section-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    // TODO this is cutting it close on 4k layout vs smallest
+    // native desktop (1366px one of most common desktop res)
+    // Fix: recent-activity section should move to centralised
+    // format one size change earlier, then this can be 65vw;
+    width: 60vw;
+    
+    min-height: 90vh;
+
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 10vh;
+}
+
+.thumbnail {
+
+    margin: 2em;
+    
+    width: $thumbnail-width-default; 
+    height: $thumbnail-height-default; 
+    max-width: $thumbnail-width-default;
+    min-width: $thumbnail-width-default;
+    max-height: $thumbnail-height-default;
+    min-height: $thumbnail-height-default;
+
+    & .resize {
+	object-fit: cover;
+	object-position: bottom;
+    }	
+}
+
+
+.item-links-and-tags {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+        
+    span {
+	@include font-vw;	    
+	margin: 0.5rem;
+	text-align: center;
+    }
+    
+}
+
+.NewBlogPost {
+
+    padding: 0.65rem 1rem 0.5rem 1rem;
+
+    border: solid 2px $map-color;
+    border-radius: 10px;
+
+    color: $text-color;
+    font-size: $default-small-font-size;
+    
+}
+
+.NewMerge,.NewPullRequest {
+
+    padding: 0.5rem 1rem 0.5rem;
+    
+    display: inline-flex;
+    align-items: baseline;
+    
+    border-radius: 10px;
+    
+    color: $text-color;
+    font-size: $default-font-size;
+
+    white-space: nowrap;
+    
+    img {
+	align-self: center;
+    }
+    
+    .svg-no-hover {
+	margin-right: 8px; // Magic number
+	width: $default-font-size;
+	height: $default-font-size;
+	filter: $text-color-filter;
+    }
+}
+
+.NewMerge {
+    // GitHub Merge color
+    border: solid 1px #8957e5;
+    .svg-no-hover {
+	filter: $github-merge-filter;
+    }
+}
+.NewPullRequest {
+    // GitHub Pull Request color
+    border: solid 1px #238636;
+    .svg-no-hover {
+	filter: $github-pull-filter;
+    }    
+}
+
+
+.icon-link-container {
+    @include easeOutSlow;
+    width: $fixed-icon-size;
+    height: $fixed-icon-size;
+    margin: $fixed-icon-padding;
+    text-align: center;
+
+    &:hover {
+	transform: scaleX(1.1) scaleY(1.1);
+    }
+}
+// svg icons sit inside the .icon-link-container's in the html 
+.svg-icon {
+    width: 100%;
+    height: 100%;
+    filter: $text-secondary-filter;
+    &:hover {
+	filter: $text-accent-filter;
+    }
+}
+
+footer {
+    @include section-background;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0 4rem;
+
+    border-top: 10px double $map-color;
+    
+    p,a {
+	line-height: 2;
+	max-width: 20rem;
+	text-align: center;
+    }
+}
+
+
+//////////////////////////////////////////////////////
+// TEXT /////////////////////////////////////////////
+
+// Headings
+h1,h2,h3,h4,h5{
+    color: $text-color;
+    max-width: $default-text-width;
+    @include font-header;
+    margin: 0;
+}
+// whoami_  , recent-activity_ etc. 
+.terminal-text {   
+    align-self: flex-start;
+    margin-bottom: $terminal-text-heading-margin-bottom;
+    font-size: $terminal-font-size;
+    color: $terminal-text-color;
+
+    // So that the bg-color box overlay on smaller layouts
+    // once terminal text is centralised can be absolutely
+    // positioned relative to the terminal text it's shadowing
+    position: relative;
+    
+}
+.terminal-text-heading {
+    color: $terminal-text-heading-color;
+}
+p,ul,li{
+    @include font-vw;
+    font-size: $default-font-size;
+    color: $text-color;
+    max-width: $default-text-width;
+    word-spacing: 0.125rem;    
+}
+ul{
+    list-style: inside;
+    text-align: center;
+}
+li{
+    width: 90%;
+    margin-bottom: 0.5rem;
+}
+
+.default-text {
+    @include font-vw;
+    font-size: $default-font-size;
+    color: $text-color;
+}
+.small {
+    font-size: $default-small-font-size;
+}
+.bold {
+    font-weight: $bold-font-weight;
+}
+
+
+// TODO: this isn't used anywhere currently
+//       use or delete
+.text-symbol {
+    @include font-mono;
+    font-size: $default-large-font-size;
+}
+
+
+.text-default {
+    color: $text-color;
+}
+
+.text-primary {
+    color: $text-primary;
+}
+.text-secondary {
+    color: $text-secondary;
+}
+.text-accent {
+    color: $text-accent;
+}
+
+
+.text-mono {
+    @include font-mono;
+}
+
+// No text decoration by default on links (TODO, is this what I want?)
+a {
+    font-size: $default-font-size;
+    text-decoration: none;
+    color: $text-secondary;
+    @include font-vw;
+
+    &.inline-link {
+	@include flex-hover-underline($text-secondary, 100%);
+    }
+    // TODO don't think this is currently being used?
+    &.block-link {
+	color: $text-accent;
+	@include flex-hover-underline($text-accent, 100%);
+    }
+}
+
+table {
+    font-size: $default-font-size;
+    color: $text-color;
+    margin: 1em 0;
+    border-collapse: collapse;
+    width: fit-content;
+    overflow-x: auto;
+    display: block;
+    font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+    margin-bottom: 0.75em;
+}
+tbody {
+    margin-top: 0.5em;
+    border-top: 1px solid $text-primary;
+    border-bottom: 1px solid $text-primary;
+}
+th {
+    border-top: 1px solid $text-primary;
+    padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+    padding: 0.125em 0.5em 0.25em 0.5em;
+}
+
+
+.no-pointer-events{
+    pointer-events: none;
+}
+
+    
+.hover-underline-text-color {
+    @include flex-hover-underline($text-color, 100%);
+}
+.hover-underline-text-primary {
+    @include flex-hover-underline($text-primary, 100%);
+}
+.hover-underline-text-secondary {
+    @include flex-hover-underline($text-secondary, 100%);
+}
+.hover-underline-text-accent {
+    @include flex-hover-underline($text-accent, 100%);
+}
+
+@import 'root-r';
 @import 'navigation/navbar-and-page-map';
 
 

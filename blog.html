@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="/css/listicle.css" />
+<div class="insert-block">
+  $for(blogIntro)$
+  <p >$body$</p>
+  $endfor$
+  <h2 class="text-accent" style="width: 100%; text-align: center">Soft. Dev. / Comp. Sci.</h2>
+  <div class="border"/>
+  $for(postsList)$
+  $if(technical)$
+  <div $if(hasThumbnail)$class="post-item has-thumbnail"$else$class="post-item no-thumbnail"$endif$ >
+    $if(hasThumbnail)$
+    <div class="post-lhs">
+      <img  src="$imgSrc$" class="thumbnail">
+      <div class="post-heading">
+	<a href="$postLink$" class="hover-underline-text-primary">
+	  <h2 class="text-primary">$postTitle$</h2>
+	</a>
+	<h3 class="text-default">$postDate$</h3>
+      </div>
+    </div>
+    $endif$
+    <div class="post-rhs" >
+      <div class="post-heading $if(hasThumbnail)$$else$offset-me$endif$">
+	<a href="$postLink$" class="hover-underline-text-primary">
+	  <h2 class="text-primary">$postTitle$</h2>
+	</a>
+	<h3 class="text-default">$postDate$</h3>
+      </div>
+      <div class="post-summary">
+	<p>$postDesc$</p>
+	<div class="item-links-and-tags">
+	  <span class="text-secondary bold small">Tags:</span>
+	  $for(postTags)$
+	  <span class="text-primary small">$body$</span>
+	  $endfor$
+	</div>
+      </div>
+    </div>
+  </div>
+  $else$  $endif$
+  $endfor$
+  <h2 class="text-accent" style="width: 100%; text-align: center; margin-top: 4rem">Other Stuff</h2>
+  <div class="border"/>
+  $for(postsList)$
+  $if(technical)$ $else$
+  <div $if(hasThumbnail)$class="post-item has-thumbnail"$else$class="post-item no-thumbnail"$endif$ >
+    $if(hasThumbnail)$
+    <div class="post-lhs">
+      <img  src="$imgSrc$" class="thumbnail">
+      <div class="post-heading">
+	<a href="$postLink$" class="hover-underline-text-primary">
+	  <h2 class="text-primary">$postTitle$</h2>
+	</a>
+	<h3 class="text-default">$postDate$</h3>
+      </div>
+    </div>
+    $endif$
+    <div class="post-rhs" >
+      <div class="post-heading $if(hasThumbnail)$$else$offset-me$endif$">
+	<a href="$postLink$" class="hover-underline-text-primary">
+	  <h2 class="text-primary">$postTitle$</h2>
+	</a>	
+	<h3 class="text-default">$postDate$</h3>
+      </div>
+      <div class="post-summary">
+	<p>$postDesc$</p>
+	<div class="item-links-and-tags">
+	  <span class="text-secondary bold small">Tags:</span>
+	  $for(postTags)$
+	  <span class="text-primary small">$body$</span>
+	  $endfor$
+	</div>
+      </div>
+    </div>
+  </div>
+  $endif$
+  $endfor$
+  <p style="margin-top: 2rem"> End of List </p>
+</div>

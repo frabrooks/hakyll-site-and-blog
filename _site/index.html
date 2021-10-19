@@ -7,72 +7,84 @@
     <meta name="current-page" content="Home">
     <title>FLB | Home</title>
     <link rel="stylesheet" href="./css/root.css" />
+
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      "HTML-CSS": {fonts: ['STIX-web']},
+      SVG: {font: 'STIX-Web'},
+      TeX: {Augment: {
+	  Definitions: {
+	      delimiter: {
+		  '\\llbracket': '27E6',
+		  '\\rrbracket': '27E7',
+		  '\\lAngle': '27EA',
+		  '\\rAngle': '27EB'
+	      }
+	  }
+      }}
+  });
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   </head>
   
   <body id="bg-img">
     <header>
 
-      <!-- NAVBAR -->
-      <nav id="nav-bar">
+      <nav id="bnna">
 
-	<!-- Nav Block:  Site logo/nameplate -->
-	<div id="site-logo" class="nav-block start-block">
-	  <span class="nav-text">Fraser Brooks</span>
-	  <div class="separator">
-	  </div>
+	<!-- Home Button -->
+	<div id="home-button" class="start-block nav-block  ">
+	  <a href="./">FB</a>
 	</div>
-
-	<!-- Nav Block: Title of page: Home/Contact/Blog etc. -->
+	
+	<!-- Page Title (Home, Blog, Contact... etc.) -->
 	<div id="page-title" class="nav-block">
-	  <div id="title-container">
-	    <div id="small-site-logo" class="nav-text"><span>Fraser</span><span>Brooks</span></div>
-	    <p class="nav-text">Home</p>
-	  </div>
-	  <div class="separator"></div>
+	  
+	  <span>Home</span>
+	  
 	</div>
+	
+	<!-- Nav Link: 1  -->
+	<a href="./" id="nav-link1" class="nav-link nav-block">
+	  <span class="underline-me">Home</span>
+	</a>
+	
+	<!-- Nav Link: 2 -->
+	<a href="./blog.html" id="nav-link2" class="nav-link nav-block
+		                ">
+	  <span class="underline-me">Blog</span>
+	</a>
 
-	<!-- Nav Block: 1  -->
-	<div id="nav-link1" class="nav-link nav-block">
-	  <a class="nav-text" href="./"><p>Home</p></a>
-	</div>
+	<!-- Nav Link: 3 -->
+	<a href="./open-source-jrnl.html" id="nav-link3" class="nav-link nav-block">
+	  <span class="underline-me">Open-Source Journal</span>
+	</a>
 	
-	<!-- Nav Block: 2 -->
-	<div id="nav-link2" class="nav-link nav-block">
-	  <a class="nav-text" href="./blog-home.html"><p>Blog</p></a>
-	</div>
-
-	<!-- Nav Block: 3 -->
-	<div id="nav-link3" class="nav-link nav-block">
-	  <a class="nav-text" href="./books.html"><p>Open-Source Contributions</p></a>
-	</div>
+	<!-- Nav Link: 4 -->
+	<a href="./#projects" id="nav-link4" class="nav-link nav-block">
+	  <span class="underline-me">Projects</span>
+	</a>
 	
-	<!-- Nav Block: 4 -->
-	<div id="nav-link4" class="nav-link nav-block">
-	  <a class="nav-text" href="./"><p>Projects</p></a>
-	</div>
+	<!-- Nav Link: 5 -->
+	<a href="./#contact-me" id="nav-link5" class="nav-link nav-block">
+	  <span class="underline-me">Contact Me</span>
+	</a>
 	
-	<!-- Nav Block: 5 -->
-	<div id="nav-link5" class="nav-link nav-block">
-	  <a class="nav-text" href="./contact.html"><p>Contact Me</p></a>
-	</div>
-	
-	<!-- Nav Block: CV -->
+	<!-- CV/Resume Button -->
 	
 	<div id="cv-link" class="nav-block">
-	  <a class="nav-text" href="pdfs/cv.pdf"><p>Résumé</p></a>
+	  <a href="./content/pdfs/cv.pdf" class="underline-me">Résumé</a>
 	</div>
 	
-
+	
 	<!-- Nav Block -->
-	<div class="nav-block end-block">
-	  <div class="separator">
-	  </div>
-	  <div id="show-button-container">
-	    <div id="menu-btn">
-	      <div class="btn-line line-top">	</div>
-	      <div class="btn-line">	</div>
-	      <div class="btn-line">	</div>
-	    </div>  
+	<div id="show-nav-links-button" class="nav-block">
+	  <div>
+	    <div class="btn-line line-top"></div>
+	    <div class="btn-line"></div>
+	    <div class="btn-line"></div>
 	  </div>
 	</div>
 	
@@ -89,31 +101,34 @@
     </header>
 
     <main role="main" id="insert">
-      <link rel="stylesheet" href="./css/index/index.css" />
+      <link rel="stylesheet" href="./css/index.css" />
 <div id="page-map-root">
-  <div class="icon-stack">
-    <p>contactme@fraserbrooks.io</p>
-    <a href="#!">
-      <img src="images/twitter.svg" class="svg-icon" />      
-    </a>
-    <div class="map-sep invisible"></div>
-    <a href="#!">
-      <img src="images/banana-line.svg" class="svg-icon" />
-    </a>
-    <div class="map-sep invisible"></div>
-    <a href="#!">
-      <img src="images/linkedin.svg" class="svg-icon" />      
-    </a>
-    <div class="map-sep invisible"></div>
-    <a href="#!">
-      <img src="images/github.svg" class="svg-icon" />
-    </a>
-    <div class="map-sep invisible"></div>
-    <div class="stem">
+  <div id="page-map-rhs">
+    <a id="email" href="mailto:contact@fraserbrooks.io">contact@fraserbrooks.io</a>
+    <div id="email-sep" class="map-sep"></div>    
+    <div class="icon-stack">
+      <a href="https://twitter.com/FraserLBrooks" class="icon-link-container">
+	<img src="images/twitter.svg" class="svg-icon" />      
+      </a>
+      <div class="map-sep invisible"></div>
+      <a href="./#bnna" class="icon-link-container bnnaBtn">
+	<img src="images/banana-line.svg" class="svg-icon" />
+      </a>
+      <div class="map-sep invisible"></div>
+      <a href="https://www.linkedin.com/in/fraserbrooks0208" class="icon-link-container">
+	<img src="images/linkedin.svg" class="svg-icon" />      
+      </a>
+      <div class="map-sep invisible"></div>
+      <a href="https://github.com/frabrooks" class="icon-link-container">
+	<img src="images/github.svg" class="svg-icon" />
+      </a>
+      <div class="map-sep invisible"></div>
+      <div class="stem">
+      </div>
     </div>
   </div>
   <div id="traffic-light">
-    <div class="map-sep invisible"></div>
+    <div class="map-sep hidden"></div>
     <a href="#!" id="circle1" class="circle">
       <div id="subCircle1" class="subCircle"></div>      
       <div id="branch1" class="branch hidden"></div>
@@ -142,176 +157,314 @@
     <div class="stem"></div>
   </div>
 </div>
-<div class="insert-block">
-  <h4 id="terminal1" class="mono-text text-secondary terminal-text">~$<span class="text-primary"> whoami<span class="blink">_</span></span></h4>
+<div id="first-block" class="insert-block">
+  <h4 id="whoami" class="text-mono text-secondary terminal-text">~$
+    <span class="terminal-text-heading">whoami<span class="blink">_</span></span>
+  </h4>
   <div id="nameplate">
     <div id="top">
-      <div id="portrait"></div>	
+      <div id="portrait"></div>
       <div id="top-text">
-	<h4 class="highlight-text">Hello, my name is
+	<h4 class="text-accent">Hello, my name is
 	</h4>
-	<h1 class="text-flex-container">
-	  <span class="prim-heading text-secondary">
-	    Fraser
-	  </span>
-	  <span class="prim-heading text-secondary">
-	    Brooks
-	  </span>
-	</h1>
-	<h2 class="text-flex-container">
-	  <span class="mono-text sec-heading">
-	    M.Sci
-	  </span>
-	  <span class="mono-text sec-heading">
-	    Computer Science
-	  </span>
-	</h2>
-	<div class="icon-stack">
-	  <a href="#!">
-	    <img src="images/twitter.svg" class="svg-icon" />      
-	  </a>
-	  <div class="map-sep"></div>
-	  <a href="#!">
-	    <img src="images/banana-line.svg" class="svg-icon" />
-	  </a>
-	  <div class="map-sep"></div>
-	  <a href="#!">
-	    <img src="images/linkedin.svg" class="svg-icon" />      
-	  </a>
-	  <div class="map-sep"></div>
-	  <a href="#!">
-	    <img src="images/github.svg" class="svg-icon" />
-	  </a>
+	<div id="name-container" class="text-primary text-mono">
+	  <span>Fraser</span><span>Brooks</span>
+	</div>
+	<div id="subtitle-container" style="display: inline;">
+	  <h4 class="lhs text-accent" style="display: inline;">I'm a</h4>
+	  <h2 class="rhs text-primary text-mono" style="display: inline;">Full Stack Developer</h2>
+	  <div class="icon-stack">
+	    <a href="https://twitter.com/FraserLBrooks" class="icon-link-container">
+	      <img src="images/twitter.svg" class="svg-icon" />      
+	    </a>
+	    <div class="map-sep"></div>
+	    <a href="./#bnna" class="icon-link-container bnnaBtn">
+	      <img src="images/banana-line.svg" class="svg-icon" />
+	    </a>
+	    <div class="map-sep"></div>
+	    <a href="https://www.linkedin.com/in/fraserbrooks0208" class="icon-link-container">
+	      <img src="images/linkedin.svg" class="svg-icon" />      
+	    </a>
+	    <div class="map-sep"></div>
+	    <a href="https://github.com/frabrooks" class="icon-link-container">
+	      <img src="images/github.svg" class="svg-icon" />
+	    </a>
+	  </div>	  
 	</div>
       </div>
     </div>
     <div id="bottom">
       <div id="spacer"></div>
       <div id="intro-text">
-	<p>I'm a recent M.Sci Computer Science graduate with a history in design, a budding open-source software enthusiast, and wannabe Haskeller.</p>
-	<p>I love to create beautiful and useful software and am looking for work in software development, data science,  or DevOps. I also have a blog where I write about whatever interests me. See below for examples of my work ↴</p>
+	
+	<p><span class="text-secondary text-mono">About: </span>I'm a recent M.Sci Computer Science graduate with a history in design, a budding open-source software enthusiast, and wannabe Haskeller.</p>
+	
+	<p>I love to create beautiful and useful software and am currently looking for a job as a developer. See below for some examples of my work to get an idea of what I can do when supplied enough caffeine :) ↴</p>
+	
       </div>
     </div>
   </div>
   <div id="recent-activity-text">
-    <h4 id="terminal2" class="mono-text text-secondary terminal-text">~$<span class="text-primary"> recent-activity<span class="blink">_</span></span></h4>
-    <p><span> 29/09/2021 - New Blog Post:</span><span class="sep"></span><a href="#!" class="hover-underline-link">Undergeneralisation and the Prosecutors Fallacy</a></p>
-    <p><span>14/09/2021 - New Merge:</span><span class="sep"></span><a href="https://github.com/haskell/cabal/pull/7310" class="hover-underline-link">First contribution to haskell toolchain: a bugfix for the cabal-install CL tool</a></span></p>
-<p><span>21/08/2021 - New Blog Post:</span><span class="sep"></span><a href="#!" class="hover-underline-link">Parkinson's Law vs. Goodhart's Law</a></p>    
-</div>
+    <h4 id="terminal2" class="text-mono text-secondary terminal-text">~$
+      <span class="terminal-text-heading">recent-activity<span class="blink">_</span></span>
+    </h4>
+    
+    <a href="./blog/2021-10-09-making-a-responsive-portfolio-blog-site-with-the-haskell-static-site-generator-hakyll.html" class="recent-activity">
+      <span class="lhs">
+	<span class="date">9th of Oct</span>
+	
+	<span class="NewBlogPost type-box">New Blog Post</span>
+	
+      </span>
+      <span class="rhs text-accent underline-me">Making a Responsive Portfolio/Blog Site with the Haskell Static Site Generator Hakyll</span>
+    </a>
+    
+    <a href="https://github.com/haskell/cabal/pull/7310" class="recent-activity">
+      <span class="lhs">
+	<span class="date">4th of Oct</span>
+	
+	
+	<span class="NewMerge type-box">
+	  <img src="images/merged.svg" class="svg-no-hover" />
+	  <span>Merged</span>
+	</span>
+	
+	
+      </span>
+      <span class="rhs text-accent underline-me">haskell:master &nbsp➔&nbsp Bugfix for the cabal-install CL tool</span>
+    </a>
+    
+    <a href="./blog/2021-10-01-this-is-a-test-blog-post-of-no-importance.html" class="recent-activity">
+      <span class="lhs">
+	<span class="date">1st of Oct</span>
+	
+	<span class="NewBlogPost type-box">New Blog Post</span>
+	
+      </span>
+      <span class="rhs text-accent underline-me">This is a Test Blog Post of No Importance</span>
+    </a>
+    
+    <a href="https://youtube.com" class="recent-activity">
+      <span class="lhs">
+	<span class="date">29th of Sep</span>
+	
+	
+	<span class="NewPullRequest type-box">
+	  <img src="images/pull-request.svg" class="svg-no-hover" />
+	  <span>Pull Request</span>
+	</span>
+	
+	
+      </span>
+      <span class="rhs text-accent underline-me">Bug Fix for the Haskell toolchain, specifically the cabal-install tool</span>
+    </a>
+    
+  </div>
 </div>
 <div class="insert-block">
-  <h4 id="terminal3" class="mono-text text-secondary terminal-text">~$<span class="text-primary"> academic-work<span class="blink">_</span></span></h4>
-  <div class="icons">
-    <a href="#!">
-      <i class="fab fa-twitter fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-facebook fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-linkedin fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-github fa-2x"></i>
-    </a>
+  <h4 id="terminal3" class="text-mono text-secondary terminal-text">~$
+    <span class="terminal-text-heading">academic-work<span class="blink">_</span></span>
+  </h4>
+  
+  <div class="insert-item">
+    <div class="item-lhs">
+      <a href="./content/pdfs/constructive-hoare-logic.pdf" class="hover-underline-text-primary">
+	<h2 class="text-primary">A Constructive Formalisation of Hoare Logic within the Interactive Theorem Prover Agda</h2>
+      </a>
+      <img class="thumbnail" src="./content/academic-work/01-thesis.png">
+    </div>
+    <div class="item-rhs">
+      <a href="./content/pdfs/constructive-hoare-logic.pdf" class="hover-underline-text-primary">
+	<h2 class="text-primary">A Constructive Formalisation of Hoare Logic within the Interactive Theorem Prover Agda</h2>
+      </a>      
+      
+      <p>A <a class="inline-link" href="https://en.wikipedia.org/wiki/Constructivism_(philosophy_of_mathematics)">constructive</a> formalisation of <a class="inline-link" href="https://en.wikipedia.org/wiki/Hoare_logic">Hoare Logic</a> in the interactive theorem prover <a class="inline-link" href="https://en.wikipedia.org/wiki/Agda_(programming_language)">Agda.</a> The final result is a constructive formalisation of Hoare logic and an Agda library that is fit for the purpose of proving correct simple imperative-style programs using the formalised Hoare logic.</p>
+      
+      <div class="item-links-and-tags">
+	
+	<a href="https://github.com/frabrooks/hakyll-site-and-blog" class="icon-link-container">
+	  <img src="images/github.svg" class="svg-icon">
+	</a>
+	
+	
+	<a href="./content/pdfs/constructive-hoare-logic.pdf" class="icon-link-container">
+	  <img src="images/pdf.svg" class="svg-icon">
+	</a>
+	
+	<div class="separator"></div>
+	<span class="text-secondary bold small">Tags:</span>
+	
+	<span class="text-primary small">Agda</span>
+	
+	<span class="text-primary small">Formal Logic</span>
+	
+	<span class="text-primary small">Type Theory</span>
+	
+	<span class="text-primary small">Programming Language Semantics</span>
+	
+	<span class="text-primary small">Formal Proof</span>
+	
+      </div>
+    </div>
   </div>
-  <p id="intro-text">I'm a recent M.Sci Computer Science graduate with a history in design, a budding open-source software enthusiast, and wannabe Haskeller.</p>
-    <div class="icons">
-    <a href="#!">
-      <i class="fab fa-twitter fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-facebook fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-linkedin fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-github fa-2x"></i>
-    </a>
+  
+  <div class="insert-item">
+    <div class="item-lhs">
+      <a href="./content/pdfs/constructive-hoare-logic.pdf" class="hover-underline-text-primary">
+	<h2 class="text-primary">Creating a Robotic Waiter using a Pioneer P3DX Robot and Particle Filtering</h2>
+      </a>
+      <img class="thumbnail" src="./content/academic-work/02-robotics-proj.png">
+    </div>
+    <div class="item-rhs">
+      <a href="./content/pdfs/constructive-hoare-logic.pdf" class="hover-underline-text-primary">
+	<h2 class="text-primary">Creating a Robotic Waiter using a Pioneer P3DX Robot and Particle Filtering</h2>
+      </a>      
+      
+      <p>A <a class="inline-link" href="https://en.wikipedia.org/wiki/Constructivism_(philosophy_of_mathematics)">constructive</a> formalisation of <a class="inline-link" href="https://en.wikipedia.org/wiki/Hoare_logic">Hoare Logic</a> in the interactive theorem prover <a class="inline-link" href="https://en.wikipedia.org/wiki/Agda_(programming_language)">Agda</a>. The final result is a constructive formalisation of Hoare logic and an Agda library that is fit for the purpose of proving correct simple imperative-style programs using the formalised Hoare logic.</p>
+      
+      <div class="item-links-and-tags">
+	
+	<a href="https://github.com/frabrooks/hakyll-site-and-blog" class="icon-link-container">
+	  <img src="images/github.svg" class="svg-icon">
+	</a>
+	
+	
+	<a href="./content/pdfs/constructive-hoare-logic.pdf" class="icon-link-container">
+	  <img src="images/pdf.svg" class="svg-icon">
+	</a>
+	
+	<div class="separator"></div>
+	<span class="text-secondary bold small">Tags:</span>
+	
+	<span class="text-primary small">C++</span>
+	
+	<span class="text-primary small">Robotics</span>
+	
+	<span class="text-primary small">Particle Filter</span>
+	
+	<span class="text-primary small">Java/Android</span>
+	
+	<span class="text-primary small">Clustering</span>
+	
+	<span class="text-primary small">Uncertainty</span>
+	
+      </div>
+    </div>
   </div>
-  <p id="intro-text">I'm a recent M.Sci Computer Science graduate with a history in design, a budding open-source software enthusiast, and wannabe Haskeller.</p>
+  
 </div>
+
 <div class="insert-block">
-  <h4 id="terminal4" class="mono-text text-secondary terminal-text">~$<span class="text-primary"> project-portfolio<span class="blink">_</span></span></h4>
-  <div class="icons">
-    <a href="#!">
-      <i class="fab fa-twitter fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-facebook fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-linkedin fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-github fa-2x"></i>
-    </a>
+  <h4 id="projects" class="text-mono text-secondary terminal-text">~$
+    <span class="terminal-text-heading"> project-portfolio<span class="blink">_</span></span>
+  </h4>
+  
+  <div class="insert-item">
+    <div class="item-lhs">
+      <a href="./content/pdfs/constructive-hoare-logic.pdf" class="hover-underline-text-primary">
+	<h2 class="text-primary">A Constructive Formalisation of Hoare Logic within the Interactive Theorem Prover Agda</h2>
+      </a>
+      <img class="thumbnail" src="./content/project-portfolio/01-thesis.png">
+    </div>
+    <div class="item-rhs">
+      <a href="./content/pdfs/constructive-hoare-logic.pdf" class="hover-underline-text-primary">
+	<h2 class="text-primary">A Constructive Formalisation of Hoare Logic within the Interactive Theorem Prover Agda</h2>
+      </a>      
+      
+      <p>A <a href="https://en.wikipedia.org/wiki/Constructivism_(philosophy_of_mathematics)">constructive</a> formalisation of <a href="https://en.wikipedia.org/wiki/Hoare_logic">Hoare Logic</a> in the interactive theorem prover <a href="https://en.wikipedia.org/wiki/Agda_(programming_language)">Agda</a>. The final result is a constructive formalisation of Hoare logic and an Agda library that is fit for the purpose of proving correct simple imperative-style programs using the formalised Hoare logic.</p>
+      
+      <div class="item-links-and-tags">
+	
+	<a href="https://github.com/frabrooks/hakyll-site-and-blog" class="icon-link-container">
+	  <img src="images/github.svg" class="svg-icon">
+	</a>
+	
+	
+	<a href="./content/pdfs/constructive-hoare-logic.pdf" class="icon-link-container">
+	  <img src="images/pdf.svg" class="svg-icon">
+	</a>
+	
+	<div class="separator"></div>
+	<span class="text-secondary bold small">Tags:</span>
+	
+	<span class="text-primary small">Agda</span>
+	
+	<span class="text-primary small">Formal Logic</span>
+	
+	<span class="text-primary small">Type Theory</span>
+	
+	<span class="text-primary small">Programming Language Semantics</span>
+	
+	<span class="text-primary small">Formal Proof</span>
+	
+      </div>
+    </div>
   </div>
-  <p id="intro-text">I'm a recent M.Sci Computer Science graduate with a history in design, a budding open-source software enthusiast, and wannabe Haskeller.</p>
-    <div class="icons">
-    <a href="#!">
-      <i class="fab fa-twitter fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-facebook fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-linkedin fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-github fa-2x"></i>
-    </a>
+  
+  <div class="insert-item">
+    <div class="item-lhs">
+      <a href="./content/pdfs/constructive-hoare-logic.pdf" class="hover-underline-text-primary">
+	<h2 class="text-primary">Creating a Robotic Waiter using a Pioneer P3DX Robot</h2>
+      </a>
+      <img class="thumbnail" src="./content/project-portfolio/02-robotics-proj.png">
+    </div>
+    <div class="item-rhs">
+      <a href="./content/pdfs/constructive-hoare-logic.pdf" class="hover-underline-text-primary">
+	<h2 class="text-primary">Creating a Robotic Waiter using a Pioneer P3DX Robot</h2>
+      </a>      
+      
+      <p>A <a href="https://en.wikipedia.org/wiki/Constructivism_(philosophy_of_mathematics)">constructive</a> formalisation of <a href="https://en.wikipedia.org/wiki/Hoare_logic">Hoare Logic</a> in the interactive theorem prover <a href="https://en.wikipedia.org/wiki/Agda_(programming_language)">Agda</a>. The final result is a constructive formalisation of Hoare logic and an Agda library that is fit for the purpose of proving correct simple imperative-style programs using the formalised Hoare logic.</p>
+      
+      <div class="item-links-and-tags">
+	
+	<a href="https://github.com/frabrooks/hakyll-site-and-blog" class="icon-link-container">
+	  <img src="images/github.svg" class="svg-icon">
+	</a>
+	
+	
+	<a href="./content/pdfs/constructive-hoare-logic.pdf" class="icon-link-container">
+	  <img src="images/pdf.svg" class="svg-icon">
+	</a>
+	
+	<div class="separator"></div>
+	<span class="text-secondary bold small">Tags:</span>
+	
+	<span class="text-primary small">C++</span>
+	
+	<span class="text-primary small">Robotics</span>
+	
+	<span class="text-primary small">Particle Filter</span>
+	
+	<span class="text-primary small">Java/Android</span>
+	
+	<span class="text-primary small">Clustering</span>
+	
+	<span class="text-primary small">Uncertainty</span>
+	
+      </div>
+    </div>
   </div>
-  <p id="intro-text">I'm a recent M.Sci Computer Science graduate with a history in design, a budding open-source software enthusiast, and wannabe Haskeller.</p>
+  
 </div>
-<div id="insert-block-last" class="insert-block">
-  <h4 id="terminal5" class="mono-text text-secondary terminal-text">~$<span class="text-primary"> contact-me<span class="blink">_</span></span></h4>
-  <div class="icons">
-    <a href="#!">
-      <i class="fab fa-twitter fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-facebook fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-linkedin fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-github fa-2x"></i>
-    </a>
-  </div>
-  <p id="intro-text">I'm a recent M.Sci Computer Science graduate with a history in design, a budding open-source software enthusiast, and wannabe Haskeller.</p>
-    <div class="icons">
-    <a href="#!">
-      <i class="fab fa-twitter fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-facebook fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-linkedin fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-github fa-2x"></i>
-    </a>
-  </div>
-  <p id="intro-text">I'm a recent M.Sci Computer Science graduate with a history in design, a budding open-source software enthusiast, and wannabe Haskeller.</p>
+<div class="insert-block" style="min-height: initial;">
+  <h4 id="contact-me" class="text-mono text-secondary terminal-text">~$<span class="terminal-text-heading"> contact-me<span class="blink">_</span></span></h4>
+  <p> If you want to contact me for whatever reason - be it for networking, to tell me about a job opportunity, or just to say hi - your best bet is to email me at <a href="mailto:contact@fraserbrooks.io" class="inline-link">contact@fraserbrooks.io.</a> Alternatively you can reach out to me on <a href="https://www.linkedin.com/in/fraserbrooks0208" class="inline-link">LinkedIn.</a> Either way I'll endeavour to get back to you promptly. Thanks for stopping by!</p>
+
 </div>
-<script src="js/index.js"></script>
+
+<script src="./js/index.js"></script>
 
     </main>
 
     
     <footer>
-      <div class="text-flex-container content mono-text">
-	<p>Site proudly generated by</p>
-	<a href="http://jaspervdj.be/hakyll">Hakyll</a>
-      </div>
+      <p>Site proudly generated by <a class="inline-link" href="http://jaspervdj.be/hakyll">Hakyll.</a> See the <a class="inline-link" href="https://github.com/frabrooks/hakyll-site-and-blog">full source code</a> on GitHub.</p>
+      
+      <p class="small" style="padding: 0; margin: 0;"> ps. don't click the banana</p>
+      
     </footer>  
   </body>
   
-  <script src="js/main.js"></script>
+  <script src="./js/main.js"></script>
   
 </html>

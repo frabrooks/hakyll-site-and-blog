@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg1061"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="pdf.svg">
+  <defs
+     id="defs1055">
+    <rect
+       x="77.773457"
+       y="136.6824"
+       width="66.282843"
+       height="60.135644"
+       id="rect3482" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1095"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="290.60347"
+     inkscape:cy="379.46403"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata1058">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-58.262781,-103.27371)">
+    <text
+       xml:space="preserve"
+       id="text3480"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Cambria Math';-inkscape-font-specification:'Cambria Math';white-space:pre;shape-inside:url(#rect3482);"
+       transform="matrix(1.5985456,0,0,1.9353911,-47.55209,-142.26)"><tspan
+         x="77.773438"
+         y="160.68464"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:aaa_Inconsolata;-inkscape-font-specification:aaa_Inconsolata">PDF</tspan></tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:6.02929;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3486"
+       width="80.60862"
+       height="91.624023"
+       x="68.17907"
+       y="108.03843" />
+  </g>
+</svg>

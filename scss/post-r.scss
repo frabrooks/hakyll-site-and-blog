@@ -1,0 +1,222 @@
+
+// SCSS imports, no css will be generated from the below imports
+// so they are safe to import at the top of all files.
+@import 'declarations/fonts';
+@import 'declarations/mixins';
+@import 'declarations/colours';
+@import 'declarations/dimens';
+@import 'declarations/backgrounds';
+
+
+
+// Roughly 4k
+@include mStupidLarge {
+}
+
+// Above roughly 3000px width
+@include mXXLarge {
+}
+
+// (Widescreen) Desktop First 
+@include mXLarge {
+}
+
+// 2/3rd desktop
+@include mLarge {
+
+    #postplate{
+	font-size: 90%;
+	width: 60em; // ~ 960px
+	padding: 2rem 0 2rem;
+    }
+    
+}
+
+// Exactly half desktop
+@include mMedium {
+
+
+    #postplate {
+	font-size: 75%;
+	width: 100%;		
+    }
+    
+}
+
+// First smaller than half desktop
+// Size of some tablets
+// Navbar now 3 rows & CV button now centered:
+//
+//    HOME  |CV|    X
+//    --------------    
+//   |  1   |  2   |
+//   |     3      |
+//   |  4  |  5   |
+//   -------------
+//
+@include mSmall { // 832px w/ default font-size
+
+
+    div.sourceCode {
+	width: 96vw;
+	margin-left: -3vw;
+	margin-right: 0;
+	padding-right: 0.5rem;
+	padding-left: 1rem;
+    }
+
+    .technical.withThumbnail{
+	#headingAndMetaBox {
+	    padding-top: 1rem;
+	    border-right: initial;	    
+	    border-top: 2px solid $text-secondary;
+	}
+
+	#aspectRatioContainer1 {
+	    width: 100%;
+	}
+	#aspectRatioContainer2 {
+	    width: 40%;
+	}
+    }
+
+    .non-technical.withThumbnail {
+
+	margin-top: 0.5rem;
+
+	#authorContainer {
+	    width: 45%;
+	    a {
+		margin: 0;
+	    }
+	    
+	}
+	#dateMetaContainer {
+	    width: 45%;
+	}
+	
+	#headingAndMetaBox {
+
+	    flex-direction: initial;
+	    flex-wrap: wrap;
+
+	    .title h1 {
+		font-size: 250%;
+		border-top: 2px solid $text-secondary;
+		margin: 0;
+		padding-top: 2rem;
+	    }
+
+	    .item-links-and-tags {
+		font-size: 160%;
+	    }
+	    
+	}
+	
+	.thumbnail {
+	    border-left: initial;
+	}
+	
+	#aspectRatioContainer1 {
+	    width: 100%;
+
+	}
+	#aspectRatioContainer2 {
+	    width: 80%;
+	}
+
+    }
+
+    .thumbnail {
+	padding: 0;
+    }
+
+    
+    #postplate {
+
+	flex-direction: column-reverse;
+
+	width: 100%;
+	font-size: 70%;
+	padding-top: 0;
+	padding-left: 10vw;
+	padding-right: 2rem;
+
+	a {
+	    margin: 0.5em 0.75em 0.5em 0.5em;
+	}
+
+	
+    }
+
+    .break-on-colon {
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+    }
+
+    #authorContainer {
+	margin-left: 0;
+    }
+
+    #portrait {
+	width: 55px;
+	min-width: 55px;
+	max-width: 55px;
+	height: 55px;
+	min-height: 55px;
+	max-height: 55px;
+    }
+}
+
+// All Tablets now
+@include mXSmall { // 640px w/ default font-size
+
+}
+
+// Small screen & massive font-size only
+@include mXXSmall { // 480px w/ default font-size
+}
+
+// Ridiculously small/narrow for galaxy fold and kin
+@include mStupidSmall { // 240px w/ default font-size
+
+
+    .non-technical.withThumbnail {
+    
+	#authorContainer {
+	    width: 40%;
+	    p,a {font-size: 100%; }
+	}
+	
+	#dateMetaContainer {
+	    width: 40%;
+	    span {
+		font-size: 100%;
+	    }
+	}
+    }
+    
+    #portrait {
+	width: 25px;
+	min-width: 25px;
+	max-width: 25px;
+	height: 25px;
+	min-height: 25px;
+	max-height: 25px;
+    }
+}
+
+// Galaxy Fold with very large font size 
+@include mTakingThePiss { // AKA techno boomer
+}
+
+
+
+
+
+
+
+
+
+

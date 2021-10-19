@@ -1,68 +1,90 @@
 
-$oxford-blue: #0a192f;
-$english-violet: #453b61;
-$cyber-grape: #5f5286;
+// Colour Bucket
 
-$yee2: #9283bb;
-$yee1: #786aa0;
-
-$razzmic-berry: #8e508a;
-$goldenrod: #d5a021;
-$cool-grey: #8892b0;
-$magic-mint: #95f2d9;
-$beige: #eff6e0;
-
-$hot-pink: #ff69b4;
-$deep-pink: #ff1493;
-$easy-peeler: #fd6d26;
-$banana-yellow: #f3c937;
-$light-grey: #bbbbbb;
-
-$background-color: $oxford-blue;
-$foreground-color-light: $razzmic-berry;
-$foreground-color-mid: $cyber-grape;
-$foreground-color-dark: $english-violet;
-$accent-color: $goldenrod;
-$text-color: $cool-grey;
-
-$color-1: $cool-grey;
-$color-2: $yee1;
-$color-3: $goldenrod;
-$color-4: $cyber-grape;
-
-$primary-color: #444;
-$secondary-color: $light-grey;
+//$english-violet: #453b61;
+//$cyber-grape: #5f5286;
+//$eggplant: #60495a;
+//
+//$yee2: #9283bb;
+//$yee1: #786aa0;
+//$russian-violet: #392B58;
+//
+//$razzmic-berry: #8e508a;
+//$goldenrod: #d5a021;
+//$magic-mint: #95f2d9;
+//$beige: #eff6e0;
+//
+//$hot-pink: #ff69b4;
+//$deep-pink: #ff1493;
+//$easy-peeler: #fd6d26;
+//$banana-yellow: #f3c937;
+//$light-grey: #bbbbbb;
 
 
-$default-font-color: $color-1;
-
-// -------- Index
-
-$map-opacity: 0.4;
+// FILTERS PREAMBLE
 
 $cool-grey-filter: brightness(0) saturate(100%) invert(63%) sepia(3%) saturate(2287%) hue-rotate(188deg) brightness(92%) contrast(88%);
 
-$yee1-filter: brightness(0) saturate(100%) invert(45%) sepia(29%) saturate(564%) hue-rotate(215deg) brightness(92%) contrast(89%) opacity($map-opacity);
+$blue-bell-filter: invert(58%) sepia(69%) saturate(182%) hue-rotate(214deg) brightness(105%) contrast(83%);
 
-$yee1-filter-half-opacity: brightness(0) saturate(100%) invert(45%) sepia(29%) saturate(564%) hue-rotate(215deg) brightness(92%) contrast(89%) opacity($map-opacity * 2);
+$dark-blue-gray-filter: invert(49%) sepia(19%) saturate(860%) hue-rotate(215deg) brightness(86%) contrast(90%);
 
-$goldenrod-filter: brightness(0) saturate(100%) invert(88%) sepia(35%) saturate(4051%) hue-rotate(346deg) brightness(89%) contrast(86%);
-
-
-$color-2-filter: $yee1-filter;
-$color-3-filter: $goldenrod-filter;
-
-$color-2-half-opacity: rgba( $color-2 , $map-opacity * 2);
-$color-2-filter-2: $yee1-filter-half-opacity;
+$maize-crayola-filter: invert(98%) sepia(43%) saturate(4346%) hue-rotate(316deg) brightness(101%) contrast(102%);
 
 
-$map-color: rgba( $color-2, $map-opacity);
-$map-color-current: rgba( $color-2, $map-opacity * 2);
+$github-merge-filter: invert(48%) sepia(73%) saturate(5056%) hue-rotate(240deg) brightness(94%) contrast(90%);
+
+$github-pull-filter: invert(26%) sepia(80%) saturate(6471%) hue-rotate(139deg) brightness(97%) contrast(73%);
 
 
+// SITE WIDE COLOR SCHEME
+
+$oxford-blue: #0a192f;
+$bg-color: $oxford-blue;
+$code-bg-color: #04132b;
+
+
+$cool-grey: #8892b0;
+$text-color: $cool-grey;
+$text-color-filter: $cool-grey-filter;
+
+$blue-bell: #b2a3dd;
+$text-primary: $blue-bell;
+$text-primary-filter: $blue-bell-filter;
+
+$dark-blue-gray: #786aa0;
+$text-secondary: $dark-blue-gray;
+$text-secondary-filter: $dark-blue-gray-filter;
+
+$maize-crayola: #ffcb50;
+$text-accent: $maize-crayola;
+$text-accent-filter: $maize-crayola-filter;
+
+// EVERYTHING BELOW THIS POINT SHOULD BE
+// DEFINED IN TERMS OF THE 5 VARS ABOVE
+
+
+// ADJUSTED COLORS
+
+// Page-map fade into bg a bit with 0.4 opacity
+$map-opacity: 0.35;
+$map-color: rgba( $text-secondary, $map-opacity);
+$map-color-current: rgba( $text-secondary, $map-opacity * 2);
+
+
+// INDIVIDUAL ELEM COLORING
+
+$terminal-text-color: $text-secondary;
+$terminal-text-heading-color: $text-color;
+
+$nav-bar-hover-color: $map-color;
+$nav-bar-border-color: $text-secondary;
+
+$cv-button-color: $text-accent;
+$cv-button-color-hover: black;
+$cv-button-bg-color-hover: $text-accent;
+
+// Page-map
 $branch-color: $map-color;
-
-
-
 
 

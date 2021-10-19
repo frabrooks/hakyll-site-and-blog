@@ -1,8 +1,254 @@
 
-@import 'nameplate-and-rec-activity';
-@import 'nameplate-and-rec-activity-r';
+// SCSS imports, no css will be generated from the below imports
+// so, if my understanding is correct, they are safe to import
+// at the top of all files.
+@import '../declarations/fonts';
+@import '../declarations/mixins';
+@import '../declarations/colours';
+@import '../declarations/dimens';
+@import '../declarations/backgrounds';
 
-@import 'contact-form';
-@import 'contact-form-r';
+@import 'index-decs';
+
+#whoami {
+    margin-top: 2rem;
+}
+
+/**
+ *   Nameplate container:
+ *
+ *
+ *     ******  |   Hello, my name is
+ *    ******** |   
+ *    ******** |   FRASER BROOKS 
+ *     ******  |   M.Sci Computer Science
+ *    =====================================
+ *     I am a bla bla bla foo bar fee thi
+ *     dee da ...                 .......
+ */
+#nameplate {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+
+    h4 { // 'Hello, my name is' & 'I'm a'
+	word-spacing: 0.2rem;
+    }
+}
+
+#top {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#top, #bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .icon-stack {
+	display: none;
+    }    
+}
+
+#portrait {
+    width: $portrait-size;
+    height: $portrait-size;
+    background: url(../../images/portrait.jpg);
+    &.dance-banana-a-go-go {
+	width: $portrait-size * 2;
+	min-width: $portrait-size * 2;
+	height: $portrait-size * 2;
+	min-height: $portrait-size * 2;
+	background: url(../../images/banana.jpg);
+	background-size: cover;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+    }
+    background-size: cover;
+    border-radius: 50%;
+    border: solid 4px $text-secondary;
+}
+
+
+#top-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    // arbitrary amount of space between portrait img and text
+    padding-left: $top-text-padding-left;
+    
+    .icons {
+	display: none;
+    }
+}
+#name-container {
+    *{
+	font-size: 4.5em;
+	font-weight: 500;
+	color: $text-primary;
+    }
+    margin-top: $fraser-brooks-margin-top;
+}
+#name-container,#subtitle-container {
+    display: inline-flex;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    span,h4,h2 {
+	margin-left: $natural-word-spacing;
+	margin-right: $natural-word-spacing;
+    }
+}
+#subtitle-container {
+    line-height: 100%;
+    // Align subtitle cont. start with F in Fraser Brooks
+    padding-left: $space-to-F;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    
+    &.rhs {
+	font-size: 2em;
+	color: $text-primary;
+    }    
+}
+
+#spacer {
+    width: $portrait-size + $top-text-padding-left;
+    margin-right: 1em;
+}
+
+#bottom {
+    #intro-text {
+	padding-left: $space-to-F;
+    }
+}
+
+
+///////////////////////////////////////////////////////////
+// Recent Activitiy //////////////////////////////////////
+
+
+// Second terminal-heading/section-header ($recent-activity_)
+#terminal2 {
+    align-self: center;
+}
+.blink {
+    animation: blinker 1s infinite;
+}
+@keyframes blinker{
+    0%{     color: $text-color; }
+    49%{    color: $text-color; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: $text-color; }
+}
+
+#recent-activity-text {
+
+    width: 100%;
+    display: flex;
+    align-items: center;    
+    flex-direction: column;
+
+    .lhs{
+	// Date/Type should never wrap
+	// link/desc/title should instead
+	white-space: nowrap;
+    }
+
+    h4{ // Terminal text heading
+	margin-bottom: 3rem;
+    }
+    
+    .recent-activity {
+	display: inline-flex;
+	align-items: baseline;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	
+	// -child version is for when the hover should be triggered
+	// by hovering over parent (i.e. the navlink) but underline
+	// should be over a child that has class .underline-me
+	@include flex-hover-underline-child($text-accent, 100%); 
+    }
+    
+    .date {
+	color: $text-color;
+	font-weight: 800;
+    }
+
+    .type-box {
+	font-size: $default-font-size;
+	margin: 0 1.5rem 0;
+	white-space: nowrap;
+    }
+
+    a {
+	margin-left: 2rem;
+    }
+}
+
+
+.insert-item {
+    display: flex;
+    width: 100%;
+    max-width: $content-max-width;
+    
+    padding-top: 1.25rem;
+    padding-bottom: 2.5rem;
+
+    border-bottom: 1px solid $text-accent;
+
+    
+    &:nth-child(odd) {
+	flex-direction: row-reverse;
+    }
+
+    .item-links-and-tags {
+
+	justify-content: center;
+	
+	.separator {
+	    flex-basis: 100%;
+	    height: 2px;
+	    margin-top: 0.8rem;
+	    margin-bottom: 0.4rem;
+	}
+    }
+    
+    .item-lhs {
+
+	a { // Title for smaller layouts
+	    display: none;
+	}
+	
+    }
+
+    .item-rhs {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	
+
+	.icon-link-container {
+	    width: 2rem;
+	    height: 2rem;
+	    margin: 0 1rem 0 1rem;
+	}
+	
+    }
+    
+}
+
+
+
+@import 'index-r';
 
 

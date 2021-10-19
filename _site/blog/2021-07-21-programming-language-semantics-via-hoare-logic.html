@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="current-page" content="Blog">
+    <title>FLB | Blog</title>
+    <link rel="stylesheet" href="../css/root.css" />
+
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      "HTML-CSS": {fonts: ['STIX-web']},
+      SVG: {font: 'STIX-Web'},
+      TeX: {Augment: {
+	  Definitions: {
+	      delimiter: {
+		  '\\llbracket': '27E6',
+		  '\\rrbracket': '27E7',
+		  '\\lAngle': '27EA',
+		  '\\rAngle': '27EB'
+	      }
+	  }
+      }}
+  });
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  </head>
+  
+  <body id="bg-img">
+    <header>
+
+      <nav id="bnna">
+
+	<!-- Home Button -->
+	<div id="home-button" class="start-block nav-block not-home-page">
+	  <a href="../">FB</a>
+	</div>
+	
+	<!-- Page Title (Home, Blog, Contact... etc.) -->
+	<div id="page-title" class="nav-block">
+	  
+	  <a href="../blog.html" class="hover-underline-text-color">Blog</a>
+	  
+	</div>
+	
+	<!-- Nav Link: 1  -->
+	<a href="../" id="nav-link1" class="nav-link nav-block">
+	  <span class="underline-me">Home</span>
+	</a>
+	
+	<!-- Nav Link: 2 -->
+	<a href="../blog.html" id="nav-link2" class="nav-link nav-block
+		                isBlogPost">
+	  <span class="underline-me">Blog</span>
+	</a>
+
+	<!-- Nav Link: 3 -->
+	<a href="../open-source-jrnl.html" id="nav-link3" class="nav-link nav-block">
+	  <span class="underline-me">Open-Source Journal</span>
+	</a>
+	
+	<!-- Nav Link: 4 -->
+	<a href="../#projects" id="nav-link4" class="nav-link nav-block">
+	  <span class="underline-me">Projects</span>
+	</a>
+	
+	<!-- Nav Link: 5 -->
+	<a href="../#contact-me" id="nav-link5" class="nav-link nav-block">
+	  <span class="underline-me">Contact Me</span>
+	</a>
+	
+	<!-- CV/Resume Button -->
+	
+	
+	<!-- Nav Block -->
+	<div id="show-nav-links-button" class="nav-block">
+	  <div>
+	    <div class="btn-line line-top"></div>
+	    <div class="btn-line"></div>
+	    <div class="btn-line"></div>
+	  </div>
+	</div>
+	
+	<div id="break1" class="nav-break">
+	</div>
+	
+	<div id="break2" class="nav-break">
+	</div>
+	
+	<div id="break3" class="nav-break">
+	</div>
+	
+      </nav>
+    </header>
+
+    <main role="main" id="insert">
+      <link rel="stylesheet" href="../css/syntax.css" />
+<link rel="stylesheet" href="../css/post.css" />
+<div id="postplate" class="
+		       technical
+		       noThumbnail ">
+  <div id="aspectRatioContainer1" class="aspectRatioContainer">
+    <div id="headingAndMetaBox" class="aspectRatioElem aspectRatioElem1">
+      <div class="title"><h1>Programming Language Semantics via Hoare Logic</h1></div>
+      <div id="authorContainer">
+	<p>Author:
+	  <a href="../" class="text-accent hover-underline-text-accent">
+	    Fraser Brooks
+	  </a>
+	  <div id="portrait"></div>
+	</p>
+      </div>
+      <div id="dateMetaContainer">
+	<div>
+	  <span class="default-text break-on-colon">
+	    <span class="text-mono">Published on:</span> 2021-07-21
+	  </span>
+	</div>
+	<div>
+	  <span class="default-text break-on-colon">
+	    <span class="text-mono">Last Updated:</span> 2021-07-21
+	  </span>
+	</div>
+      </div>
+      <div class="item-links-and-tags text-mono">
+	<span class="text-secondary bold">Tags:</span>
+	
+	<span class="text-primary">Hoare Logic</span>
+	
+	<span class="text-primary">Agda</span>
+	
+	<span class="text-primary">Program Correctness</span>
+	
+	<span class="text-primary">Verification</span>
+	
+	<span class="text-primary">Formal Proof</span>
+	
+      </div>
+    </div>
+  </div>
+  <div id="aspectRatioContainer2" class="aspectRatioContainer">
+    <img src="error" class="thumbnail aspectRatioElem aspectRatioElem2">
+  </div>
+</div>
+<div class="insert-block" style="padding-top: 1.5rem">
+  <div id="body">
+    <h2 id="axiomatic-semantics-via-hoare-logic">Axiomatic Semantics via Hoare Logic</h2>
+<p>In 1967, as an alternative to <span class="math inline">\(\lAngle\)</span> operational <span class="math inline">\(\rAngle\)</span> semantics, Floyd<span class="citation" data-cites="Floyd1967Flowcharts"></span> produced his seminal paper ‘Assigning Meanings to Programs’ in which a program is given semantics via attachment of propositions to the connections in a flow chart with nodes as commands. In Floyd’s deductive system, whenever a command (a node) is reached via a connection whose associated proposition is true, then, if execution of the program leaves that node, it will leave through a connection whose associated proposition is also true.</p>
+<blockquote>
+<p>“A <em>semantic definition</em> of a particular set of command [program] types, then, is a rule for constructing, for any command <span class="math inline">\(c\)</span> of one of these types, a <em>verification condition</em> <span class="math inline">\(V_c(P;Q)\)</span> on the antecedents and consequents of <span class="math inline">\(c\)</span>”. - Floyd<span class="citation" data-cites="Floyd1967Flowcharts"></span></p>
+</blockquote>
+<p>The principle idea is that rather than define a program (however large or small) by the way it should be executed, a program can be defined by the antecedents upon the state space that must be true before execution — hereafter referred to as <em>preconditions</em> — and the associated consequents upon the state space that can be guaranteed to be true after execution — hereafter referred to as <em>postconditions</em> — thus freeing the semantics from concerns of the <em>how</em> in favour of the <em>what.</em></p>
+<p>These ‘antecedents/consequents upon the state space’ are first-order logic predicates or propositions and the state space is taken most generally to be a set of pairs of identifiers and values; again the formulation here shields us from implementation details such as whether these ‘identifiers’ identify memory addresses within a machine or Post-it Notes on a wall.</p>
+<p>Later then, in 1969, Hoare<span class="citation" data-cites="hoare1969axiomatic"></span> built upon and expanded Floyd’s work<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, applying the system to text ( <span class="math inline">\(\large{\lAngle}\normalsize{P}\large{\rAngle}%
+  \normalsize{S}\large{\lAngle}\normalsize{Q}\large{\rAngle}\normalsize\)</span> ) rather than to flow charts, creating a <em>deductive system</em> for reasoning about the correctness of programs ( <span class="math inline">\(\large{\llbracket}\normalsize{p}\large{\rrbracket}\,%
+  \normalsize{S}\,\large{\llbracket}\normalsize{Q}\large{\rrbracket}\normalsize\)</span> ) as we would more naturally recognise them. Central to Hoare’s system is the notion of a <em>Hoare triple</em> which is a reformulation of Floyd’s verification condition <span class="math inline">\(V_c(P;Q)\)</span>. A Hoare triple associates a precondition, or a state, before execution of a particular program with a resultant postcondition, or state, after execution.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>Thus Hoare logic is sometimes referred to as Floyd-Hoare Logic<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>NB   Here, as in much of the literature, preconditions and postconditions and the actual subsets of the state space that they describe are used interchangeably. i.e. <code>False</code> = and <code>True</code> = <span class="math inline">\(S\)</span> where <span class="math inline">\(S\)</span> is the whole state space.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+  </div>
+</div>
+
+
+    </main>
+
+    
+    <footer>
+      <p>Site proudly generated by <a class="inline-link" href="http://jaspervdj.be/hakyll">Hakyll.</a> See the <a class="inline-link" href="https://github.com/frabrooks/hakyll-site-and-blog">full source code</a> on GitHub.</p>
+      
+    </footer>  
+  </body>
+  
+  <script src="../js/main.js"></script>
+  
+</html>

@@ -1,136 +1,61 @@
 
 
-// TODO 
-$minimum-width: 360px;
-$scale-padding: 4rem;
-$no-scale-padding: 34px;
-$bottom-nav-bar-gap: 1rem;
-$separator-width: 3px;
-$separator-height: 80%;
-
-// TODO rem-ify above
 
 
+$default-font-size: 1.125rem;// Roughly equiv to css large value
+$default-small-font-size: 0.875rem;
+$default-large-font-size: 1.5rem;// Roughly equiv to css x-large
+
+$indent-small-layout: 10vw;
 
 
-//------------------------------------------------ Site-wide
-
-// Min-width in pix, actual width in rem. The value of 55rem ensures
-// that when font size is set to default, min-pixel steps in to set
-// width at 1000px, while on larger font sizes 55rem > 1000px
-// The end result is that the insert-block width can grow with the font
-$insert-block-width: 55rem;
-$insert-block-min-width: 1000px;    
+$content-max-width: 66.25rem;
 
 
-$insert-block-height: auto;
-$insert-block-max-height: none;
-$insert-block-min-height: 90vh;
 
 
-// Left and right margins/padding can be zero for
-// insert block as there is padding on main element
-$insert-block-margin-top: 0;
-$insert-block-margin-right: 0;
-$insert-block-margin-bottom: 2rem;
-$insert-block-margin-left: 0;
-
-$insert-block-padding-top: 4rem;
-$insert-block-padding-right: 0;
-$insert-block-padding-bottom: 4rem;
-$insert-block-padding-left: 0;
-
-$default-font-size: 1.125rem;
+// Text width on all layouts small
+//$small-text-width: 70vw;
 
 
+$bold-font-weight: 600;
 // Aim for max 75 character width as per
 // the dictates of the typography cartel
-$default-text-width: 39.6rem;
-
-// Smaller layouts aim for 38 character size
-// as about 44 seems to be common on mobile apps
-// where the text runs edge to edge. So aim
-// a bit less leaving room for margin/page-map
-$small-text-width: 27rem;
-
-
-$word-spacing-text-flex: 0.125em;
-
-$footer-padding: 1rem;
-$footer-margin-bottom: 2rem;
+$default-text-width: 45rem;
 
 
 
-//-------------------------------------------------Navbar
 
-$nav-block-height: 6rem;
-
-$nav-block-padding: 1.5rem;
-$nav-link-padding: $nav-block-padding;
-
-$nav-bar-menu-button-padding: $nav-block-padding;
+$nav-bar-margin: 2rem;
 
 
-$page-title-padding-top: 0;
-$page-title-padding-right: 1rem;
-$page-title-padding-bottom: 0;
-$page-title-padding-left: 0;
+$thumbnail-width-default: 20.8125em; // ~ 300px on index (@ font-size: 90%)
+$thumbnail-height-default: 13.888em; // ~ 200px on index (@ font-size: 90%)
 
-// Navbar container dimens
-$navbar-padding-top: 0; 
-$navbar-padding-right: $no-scale-padding;
-$navbar-padding-bottom: 0;
-$navbar-padding-left: $no-scale-padding;
-//-
-$navbar-margin-top: 0;
-$navbar-margin-right: $no-scale-padding;
-$navbar-margin-bottom: 0;
-$navbar-margin-left: $no-scale-padding;
+$thumbnail-width-large: 15.624em; // ~ 225px on index (@ font-sie: 90%)
+$thumbnail-height-large: 10.416em; // ~ 150px on index (@ font-size: 90%)
 
+$thumbnail-width-small: 12.5em; // ~ 180px on index (@ font-sie: 90%)
+$thumbnail-height-small: 8.333em; // ~ 120px on index (@ font-size: 90%)
 
-// nav-link Home/Contact/Blog etc. buttons
-$nav-link-padding-top: 0; // could also be as below
-$nav-link-padding-right: $nav-link-padding;
-$nav-link-padding-bottom: 0; // could also be as below
-$nav-link-padding-left: $nav-link-padding;
-
-
-//Separator Widths
-//
-//
-// TODO, this is actually margin, not width
-$logo-title-separator-width: 1.2rem;
-//
-// Both use the same def. for symmetry
-$button-separator-and-page-title-separator-width: 0.2rem;
-
-$cv-button-width: 10rem;
-$cv-button-height: $nav-block-height;
-$cv-button-link-width: auto;
-$cv-button-link-height: auto;
-
-$cv-button-padding-top: 0.8rem;
-$cv-button-padding-right: 1rem;
-$cv-button-padding-bottom: 0.8rem;
-$cv-button-padding-left: 1rem;
-
+$separator-width: 0.1875rem;
+$separator-height: 80%;
 
 
 
 // ---------------------------------------- page map ( icon stack + traffic light)
 
-$page-map-width: 120px;
-$page-map-height: 17.5rem;
-$page-map-margin-left: 4vw;
 
-$map-line-width: 10px;
+$page-map-height: 22.5rem;
+$map-line-width: 0.625rem;
+
+
 $map-circle-width: 0.125rem;
 $map-style: double;
 
 $stem-height: 50px;
-$stem-width: $map-circle-width;
+$stem-width: $map-circle-width * 1.12;
 $icon-stack-padding-top: 0.5rem;
-
 
 $circle-size: 1.875rem;
 $s-c-margin: 0.16666;
@@ -157,18 +82,10 @@ $fixed-icon-padding: 4px;
 // ----------------------------------------- Index (page contents)
 
 $terminal-font-size: 1.25rem;
-$hello-my-name-is-spacing: 0.2rem;
 $terminal-text-heading-margin-bottom: 1rem;
-$nameplate-padding-bottom: 30px;
 
-$portrait-size: 9rem;
-$top-text-padding-left: 2.25rem;
+// ---------------------------------------- Blog
 
-$fraser-brooks-font-size: 4.5rem;
-$fraser-brooks-font-weight: 500;
-$fraser-brooks-margin-top-bottom: 0.6rem;
-$sec-heading-font-size: 2rem;
 
-$recent-activity-item-sep: 2rem;
 
 

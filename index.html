@@ -1,39 +1,35 @@
 ---
 title: Home
 is-home: yes
-first-name: Fraser
-last-name: Brooks
-tagline1: M.Sci
-tagline2:  Computer Science
-abstract1: I'm a recent M.Sci Computer Science graduate with a history in design, a budding open-source software enthusiast, and wannabe Haskeller.
-abstract1': I'm a recent M.Sci Computer Science 38 graduate with a history in design, a 75 budding open-source software enthusiast, and wannabe Haskeller.
-abstract2: I love to create beautiful and useful software and am looking for work in software development, data science,  or DevOps. I also have a blog where I write about whatever interests me. See below for examples of my work ↴
 ---
-<link rel="stylesheet" href="/css/index/index.css" />
+<link rel="stylesheet" href="/css/index.css" />
 <div id="page-map-root">
-  <div class="icon-stack">
-    <p>contactme@fraserbrooks.io</p>
-    <a href="#!">
-      <img src="images/twitter.svg" class="svg-icon" />      
-    </a>
-    <div class="map-sep invisible"/>
-    <a href="#!">
-      <img src="images/banana-line.svg" class="svg-icon" />
-    </a>
-    <div class="map-sep invisible"/>
-    <a href="#!">
-      <img src="images/linkedin.svg" class="svg-icon" />      
-    </a>
-    <div class="map-sep invisible"/>
-    <a href="#!">
-      <img src="images/github.svg" class="svg-icon"/>
-    </a>
-    <div class="map-sep invisible"/>
-    <div class="stem">
+  <div id="page-map-rhs">
+    <a id="email" href="mailto:$email$">$email$</a>
+    <div id="email-sep" class="map-sep"/>    
+    <div class="icon-stack">
+      <a href="https://twitter.com/FraserLBrooks" class="icon-link-container">
+	<img src="images/twitter.svg" class="svg-icon" />      
+      </a>
+      <div class="map-sep invisible"/>
+      <a href="/#bnna" class="icon-link-container bnnaBtn">
+	<img src="images/banana-line.svg" class="svg-icon" />
+      </a>
+      <div class="map-sep invisible"/>
+      <a href="https://www.linkedin.com/in/fraserbrooks0208" class="icon-link-container">
+	<img src="images/linkedin.svg" class="svg-icon" />      
+      </a>
+      <div class="map-sep invisible"/>
+      <a href="https://github.com/frabrooks" class="icon-link-container">
+	<img src="images/github.svg" class="svg-icon"/>
+      </a>
+      <div class="map-sep invisible"/>
+      <div class="stem">
+      </div>
     </div>
   </div>
   <div id="traffic-light">
-    <div class="map-sep invisible"/>
+    <div class="map-sep hidden"/>
     <a href='#!' id="circle1" class="circle">
       <div id="subCircle1" class="subCircle"/>      
       <div id="branch1" class="branch hidden"/>
@@ -62,161 +58,165 @@ abstract2: I love to create beautiful and useful software and am looking for wor
     <div class="stem"/>
   </div>
 </div>
-<div class="insert-block">
-  <h4 id="terminal1" class="mono-text text-secondary terminal-text">~$$<span class="text-primary"> whoami<span class="blink">_</span></span></h4>
+<div id="first-block" class="insert-block">
+  <h4 id="whoami" class="text-mono text-secondary terminal-text">~$$
+    <span class="terminal-text-heading">whoami<span class="blink">_</span></span>
+  </h4>
   <div id="nameplate">
     <div id="top">
-      <div id="portrait"/>	
+      <div id="portrait"/>
       <div id="top-text">
-	<h4 class="highlight-text">Hello, my name is
+	<h4 class="text-accent">Hello, my name is
 	</h4>
-	<h1 class="text-flex-container">
-	  <span class="prim-heading text-secondary">
-	    $first-name$
-	  </span>
-	  <span class="prim-heading text-secondary">
-	    $last-name$
-	  </span>
-	</h1>
-	<h2 class="text-flex-container">
-	  <span class="mono-text sec-heading">
-	    $tagline1$
-	  </span>
-	  <span class="mono-text sec-heading">
-	    $tagline2$
-	  </span>
-	</h2>
-	<div class="icon-stack">
-	  <a href="#!">
-	    <img src="images/twitter.svg" class="svg-icon" />      
-	  </a>
-	  <div class="map-sep"/>
-	  <a href="#!">
-	    <img src="images/banana-line.svg" class="svg-icon" />
-	  </a>
-	  <div class="map-sep"/>
-	  <a href="#!">
-	    <img src="images/linkedin.svg" class="svg-icon" />      
-	  </a>
-	  <div class="map-sep"/>
-	  <a href="#!">
-	    <img src="images/github.svg" class="svg-icon"/>
-	  </a>
+	<div id="name-container" class="text-primary text-mono">
+	  <span >$first-name$</span><span >$last-name$</span>
+	</div>
+	<div id="subtitle-container" style="display: inline;">
+	  <h4 class="lhs text-accent" style="display: inline;">$subtitleLHS$</h4>
+	  <h2 class="rhs text-primary text-mono" style="display: inline;">$subtitleRHS$</h2>
+	  <div class="icon-stack">
+	    <a href="https://twitter.com/FraserLBrooks" class="icon-link-container">
+	      <img src="images/twitter.svg" class="svg-icon" />      
+	    </a>
+	    <div class="map-sep"/>
+	    <a href="/#bnna" class="icon-link-container bnnaBtn">
+	      <img src="images/banana-line.svg" class="svg-icon" />
+	    </a>
+	    <div class="map-sep"/>
+	    <a href="https://www.linkedin.com/in/fraserbrooks0208" class="icon-link-container">
+	      <img src="images/linkedin.svg" class="svg-icon" />      
+	    </a>
+	    <div class="map-sep"/>
+	    <a href="https://github.com/frabrooks" class="icon-link-container">
+	      <img src="images/github.svg" class="svg-icon"/>
+	    </a>
+	  </div>	  
 	</div>
       </div>
     </div>
     <div id="bottom">
       <div id="spacer"/>
       <div id="intro-text">
-	<p >$abstract1$</p>
-	<p >$abstract2$</p>
+	$for(about-me-pars)$
+	<p>$body$</p>
+	$endfor$
       </div>
     </div>
   </div>
   <div id="recent-activity-text">
-    <h4 id="terminal2" class="mono-text text-secondary terminal-text">~$$<span class="text-primary"> recent-activity<span class="blink">_</span></span></h4>
-    <p><span> 29/09/2021 - New Blog Post:</span><span class="sep"></span><a href='#!' class="hover-underline-link">Undergeneralisation and the Prosecutors Fallacy</a></p>
-    <p><span>14/09/2021 - New Merge:</span><span class="sep"></span><a href="https://github.com/haskell/cabal/pull/7310" class="hover-underline-link">First contribution to haskell toolchain: a bugfix for the cabal-install CL tool</a></span></p>
-<p><span>21/08/2021 - New Blog Post:</span><span class="sep"></span><a href='#!' class="hover-underline-link">Parkinson's Law vs. Goodhart's Law</a></p>    
-</div>
-</div>
-<div class="insert-block">
-  <h4 id="terminal3" class="mono-text text-secondary terminal-text">~$$<span class="text-primary"> academic-work<span class="blink">_</span></span></h4>
-  <div class="icons">
-    <a href="#!">
-      <i class="fab fa-twitter fa-2x"></i>
+    <h4 id="terminal2" class="text-mono text-secondary terminal-text">~$$
+      <span class="terminal-text-heading">recent-activity<span class="blink">_</span></span>
+    </h4>
+    $for(recent-activity-list)$
+    <a href='$link$' class="recent-activity">
+      <span class="lhs">
+	<span class="date">$activity-date$</span>
+	$if(is-post)$
+	<span class="NewBlogPost type-box">New Blog Post</span>
+	$else$
+	$if(is-merge)$
+	<span class="NewMerge type-box">
+	  <img src="images/merged.svg" class="svg-no-hover"/>
+	  <span>Merged</span>
+	</span>
+	$else$
+	<span class="NewPullRequest type-box">
+	  <img src="images/pull-request.svg" class="svg-no-hover"/>
+	  <span>Pull Request</span>
+	</span>
+	$endif$
+	$endif$
+      </span>
+      <span class="rhs text-accent underline-me">$activity-title$</span>
     </a>
-    <a href="#!">
-      <i class="fab fa-facebook fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-linkedin fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-github fa-2x"></i>
-    </a>
+    $endfor$
   </div>
-  <p id="intro-text">$abstract1$</p>
-    <div class="icons">
-    <a href="#!">
-      <i class="fab fa-twitter fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-facebook fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-linkedin fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-github fa-2x"></i>
-    </a>
-  </div>
-  <p id="intro-text">$abstract1$</p>
 </div>
 <div class="insert-block">
-  <h4 id="terminal4" class="mono-text text-secondary terminal-text">~$$<span class="text-primary"> project-portfolio<span class="blink">_</span></span></h4>
-  <div class="icons">
-    <a href="#!">
-      <i class="fab fa-twitter fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-facebook fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-linkedin fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-github fa-2x"></i>
-    </a>
+  <h4 id="terminal3" class="text-mono text-secondary terminal-text">~$$
+    <span class="terminal-text-heading">academic-work<span class="blink">_</span></span>
+  </h4>
+  $for(academic-work)$
+  <div class="insert-item">
+    <div class="item-lhs" >
+      <a href="$item-link$" class="hover-underline-text-primary">
+	<h2 class="text-primary">$item-title$</h2>
+      </a>
+      <img class="thumbnail" src="$item-image$">
+    </div>
+    <div class="item-rhs">
+      <a href="$item-link$" class="hover-underline-text-primary">
+	<h2 class="text-primary">$item-title$</h2>
+      </a>      
+      $for(item-pars)$
+      <p>$body$</p>
+      $endfor$
+      <div class="item-links-and-tags">
+	$if(github)$
+	<a href="$github-link$" class="icon-link-container">
+	  <img src="images/github.svg" class="svg-icon">
+	</a>
+	$endif$
+	$if(pdf)$
+	<a href="$pdf-link$" class="icon-link-container">
+	  <img src="images/pdf.svg" class="svg-icon">
+	</a>
+	$endif$
+	<div class="separator" />
+	<span class="text-secondary bold small">Tags:</span>
+	$for(item-tags)$
+	<span class="text-primary small">$body$</span>
+	$endfor$
+      </div>
+    </div>
   </div>
-  <p id="intro-text">$abstract1$</p>
-    <div class="icons">
-    <a href="#!">
-      <i class="fab fa-twitter fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-facebook fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-linkedin fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-github fa-2x"></i>
-    </a>
-  </div>
-  <p id="intro-text">$abstract1$</p>
+  $endfor$
 </div>
-<div id="insert-block-last" class="insert-block">
-  <h4 id="terminal5" class="mono-text text-secondary terminal-text">~$$<span class="text-primary"> contact-me<span class="blink">_</span></span></h4>
-  <div class="icons">
-    <a href="#!">
-      <i class="fab fa-twitter fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-facebook fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-linkedin fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-github fa-2x"></i>
-    </a>
+
+<div class="insert-block">
+  <h4 id="projects" class="text-mono text-secondary terminal-text">~$$
+    <span class="terminal-text-heading"> project-portfolio<span class="blink">_</span></span>
+  </h4>
+  $for(projects)$
+  <div class="insert-item">
+    <div class="item-lhs" >
+      <a href="$item-link$" class="hover-underline-text-primary">
+	<h2 class="text-primary">$item-title$</h2>
+      </a>
+      <img class="thumbnail" src="$item-image$">
+    </div>
+    <div class="item-rhs">
+      <a href="$item-link$" class="hover-underline-text-primary">
+	<h2 class="text-primary">$item-title$</h2>
+      </a>      
+      $for(item-pars)$
+      <p>$body$</p>
+      $endfor$
+      <div class="item-links-and-tags">
+	$if(github)$
+	<a href="$github-link$" class="icon-link-container">
+	  <img src="images/github.svg" class="svg-icon">
+	</a>
+	$endif$
+	$if(pdf)$
+	<a href="$pdf-link$" class="icon-link-container">
+	  <img src="images/pdf.svg" class="svg-icon">
+	</a>
+	$endif$
+	<div class="separator" />
+	<span class="text-secondary bold small">Tags:</span>
+	$for(item-tags)$
+	<span class="text-primary small">$body$</span>
+	$endfor$
+      </div>
+    </div>
   </div>
-  <p id="intro-text">$abstract1$</p>
-    <div class="icons">
-    <a href="#!">
-      <i class="fab fa-twitter fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-facebook fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-linkedin fa-2x"></i>
-    </a>
-    <a href="#!">
-      <i class="fab fa-github fa-2x"></i>
-    </a>
-  </div>
-  <p id="intro-text">$abstract1$</p>
+  $endfor$
 </div>
-<script src="js/index.js"></script>
+<div class="insert-block" style="min-height: initial;">
+  <h4 id="contact-me" class="text-mono text-secondary terminal-text">~$$<span class="terminal-text-heading"> contact-me<span class="blink">_</span></span></h4>
+  <p> If you want to contact me for whatever reason - be it for networking, to tell me about a job opportunity, or just to say hi - your best bet is to email me at <a href="mailto:contact@fraserbrooks.io" class="inline-link">contact@fraserbrooks.io.</a> Alternatively you can reach out to me on <a href="https://www.linkedin.com/in/fraserbrooks0208" class="inline-link">LinkedIn.</a> Either way I'll endeavour to get back to you promptly. Thanks for stopping by!</p>
+
+</div>
+
+<script src="/js/index.js"></script>

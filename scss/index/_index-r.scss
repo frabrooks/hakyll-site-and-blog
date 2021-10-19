@@ -1,0 +1,415 @@
+
+// SCSS imports, no css will be generated from the below imports
+// so, if my understanding is correct, they are safe to import
+// at the top of all files.
+@import '../declarations/fonts';
+@import '../declarations/mixins';
+@import '../declarations/colours';
+@import '../declarations/dimens';
+@import '../declarations/backgrounds';
+
+@improt 'index-decs';
+
+
+//////////////////////////////////////////////////////////////////////////
+// Responsive styles for nameplate and recent-activity section (the stuff
+// that is visible when you land on index page.)
+
+
+
+// Roughly 4k
+@include mStupidLarge {
+}
+
+// Above roughly 3000px width
+@include mXXLarge {
+}
+
+// (Widescreen) Desktop First 
+@include mXLarge {
+}
+
+// 2/3rd desktop
+@include mLarge {
+
+
+    #whoami {
+	display: none;
+    }
+
+    #nameplate {
+	font-size: 85%;
+    }
+
+    #portrait {
+	margin-bottom: 4em;
+    }
+    
+    #top {
+
+	align-self: center;
+	
+	.icon-stack {
+	    position: static;
+	    display: flex;
+	    flex-direction: row;
+	    justify-content: space-evenly;
+	    height: auto;
+	    padding: 1em 0.5em 1em 3em; // 3em to sit under Full Stack Developer
+	    margin: 0;
+	    
+	    a {
+		width: 2em;
+		height: 2em;
+
+		.svg-icon {
+		    filter: $text-secondary-filter;
+		    &:hover {
+			filter: $text-accent-filter;
+		    }
+		}
+
+	    }
+
+	    .map-sep {
+		display: none;
+	    }
+	    
+	}
+
+
+	#name-container {
+	    margin-top: $fraser-brooks-margin-top/2;
+	}
+	
+    }
+    #bottom {
+
+	#intro-text {
+	    padding-left: 0;
+	}
+	#spacer {
+	    display: none;
+	}
+    }
+
+
+    #recent-activity-text {
+	width: 100%;
+	align-items: flex-start;
+
+	.recent-activity:nth-child(2) {
+	    margin-top: 8px;
+	}
+	
+	.recent-activity {
+
+	    width: 100%;
+	    margin-left: 0;
+	    align-items: stretch;
+
+	    border-top: 2px dashed $map-color;
+	    padding: 1rem 0 0.5rem;
+	    
+	    .lhs {
+		width: 30%;
+		min-width: 30%;
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+		align-items: flex-end;
+
+		.date {
+		    margin-top: 1rem;
+		    padding-right: 0.5rem;
+		}
+		
+		.type-box {
+		    white-space: nowrap;
+		    margin: 0;
+		    width: fit-content;
+		}		
+	    }
+	    
+	    .rhs {
+		margin-left: 2rem;
+		justify-content: flex-start;
+	    }
+	}
+    }
+
+    
+    .terminal-text,#recent-activity-text h4 {
+	font-size: $terminal-font-size;
+	align-self: flex-start;
+	width: 100%;
+	margin: 0;
+    }
+    .terminal-text:after {
+	content:'';
+	height: 2rem;
+	top: 50%;
+	margin-top: -1rem;
+	position: absolute;
+
+	left: 0;
+	right: 0;
+	
+	background: rgba($map-color , 0.1);
+
+	border-top: 1px solid $text-secondary;
+	border-bottom: 1px solid $text-secondary;	
+    }
+
+    .insert-item {
+	flex-direction: column;
+	align-items: center;	    
+
+
+	.thumbnail {
+	    // idk why these -5 px make it line
+	    // up better but they do and I don't care
+	    margin-left: -5px; 
+	}
+	
+	&:nth-child(odd) {
+	    // Overwrite previous rule
+	    flex-direction: column;
+
+	    // Move criss-cross to inner div
+	    // (still swapping side of thumbnail)
+	    .item-lhs {
+		// counter to row-reverse below
+		flex-direction: initial;
+	    }
+
+	    .thumbnail {
+		margin-left: 2rem;
+		margin-right: -5px;
+	    }
+	}
+	
+	.item-lhs {
+	    display: flex;
+	    flex-direction: row-reverse;
+	    justify-content: center;
+	    align-items: center;
+
+	    a {
+		display: initial;
+		text-align: center;		
+	    }
+	    
+	    h2 {
+		display: initial;
+		font-size: 135%;
+	    }
+
+	}
+	
+	.item-rhs {
+	    min-height: initial;
+	    padding-left: 0;
+	    align-items: center;
+
+	    
+	    h2 {
+		display: none;
+	    }	
+	}
+    
+    }
+    
+}
+
+
+// Exactly half desktop
+@include mMedium {
+
+    #portrait.dance-banana-a-go-go {
+	margin-left: initial;
+	margin-right: initial;
+	left: initial;
+	right: initial;
+	width: $portrait-size * 1.5;
+	min-width: $portrait-size * 1.5;
+	height: $portrait-size * 1.5;
+	min-height: $portrait-size * 1.5;
+    }
+
+    html.dance-banana-a-go-go {
+
+	background-size: 65vw;
+	background-position: center 30%;
+		
+	#first-block{
+	    margin-top: 50vh;
+	    padding-top: 0;
+	    #top {
+		padding-top: 0.5rem;
+	    }
+	}
+    }
+    
+}
+
+// First smaller than half desktop
+// Size of some tablets
+// Navbar now 3 rows & CV button now centered:
+//
+//    HOME  |CV|    X
+//    --------------    
+//   |  1   |  2   |
+//   |     3      |
+//   |  4  |  5   |
+//   -------------
+//
+@include mSmall { // 832px w/ default font-size
+
+	
+    #nameplate {
+	font-size: 75%;
+    }
+
+    #top {
+	#name-container {
+
+	    margin-top: 2em;
+	    margin-bottom: 2em;
+	    
+	    margin-left: 12em;
+	    flex-direction: column;
+	    
+	    * {
+		font-size: 550%;
+	    }
+	    
+	    *:nth-child(2) {
+		margin-top: -0.6em;
+	    }
+	}
+    }
+
+    #subtitle-container {
+	margin-left: 0;
+	padding-left: 0;
+    }
+    
+    #nameplate h4 {
+	font-size: 150%;
+    }
+
+    #nameplate h2 {
+	font-size: 250%;
+	word-spacing: -0.25em;
+    }
+
+    #portrait {
+	position: absolute;
+	margin-bottom: 10em;
+	margin-left: 2.6em;
+	font-size: 110%;
+    }
+
+
+    #top {
+	.icon-stack {
+	    padding: 2.5em 0 1em;
+	    
+	    font-size: 160%;
+	    justify-content: space-between;	
+	}
+    }
+
+    #recent-activity-text .type-box {
+	font-size: $default-small-font-size;
+    }
+
+    #recent-activity-text .recent-activity .lhs {
+	width: 40%;
+	min-width: 40%;
+    }
+
+
+    .insert-item {
+	.thumbnail {
+	    // idk why these -5 px make it line
+	    // up better but they do and I don't care
+	    margin-left: -5px; 
+	}
+	
+	&:nth-child(odd) {
+	    .thumbnail {
+		margin-left: 1rem;
+		margin-right: -5px;
+	    }
+	}
+    }
+
+    
+    .insert-item .item-lhs h2 {
+	font-size: 110%;
+    }
+
+    .insert-item .item-rhs .icon-link-container {
+	width: 2.5rem; // ~ match the icons on nameplate
+	height: 2.5rem; 
+    }
+
+    .insert-item .item-rhs .item-links-and-tags {
+	margin-top: 1rem;
+    }
+
+		
+}
+
+// All Tablets now
+@include mXSmall { // 640px w/ default font-size
+
+    #nameplate {	
+	font-size: 65%;
+	width: 100%;
+    }
+
+    #top {
+	padding-top: 4em;
+    }
+
+
+}
+
+// Small screen & massive font-size only
+// Now single file:
+// i.e.
+//  |     nav-1     |
+//  ----------------
+//  |      nav-2    |
+//  ----------------
+//  |     nav-3     | 
+//  ----------------
+//         .
+//         .
+//         .
+//
+@include mXXSmall { // 480px w/ default font-size
+
+    #nameplate {	
+	font-size: 60%;
+    }
+    
+}
+
+// Ridiculously small/narrow for galaxy fold and kin
+@include mStupidSmall { // 280px w/ default font-size
+    #nameplate {
+	font-size: 55%;
+    }
+}
+
+@include mTakingThePiss {
+    #nameplate {
+	font-size: 45%;
+    }
+}
+
+

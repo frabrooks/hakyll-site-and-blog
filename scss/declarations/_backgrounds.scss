@@ -1,12 +1,13 @@
 
 
-
-$show-bg-image: true;
 $bg-image: url(../images/bg.jpg);
+
+
+$bnna-image: url(../images/banana-dance.gif);
 
 //overlay-gradient-start/ens for translucent shapes
 $ogs: 25%;
-$oge: 75%;
+$oge: 25%;
 
 $background-opacity: 0.96;
 $overlay-opacity: 1;
@@ -16,13 +17,19 @@ $overlay-opacity: 1;
 @mixin page-background{
 
     // This is needed to have background past edge of page
-    background: rgba($background-color , $background-opacity);
-    
-    @if $show-bg-image {	
-	background-image: $bg-image;
-	background-attachment: fixed;
-	background-size: cover;
+    background: rgba($bg-color , $background-opacity);
+    	
+    background-image: $bg-image;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right bottom;
+
+    &.dance-banana-a-go-go {
+	background-image: $bnna-image;
+	background-size: contain;
+	background-position: right bottom;
     }
+	
     &:after {
 	content: '';
 	position: fixed;
@@ -30,17 +37,21 @@ $overlay-opacity: 1;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba($background-color , $background-opacity);
+	background: rgba($bg-color , $background-opacity);
 	z-index: -1;
+    }
+
+    &.dance-banana-a-go-go:after {
+	background: rgba($bg-color , 0.5);
     }
 }
 
 
 @mixin section-background{
     background: linear-gradient(to right,
-				rgba($background-color , 0) ,
-				rgba($background-color, $overlay-opacity) $ogs $oge,
-				rgba($background-color , 0) )
+				rgba($bg-color , 0) ,
+				rgba($bg-color, $overlay-opacity) $ogs $oge,
+				rgba($bg-color , 0) )
 }
 
 

@@ -1,0 +1,161 @@
+// Styling loaded for blog.htm (blog post list/index page)
+
+// SCSS imports, no css will be generated from the below imports
+// so they are safe to import at the top of all files.
+@import 'declarations/fonts';
+@import 'declarations/mixins';
+@import 'declarations/colours';
+@import 'declarations/dimens';
+@import 'declarations/backgrounds';
+
+
+.border{
+    width: 100%;
+    border-bottom: 1px solid $text-accent;
+}
+
+.post-item {
+    
+    display: flex;
+
+    width: 100%;
+    max-width: $content-max-width + 5rem;
+
+    align-items: flex-start;
+    
+    padding: 2rem 0 2rem 0;
+
+    border-bottom: 1px solid $text-secondary;
+    
+    .thumbnail {
+	
+	font-size: 90%; // to match index
+	object-fit: contain;	
+    }
+
+    .post-lhs .post-heading {
+	display: none;
+    }
+	
+
+    .offset-me{
+	margin-left: 2em;
+    }
+    .post-rhs{
+
+	width: 100%;
+	
+	.post-heading {
+	    display: flex;
+	    flex-wrap: nowrap;
+	    align-items: flex-start;
+	    justify-content: space-between;
+
+	    a { // Link / Title
+		padding-right: 1rem;
+	    }
+	    
+	    h3 { // Date
+		text-align: end;
+		white-space: nowrap;
+		padding-left: 3rem;
+	    }
+	}
+
+	.post-summary {
+	    display: flex;
+	    justify-content: space-between;
+	    flex-direction: column;
+	}
+	
+    }
+    
+}
+
+.post-item.no-thumbnail{
+
+    .DateAndLinesChanged {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin-bottom: 0.25rem;
+
+	.linesAdded,.linesRemoved{
+	    @include font-mono;
+	    font-size: $default-font-size;
+	    font-weight: bold;
+	}
+	.lines{
+	    @include font-mono;
+	    color: $text-color;
+	}
+	// a la GitHub
+	.linesAdded {
+	    color: #3fb950;
+	}
+	.linesRemoved {
+	    color: #da3633;
+	}
+	    
+    }
+    
+    .post-rhs{
+	
+	
+	.post-summary{
+	    flex-direction: row-reverse;
+	    justify-content: flex-end;
+	    
+	    .item-links-and-tags {
+
+		font-size: 90%; // to match index
+		
+		width: $thumbnail-width-default;
+		min-width: $thumbnail-width-default;
+		max-width: $thumbnail-width-default;
+		height: fit-content;
+		
+		margin: 2em;
+	    }
+	    .NewMerge,.NewPullRequest{
+		margin-left: 0.5rem;
+	    }
+	}
+    }
+    
+}
+
+#open-src-jrnl {
+
+    .post-item {
+
+
+	.post-heading {
+	    display: flex;
+	    justify-content: space-between;
+	}
+	
+	.post-summary {
+
+	    display: flex;
+	    flex-direction: row-reverse;
+
+	    align-items: flex-start;
+
+	    .item-type-and-tags {
+		width: $thumbnail-width-default;
+		min-width: $thumbnail-width-default;
+		max-width: $thumbnail-width-default;
+
+		margin: 0 2em 2em;
+	    }
+	}
+    }
+}
+
+
+
+@import 'listicle-r';
+
+
+

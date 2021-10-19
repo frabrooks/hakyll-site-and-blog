@@ -1,0 +1,123 @@
+---
+title: This is a Test Blog Post of No Importance
+
+tags:
+ - Test
+ - Super Glue
+ - Outer Space
+ - Cheese
+ - Kiwis
+
+---
+% DOCUMENT CLASS
+\documentclass[oneside,12pt]{article}
+
+\usepackage{hyperref}
+
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{verbatim}
+
+\usepackage{amsmath}
+\usepackage{mathtools}
+
+\usepackage{agda}
+
+% \input{font-business}
+
+% Caption options
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+
+\usepackage{lipsum}
+
+% Bold face small caps
+% \usepackage{bold-extra}
+
+%\input{unicode}
+%\usepackage{eufrak}
+%\usepackage{mathabx}
+% Use Chancery Font
+
+
+% Includes "References" in the table of contents
+\usepackage[nottoc]{tocbibind}
+
+
+\usepackage{epigraph}
+\usepackage{varwidth}
+
+\usepackage{ stmaryrd }% For \llbracket \rrbracket
+% Used in \tctrip def
+
+
+% For NB ligature
+\newcommand\NB[1][0.1]{NB \; \; } % default kern amount: -0.3em
+
+% Style for Agda snippet math script replacement
+% (emphasised agda definitions)
+\newcommand{\agdamath}[1]{\emph{\texttt{\!#1}}}
+
+% style for Mini-Imp construct/mechanism
+\newcommand{\impcode}[1]{\texttt{#1}}
+
+\newcommand{\codevar}[1]{\ensuremath{#1}}
+
+\newcommand{\textM}[1]{$#1$}
+
+% For constants in agda-snippets
+% Place input in circle (arg should be one numeral 1-9)
+\newcommand{\constv}[1]{\raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {#1}}}}
+
+% Hoare's original notation for partial correctness
+% \newcommand{\hpc}[3]{\textM{#1 } \{\!\!\{\  \textM{ #2 }  \}\!\!\} \textM{ #3}}
+\newcommand{\hpc}[3]{\! \textM{#1} \;  \{\!\!\{ \; \textM{#2} \;  \}\!\!\}  \; \textM{#3} \!}
+% Inline version with tighter spacing
+\newcommand{\hpcil}[3]{ \!\!\!  \textM{#1} \!\!\!  \{\!\!\{  \textM{#2}  \}\!\!\}  \!\!\! \textM{#3} \!\!\!  }
+
+% Gries then uses this for total correctness, but confusingly in many
+% expositions these days it is used to denote partial correctness!
+\newcommand{\gtc}[3]{\!  \{\!\!\{ \; \textM{#1} \; \}\!\!\} \; \textM{#2} \;  \{\!\!\{ \; \textM{#3} \; \}\!\!\} \!}
+% Inline version with tighter spacing
+\newcommand{\gtcil}[3]{ \!\!\!\!   \{\!\!\{  \!\!\!  \textM{#1} \!\!\! \}\!\!\} \textM{#2}   \{\!\!\{  \!\!\! \textM{#3} \!\!\!  \}\!\!\} \!\!\!  }
+
+% This reports/project's notation
+% Partial Correctness Hoare-Triple
+\newcommand{\pctrip}[3]{$\large{\lAngle}\normalsize{#1}\large{\rAngle}%
+  \normalsize{#2}\large{\lAngle}\normalsize{#3}\large{\rAngle}\normalsize$}
+
+% Total Correctness Hoare-Triple
+\newcommand{\tctrip}[3]{$\large{\llbracket}\normalsize{#1}\large{\rrbracket}\,%
+  \normalsize{#2}\,\large{\llbracket}\normalsize{#3}\large{\rrbracket}\normalsize$}
+
+
+\newcommand{\wpre}[2]{$\textit{wp}(#1,#2)$}
+
+\newcommand{\wlpre}[2]{$\textit{wlp}(#1,#2)$}
+
+% Agda code state transformer symbol
+\newcommand{\stateT}{\ensuremath{S\Delta}}
+
+% def above equal sign
+\newcommand{\eqdef}{$\stackrel{\text{\tiny def}}{=}$}
+
+% filled circle (empty state) symbol
+\newcommand{\circfill}{\tikz\draw[black , fill=black] (0,0) circle (.6ex);}
+
+
+
+\begin{document}
+
+
+\subsection{Sub Section 1}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\end{document}
+
+

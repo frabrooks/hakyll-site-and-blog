@@ -1,0 +1,67 @@
+---
+title: Open Source Journal
+---
+<link rel="stylesheet" href="/css/listicle.css" />
+<div id="open-src-jrnl" class="insert-block">
+  $for(jrnlIntro)$
+  <p style="text-align: center">$body$</p>
+  $endfor$
+  <div class="border" style="margin-top: 2rem"/>  
+  $for(jrnlEntries)$  
+  <div class="post-item no-thumbnail" >
+    <div class="post-text" >
+      <div class="post-heading">
+	<a href="$srcLink$" class="hover-underline-text-primary">
+	  $if(hasRepo)$
+	  <h2 class="text-primary">$srcRepo$</h2>
+	  $endif$
+	  <h2 class="text-primary">$srcTitle$</h2>
+	</a>
+	<div class="DateAndLinesChanged">
+	  <div >
+	    <h3 class="with-underline">$srcDate$</h3>
+	    <span class="break-on-colon">
+	      <span class="lines">lines:</span>
+	      <span>
+		<span class="linesAdded">&nbsp+$linesAdded$,&nbsp</span>
+		<span class="linesRemoved">-$linesRemoved$</span>
+	      </span>
+	  </div>
+	</div>
+      </div>
+      <div class="post-summary">
+	<div>
+	  $for(srcDescription)$
+	  <p>$body$</p>
+	  $endfor$
+	</div>
+	<div class="item-type-and-tags">
+	  <p>
+	    $if(isMerge)$
+	    <span class="NewMerge">
+	      <img src="images/merged.svg" class="svg-no-hover"/>
+	      <span>Merged</span>
+	    </span>
+	    $else$
+	    <span class="NewPullRequest">
+	      <img src="images/pull-request.svg" class="svg-no-hover"/>
+	      <span>Pull request</span>
+	    </span>
+	    $endif$
+	  </p>
+	  <div class="item-links-and-tags">
+	    <span class="text-secondary bold small">Tags:</span>
+	    $for(srcTags)$
+	    <span class="text-primary small">$body$</span>
+	    $endfor$
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+  $endfor$
+  <p style="margin-top: 2rem"> End of List </p>
+</div>
+
+
+

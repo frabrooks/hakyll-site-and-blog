@@ -3,7 +3,6 @@
 // so, if my understanding is correct, they are safe to import
 // at the top of all files.
 @import '../../declarations/fonts';
-@import '../../declarations/vars';
 @import '../../declarations/mixins';
 @import '../../declarations/colours';
 @import '../../declarations/dimens';
@@ -21,47 +20,59 @@
 @include mXLarge {
 }
 
-@media screen and (max-width: 100.4rem) {
-
-    .icon-stack {
-
-	margin-right: $page-map-margin-left * 2;
-	
-	p {
-	    position: fixed;
-	    margin: 0;
-	    right: 3vw;
-	    bottom: $stem-height + 36px;
-	    top: initial;
-	}
-	
-	p:after {
-	    position: fixed;
-	    right: 3.8vw;
-	    bottom: 0;
-	    left: initial;
-	    height: $stem-height;
-	}	
-    }
-
-    
-    
-}
 
 // 2/3rd desktop
 @include mLarge {
 
-    #page-map-root {
-
-	margin-left: $page-map-margin-left / 2;
-    }
-    .icon-stack {
+    
+    #page-map-rhs {
 	display: none;
     }
 
     .branch {
 	display: none;
     }
+
+    // Change page-map to half-hidden/off-page version
+    #page-map-root {
+	left: - $circle-size-small / 2.125;
+	height: 100vh;
+	max-height: 100vh;
+	margin: 0;
+    }
+    
+    #traffic-light {
+
+	.invisible {
+	    opacity: 1;
+	}
+
+	.map-sep.hidden {
+	    display: initial;
+	}
+
+	.map-sep {
+	    width: $stem-width * 6;
+	}
+
+	.stem {
+	    display: none;
+	}
+	
+    }
+    
+    .circle {
+	width: $circle-size-small;
+	height: $circle-size-small;
+	border: ($map-circle-width * $circ-grow-factor) solid $branch-color;
+    }
+
+    .subCircle {
+	width: $sub-circle-size-small;
+	height: $sub-circle-size-small;
+	margin: $sub-circle-margin-small;
+    }
+    
 }
 
 // Exactly half desktop
@@ -84,38 +95,6 @@
 
 // All Tablets now
 @include mXSmall { // 640px w/ default font-size
-
-
-    // Change page-map to half-hidden/off-page version
-    #page-map-root {
-	left: - $circle-size-small / 2.125;
-	height: 100vh;
-	max-height: 100vh;
-	margin: 0;
-    }
-    
-    #traffic-light {
-
-	.invisible {
-	    opacity: 1;
-	}
-
-	.stem, .map-sep {
-	    width: $stem-width * 6;
-	}	
-    }
-    
-    .circle {
-	width: $circle-size-small;
-	height: $circle-size-small;
-	border: ($map-circle-width * $circ-grow-factor) solid $branch-color;
-    }
-
-    .subCircle {
-	width: $sub-circle-size-small;
-	height: $sub-circle-size-small;
-	margin: $sub-circle-margin-small;
-    }
     
 }
 

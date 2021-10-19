@@ -1,0 +1,84 @@
+
+
+#{
+
+A record of open-source software contributions I've made. The intent being that such a record will motivate me to do so more regularly.*
+
+*As you can see there's not a lot here right now.
+
+
+}#
+
+--------------------------------------------------------------------------
+
+Merge
+
+haskell:master &nbsp➔&nbsp Bugfix for the cabal-install CL tool
+
+04/10/2021
+
++58
+
+-15
+
+https://github.com/haskell/cabal/pull/7310
+
+
+#{
+
+There was a bug in the command line cabal-install tool that broke emacs' haskell mode on Windows.
+
+It was ultimately a result of two file paths being compared as strings rather than as file paths thus the comparison was sensitive to drive capitalisation. Under circumstances that I am yet to fathom the call to cwd on Windows returns "C:/...", other times it returns "c:/...", which made the bug that more bizarre and harder to pin down.
+
+}#
+
+@tags{
+
+Haskell
+Cabal
+Elisp
+Emacs
+Windows
+GHCi Debugger
+Edebug
+
+}@tags
+
+-----------------------------------------------------------------
+
+Pull
+
+Bug Fix for the Haskell toolchain, specifically the cabal-install tool
+
+29/09/2021
+
++8
+
+-5
+
+https://youtube.com
+
+#{
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+}#
+
+@tags{
+
+Python
+Cabal
+Elisp
+C++
+Windows
+GHCi Debugger
+Edebug
+
+}@tags
+
+
+
+

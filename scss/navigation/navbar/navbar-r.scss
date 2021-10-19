@@ -1,0 +1,314 @@
+
+// SCSS imports, no css will be generated from the below imports
+// so they are safe to import at the top of all files.
+@import '../../declarations/fonts';
+@import '../../declarations/mixins';
+@import '../../declarations/colours';
+@import '../../declarations/dimens';
+@import '../../declarations/backgrounds';
+
+@import 'nav-decs';
+
+
+// Roughly 4k
+@include mStupidLarge {
+}
+
+// Above roughly 3000px width
+@include mXXLarge {
+}
+
+// (Widescreen) Desktop First 
+@include mXLarge {
+}
+
+// 2/3rd desktop
+@include mLarge {
+
+    nav {
+	// Navbar now needs to wrap
+	flex-wrap: wrap;
+	// Add dashed border to indicate that navbar expands
+	border-bottom: 1px dashed $map-color;
+    }
+
+    #nav-link1,#nav-link2,#nav-link3,#nav-link4,#nav-link5{
+	flex-grow: 1;
+	flex-shrink: 1;
+    }
+
+    // Now need 1 break/wrap to display navbar
+    #break1 {
+	display: initial;
+    }
+    
+    #home-button { order: 1; }
+    #page-title { order: 2; }    
+    #nav-link1 { order: 3; }
+    #nav-link2 { order: 4; }
+    #cv-link { order: 5; }
+    #show-nav-links-button { order: 6; }
+    #break1 { order: 7; }
+    #nav-link3 { order: 8; }
+    #nav-link4 { order: 9; }
+    #nav-link5 { order: 10; }
+
+    #home-button {
+	@include remove-separator;
+	display: none;
+    }
+    #page-title {
+	@include separator-right;
+    }
+    
+    #page-title,#home-button {
+	&.show {
+	    border-bottom: ($separator-width / 2) solid $nav-bar-border-color;
+	}	
+    }
+    #show-nav-links-button { // button block
+	&.show {
+	    border-bottom: ($separator-width / 2) solid $nav-bar-border-color;
+	    // Separator-width / 2 so border between nav-link buttons are slighlty
+	    // thinner than between all buttons and pagetitle/button
+	}	
+    }
+    #nav-link1.show {
+	border-bottom: ($separator-width / 2) solid $nav-bar-border-color;
+	border-right: ($separator-width / 2) solid $nav-bar-border-color;
+    }
+    #nav-link2.show {
+	border-bottom: ($separator-width / 2) solid $nav-bar-border-color;
+    }
+    #nav-link3.show {
+	border-right: ($separator-width / 2) solid $nav-bar-border-color;
+	border-bottom: ($separator-width / 2) solid $nav-bar-border-color;
+    }
+    #nav-link4.show {
+	border-right: ($separator-width / 2) solid $nav-bar-border-color;
+	border-bottom: ($separator-width / 2) solid $nav-bar-border-color;
+    }
+    #nav-link5.show {
+	border-bottom: ($separator-width / 2) solid $nav-bar-border-color;
+    }
+    
+}
+
+// Exactly half desktop
+@include mMedium {
+    
+}
+
+// First smaller than half desktop
+// Size of some tablets
+// Navbar now 3 rows & CV button now centered:
+//
+//    HOME  |CV|    X
+//    --------------    
+//   |  1   |  2   |
+//   |     3      |
+//   |  4  |  5   |
+//   -------------
+//
+@include mSmall { // 832px w/ default font-size
+	
+    
+    // Need second and third breaks now
+    #break2,#break3 {
+	display: initial;
+    }
+
+    // If on home-page (cv-link only present on home page)
+    // then remove CV button from flow and position
+    // absolutely centered in middle of navbar
+    #cv-link {
+
+	// 
+	position: absolute;
+	justify-content: center;
+
+	&.hide {
+	    // Don't need to hide the cv button in this layout so
+	    // reinstate initial values for when hide tag applied
+	    @include cv-link-animated-config;
+	}
+	
+	// Below menu button
+	z-index: 1;	
+    }
+
+    // Else, if not on home-page then absolutely center the home btn
+    #home-button.not-home-page{
+	display: initial;
+	position: absolute;
+	justify-content: center;
+	border-bottom: initial;
+    }
+
+
+    // Give fixed width to allow CV button to appear centered
+    // (centering CV button doesn't look centered if title and
+    //  show nav-links button are different widths)
+    #page-title, #show-nav-links-button {
+
+	// Quarter the padding for smaller layout
+	padding-left: $nav-block-padding/4;
+	padding-right: $nav-block-padding/4;
+	width: 25vw;
+	min-width: 9rem;
+
+	a,p {
+	    // Reduce line-height for breaking titles
+	    line-height: 1.2;
+	}
+	
+	// And give borders to fit in with nav-links borders
+	&.show {
+	    border-bottom: initial;
+	}
+    }
+
+    
+    #home-button { order: 1; }
+    #page-title { order: 2; }
+    #show-nav-links-button { order: 3; }
+    #break1 { order: 4; }
+    #nav-link1 { order: 5; }
+    #nav-link2 { order: 6; }
+    #break2 { order: 7; }
+    #nav-link3 { order: 8; }
+    #break3 { order: 9; }
+    #nav-link4 { order: 10; }
+    #nav-link5 { order: 11; }
+
+
+    
+    #page-title,#show-nav-links-button {
+    }
+
+    #nav-link1.show {
+	border-top: ($separator-width) solid $nav-bar-border-color;
+    }
+    #nav-link2.show {
+	border-top: ($separator-width) solid $nav-bar-border-color;
+    }
+
+    
+    #nav-link3.show {
+	border-right: initial;
+	border-bottom: ($separator-width / 2) solid $nav-bar-border-color;
+    }
+    
+}
+
+// All Tablets now
+@include mXSmall { // 640px w/ default font-size
+
+    #page-title, #show-nav-links-button {
+	@include remove-separator;
+    }
+
+}
+
+
+// Small screen & massive font-size only
+// Now single file:
+// i.e.
+//  |     nav-1     |
+//  ----------------
+//  |      nav-2    |
+//  ----------------
+//  |     nav-3     | 
+//  ----------------
+//         .
+//         .
+//         .
+//
+@include mXXSmall { // 480px w/ default font-size    
+    
+    // But restore padding
+    #page-title, #show-nav-links-button {
+
+	width: fit-content;
+	max-width: 36vw;
+	min-width: initial;
+	
+	// Increase the padding for smaller layout
+	// as we now have margin-auto
+	padding-left: $nav-block-padding * 1.5;
+	padding-right: $nav-block-padding * 1.5;
+    }
+
+    #page-title {
+	margin-right: auto;
+	padding-right: 0;
+    }
+
+    #show-nav-links-button {
+	margin-left: auto;
+    }
+  
+     // Don't need any breaks now as single file
+    #break1,#break2,#break3 {
+	display: none;
+    }
+
+    // Declare borders for this configuration
+    #nav-link1 {
+	flex-basis: 99%;
+	&.show {
+	    border-right: initial;
+	}
+    }
+    #nav-link2 {
+	flex-basis: 99%;
+    }
+    #nav-link3 {
+	flex-basis: 99%;
+	&.show {
+	    border-right: initial;
+	    border-bottom: ($separator-width / 2) solid $nav-bar-border-color;
+	}
+    }
+    #nav-link4 {
+	flex-basis: 99%;
+	&.show {
+	    border-right: initial;
+	    border-bottom: ($separator-width / 2) solid $nav-bar-border-color;
+	}
+    }
+    #nav-link5 {
+	flex-basis: 99%;
+	&.show {
+	    border-bottom: ($separator-width / 2) solid $nav-bar-border-color;
+	}
+    }
+
+
+}
+
+// Ridiculously small/narrow for galaxy fold and kin
+@include mStupidSmall { // 240px w/ default font-size
+
+
+    #page-title {
+	justify-content: flex-start;
+    }
+    #show-nav-links-button {
+	min-width: initial;
+	width: fit-content;	
+	justify-content: flex-end;
+    }
+    
+    
+    #page-title, #show-nav-links-button {
+	
+	a,p {
+	    // Decrease font-size from large
+	    font-size: $default-font-size;
+	    // and now align left
+	    text-align: left;
+	}
+    }
+
+}

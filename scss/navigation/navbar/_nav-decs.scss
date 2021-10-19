@@ -1,0 +1,63 @@
+
+$nav-block-height: 6.5rem;// Effective NavBar height on Desktop when nowrap
+$nav-block-padding: 1.5rem;
+$separator-height: 80%;
+$separator-width: 3px;
+
+$cv-button-width: 10.85rem; // kinda arbitrary but needs be big enough for txt
+
+@mixin separator-right {
+
+    position: relative;
+    &::before {
+	content: '';
+	position: absolute;
+	height: $separator-height;
+	width: $separator-width;
+	background: $text-secondary;
+	margin-top: (100% - $separator-height) / 2;
+	margin-bottom: (100% - $separator-height) / 2;
+	left: initial;
+	right: - $separator-width;
+    }
+}
+@mixin separator-left {
+
+    position: relative;
+    &::before {
+	content: '';
+	position: absolute;
+	height: $separator-height;
+	width: $separator-width;
+	background: $text-secondary;
+	margin-top: (100% - $separator-height) / 2;
+	margin-bottom: (100% - $separator-height) / 2;
+	right: initial;
+	left: - $separator-width;
+    }
+}
+@mixin remove-separator { &::before { display: none; } }
+
+
+// Kind of a hack 
+//
+// Used in navbar/links & responsive/navbar/content
+//
+// Using a mixin to satisfy DRY as in responsive/navbar/content we need to reapply
+// all these rules to overwrite the &.hide overwrites declared in navbar/links
+// (when we stop hiding the CV button on smaller layouts)
+@mixin cv-link-animated-config{
+    
+    width: $cv-button-width;
+    // The animated button is square but for the container itself
+    // to be square we need to add a lil (below) and so we need
+    // to add it here for symmetry either side of the sepaparator
+    padding-left: $nav-block-padding + 0.5rem;
+    padding-right: $nav-block-padding + 0.5rem;
+    
+    visibility: visible;
+    a {
+	border: 2px solid $text-accent;
+    }
+}
+

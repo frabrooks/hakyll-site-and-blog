@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="current-page" content="Blog">
+    <title>FLB | Blog</title>
+    <link rel="stylesheet" href="../css/root.css" />
+
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      "HTML-CSS": {fonts: ['STIX-web']},
+      SVG: {font: 'STIX-Web'},
+      TeX: {Augment: {
+	  Definitions: {
+	      delimiter: {
+		  '\\llbracket': '27E6',
+		  '\\rrbracket': '27E7',
+		  '\\lAngle': '27EA',
+		  '\\rAngle': '27EB'
+	      }
+	  }
+      }}
+  });
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  </head>
+  
+  <body id="bg-img">
+    <header>
+
+      <nav id="bnna">
+
+	<!-- Home Button -->
+	<div id="home-button" class="start-block nav-block not-home-page">
+	  <a href="../">FB</a>
+	</div>
+	
+	<!-- Page Title (Home, Blog, Contact... etc.) -->
+	<div id="page-title" class="nav-block">
+	  
+	  <a href="../blog.html" class="hover-underline-text-color">Blog</a>
+	  
+	</div>
+	
+	<!-- Nav Link: 1  -->
+	<a href="../" id="nav-link1" class="nav-link nav-block">
+	  <span class="underline-me">Home</span>
+	</a>
+	
+	<!-- Nav Link: 2 -->
+	<a href="../blog.html" id="nav-link2" class="nav-link nav-block
+		                isBlogPost">
+	  <span class="underline-me">Blog</span>
+	</a>
+
+	<!-- Nav Link: 3 -->
+	<a href="../open-source-jrnl.html" id="nav-link3" class="nav-link nav-block">
+	  <span class="underline-me">Open-Source Journal</span>
+	</a>
+	
+	<!-- Nav Link: 4 -->
+	<a href="../#projects" id="nav-link4" class="nav-link nav-block">
+	  <span class="underline-me">Projects</span>
+	</a>
+	
+	<!-- Nav Link: 5 -->
+	<a href="../#contact-me" id="nav-link5" class="nav-link nav-block">
+	  <span class="underline-me">Contact Me</span>
+	</a>
+	
+	<!-- CV/Resume Button -->
+	
+	
+	<!-- Nav Block -->
+	<div id="show-nav-links-button" class="nav-block">
+	  <div>
+	    <div class="btn-line line-top"></div>
+	    <div class="btn-line"></div>
+	    <div class="btn-line"></div>
+	  </div>
+	</div>
+	
+	<div id="break1" class="nav-break">
+	</div>
+	
+	<div id="break2" class="nav-break">
+	</div>
+	
+	<div id="break3" class="nav-break">
+	</div>
+	
+      </nav>
+    </header>
+
+    <main role="main" id="insert">
+      <link rel="stylesheet" href="../css/syntax.css" />
+<link rel="stylesheet" href="../css/post.css" />
+<div id="postplate" class="
+		       technical
+		       withThumbnail ">
+  <div id="aspectRatioContainer1" class="aspectRatioContainer">
+    <div id="headingAndMetaBox" class="aspectRatioElem aspectRatioElem1">
+      <div class="title"><h1>Making a Responsive Portfolio/Blog Site with the Haskell Static Site Generator Hakyll</h1></div>
+      <div id="authorContainer">
+	<p>Author:
+	  <a href="../" class="text-accent hover-underline-text-accent">
+	    Fraser Brooks
+	  </a>
+	  <div id="portrait"></div>
+	</p>
+      </div>
+      <div id="dateMetaContainer">
+	<div>
+	  <span class="default-text break-on-colon">
+	    <span class="text-mono">Published on:</span> 2021-10-09
+	  </span>
+	</div>
+	<div>
+	  <span class="default-text break-on-colon">
+	    <span class="text-mono">Last Updated:</span> 2021-10-09
+	  </span>
+	</div>
+      </div>
+      <div class="item-links-and-tags text-mono">
+	<span class="text-secondary bold">Tags:</span>
+	
+	<span class="text-primary">Hakyll</span>
+	
+	<span class="text-primary">SCSS</span>
+	
+	<span class="text-primary">HTML5</span>
+	
+	<span class="text-primary">JavaScript</span>
+	
+	<span class="text-primary">Responsive Design</span>
+	
+	<span class="text-primary">Parsing</span>
+	
+      </div>
+    </div>
+  </div>
+  <div id="aspectRatioContainer2" class="aspectRatioContainer">
+    <img src="../blog/2021-10-09-making-a-responsive-portfolio-blog-site-with-the-haskell-static-site-generator-hakyll\thumb.png" class="thumbnail aspectRatioElem aspectRatioElem2">
+  </div>
+</div>
+<div class="insert-block" style="padding-top: 1.5rem">
+  <div id="body">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h1 id="why-hakyll">Why Hakyll?</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="ot">main ::</span> <span class="dt">IO</span> ()</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>main <span class="ot">=</span> <span class="kw">do</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>  E.setLocaleEncoding E.utf8</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>  </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>  <span class="fu">putStrLn</span> <span class="st">&quot;Parsing 'content/open-source-journal.txt'&quot;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a></span></code></pre></div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><img src="../blog/2021-10-09-making-a-responsive-portfolio-blog-site-with-the-haskell-static-site-generator-hakyll\image-1.jpg" alt="image-1.jpg" /></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><em>Image 1, isn’t this fun</em></td>
+</tr>
+</tbody>
+</table>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<h1 id="why-scss">Why SCSS?</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><img src="../blog/2021-10-09-making-a-responsive-portfolio-blog-site-with-the-haskell-static-site-generator-hakyll\image-2.gif" alt="image-2.gif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><em>Image 2, yabadaba doo</em></td>
+</tr>
+</tbody>
+</table>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<h1 id="why-tho">Why tho?</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><img src="../blog/2021-10-09-making-a-responsive-portfolio-blog-site-with-the-haskell-static-site-generator-hakyll\image-3.jpg" alt="image-3.jpg" /></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><em>Image 3, fiddle dee dee</em></td>
+</tr>
+</tbody>
+</table>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+</div>
+
+
+    </main>
+
+    
+    <footer>
+      <p>Site proudly generated by <a class="inline-link" href="http://jaspervdj.be/hakyll">Hakyll.</a> See the <a class="inline-link" href="https://github.com/frabrooks/hakyll-site-and-blog">full source code</a> on GitHub.</p>
+      
+    </footer>  
+  </body>
+  
+  <script src="../js/main.js"></script>
+  
+</html>

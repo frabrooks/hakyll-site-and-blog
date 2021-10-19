@@ -1,0 +1,204 @@
+
+// SCSS imports, no css will be generated from the below imports
+// so they are safe to import at the top of all files.
+@import 'declarations/fonts';
+@import 'declarations/mixins';
+@import 'declarations/colours';
+@import 'declarations/dimens';
+@import 'declarations/backgrounds';
+
+
+
+// Roughly 4k
+@include mStupidLarge {
+}
+
+// Above roughly 3000px width
+@include mXXLarge {
+}
+
+// (Widescreen) Desktop First 
+@include mXLarge {
+}
+
+// 2/3rd desktop
+@include mLarge {
+
+
+    .post-item {
+
+	flex-direction: column;
+
+	h2 {
+	    font-size: 135%;
+	}
+	
+	&.has-thumbnail .post-rhs .post-heading {
+	    display: none;
+	}
+	
+	&.has-thumbnail .post-lhs {
+
+	    display: flex;
+	    align-items: center;
+	    
+	    .post-heading {
+		display: initial;
+	    }
+	}
+
+	.item-links-and-tags {
+	    justify-content: center;
+	}
+    }
+    
+    .post-item.no-thumbnail .post-rhs {
+
+	.post-heading {
+	    // Put link on rhs for easier
+	    // use on mobile (one handed use)
+	    flex-direction: row-reverse;
+	    margin-left: 0;
+	    align-items: center;
+	    
+	    a {
+		margin-left: 0;
+		padding: 0;
+	    }
+
+	    // Date
+	    h3 {
+		font-size: 90%;
+		width: $thumbnail-width-large + 4em;
+		min-width: $thumbnail-width-large + 4em;
+		max-width: $thumbnail-width-large + 4em;
+		text-align: center;
+		padding: 0;
+		
+		transform: scale(1.5);
+		// kinda dumb hack to overcome the 90%
+		// which is needed to size match thumbnail
+		// but 90% makes h3 tiny so scale(1.5)
+		
+	    }
+	}   
+	
+	.post-summary {
+	    flex-direction: column;
+	    margin: 0;
+	    
+	    .item-links-and-tags {
+		width: 100%;
+		min-width: 100%;
+		max-width: 100%;
+		margin: 0;
+	    }
+	}
+    }
+
+
+    #open-src-jrnl {
+
+	.post-item {
+
+
+	    .DateAndLinesChanged {
+
+		text-align: end;	
+		
+		.break-on-colon {
+		    display: flex;
+		    justify-content: flex-end;
+		    flex-wrap: wrap;
+		}
+	    }
+
+	    
+	    .post-summary {
+		
+		flex-direction: column-reverse;
+		
+		align-items: center;
+		
+		.item-type-and-tags {
+		    width: 100%;
+		    min-width: 100%;
+		    max-width: 100%;
+		    margin: 0;
+
+		    display: flex;
+		    align-items: center;
+
+		    .item-links-and-tags {
+			padding: 1rem;
+		    }
+		    
+		}
+	    }
+	}
+    }
+}
+
+// Exactly half desktop
+@include mMedium {
+}
+
+// First smaller than half desktop
+// Size of some tablets
+// Navbar now 3 rows & CV button now centered:
+//
+//    HOME  |CV|    X
+//    --------------    
+//   |  1   |  2   |
+//   |     3      |
+//   |  4  |  5   |
+//   -------------
+//
+@include mSmall { // 832px w/ default font-size
+
+
+    .post-item {
+
+	h2 {
+	    font-size:110%;
+	}
+    }
+
+    .post-item.no-thumbnail .post-rhs {
+
+	.post-heading {
+	    // Date
+	    h3 {
+		font-size: 90%;
+		width: $thumbnail-width-small + 2em;
+		min-width: $thumbnail-width-small + 2em;
+		max-width: $thumbnail-width-small + 2em;
+		
+		transform: scale(1.2);
+		// kinda dumb hack to overcome the 90%
+		// which is needed to size match thumbnail
+		// but 90% makes h3 tiny so scale(1.5)
+		
+	    }
+	}	
+    }
+
+    
+}
+
+// All Tablets now
+@include mXSmall { // 640px w/ default font-size
+}
+
+// Small screen & massive font-size only
+@include mXXSmall { // 480px w/ default font-size
+}
+
+// Ridiculously small/narrow for galaxy fold and kin
+@include mStupidSmall { // 240px w/ default font-size
+}
+
+// Galaxy Fold with very large font size 
+@include mTakingThePiss { // AKA techno boomer
+}
+

@@ -1,0 +1,6 @@
+
+#{
+
+<h3>My posts, in reverse chronological order, in two sections:</h3><ul><li>One for software engineering and or computer science posts for people who know their monads from their monoids.</li><li>One for layperson-readable posts containing my attempts at learning to arrange words smartly and goodly.</li></ul>
+
+}#

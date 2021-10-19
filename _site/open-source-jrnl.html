@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="current-page" content="Open Source Journal">
+    <title>FLB | Open Source Journal</title>
+    <link rel="stylesheet" href="./css/root.css" />
+
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      "HTML-CSS": {fonts: ['STIX-web']},
+      SVG: {font: 'STIX-Web'},
+      TeX: {Augment: {
+	  Definitions: {
+	      delimiter: {
+		  '\\llbracket': '27E6',
+		  '\\rrbracket': '27E7',
+		  '\\lAngle': '27EA',
+		  '\\rAngle': '27EB'
+	      }
+	  }
+      }}
+  });
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  </head>
+  
+  <body id="bg-img">
+    <header>
+
+      <nav id="bnna">
+
+	<!-- Home Button -->
+	<div id="home-button" class="start-block nav-block not-home-page">
+	  <a href="./">FB</a>
+	</div>
+	
+	<!-- Page Title (Home, Blog, Contact... etc.) -->
+	<div id="page-title" class="nav-block">
+	  
+	  <span>Open Source Journal</span>
+	  
+	</div>
+	
+	<!-- Nav Link: 1  -->
+	<a href="./" id="nav-link1" class="nav-link nav-block">
+	  <span class="underline-me">Home</span>
+	</a>
+	
+	<!-- Nav Link: 2 -->
+	<a href="./blog.html" id="nav-link2" class="nav-link nav-block
+		                ">
+	  <span class="underline-me">Blog</span>
+	</a>
+
+	<!-- Nav Link: 3 -->
+	<a href="./open-source-jrnl.html" id="nav-link3" class="nav-link nav-block">
+	  <span class="underline-me">Open-Source Journal</span>
+	</a>
+	
+	<!-- Nav Link: 4 -->
+	<a href="./#projects" id="nav-link4" class="nav-link nav-block">
+	  <span class="underline-me">Projects</span>
+	</a>
+	
+	<!-- Nav Link: 5 -->
+	<a href="./#contact-me" id="nav-link5" class="nav-link nav-block">
+	  <span class="underline-me">Contact Me</span>
+	</a>
+	
+	<!-- CV/Resume Button -->
+	
+	
+	<!-- Nav Block -->
+	<div id="show-nav-links-button" class="nav-block">
+	  <div>
+	    <div class="btn-line line-top"></div>
+	    <div class="btn-line"></div>
+	    <div class="btn-line"></div>
+	  </div>
+	</div>
+	
+	<div id="break1" class="nav-break">
+	</div>
+	
+	<div id="break2" class="nav-break">
+	</div>
+	
+	<div id="break3" class="nav-break">
+	</div>
+	
+      </nav>
+    </header>
+
+    <main role="main" id="insert">
+      <link rel="stylesheet" href="./css/listicle.css" />
+<div id="open-src-jrnl" class="insert-block">
+  
+  <p style="text-align: center">A record of open-source software contributions I've made. The intent being that such a record will motivate me to do so more regularly.*</p>
+  
+  <p style="text-align: center">*As you can see there's not a lot here right now.</p>
+  
+  <div class="border" style="margin-top: 2rem"></div>  
+    
+  <div class="post-item no-thumbnail">
+    <div class="post-text">
+      <div class="post-heading">
+	<a href="https://github.com/haskell/cabal/pull/7310" class="hover-underline-text-primary">
+	  
+	  <h2 class="text-primary">haskell:master &nbsp⮯</h2>
+	  
+	  <h2 class="text-primary">&nbsp Bugfix for the cabal-install CL tool</h2>
+	</a>
+	<div class="DateAndLinesChanged">
+	  <div>
+	    <h3 class="with-underline">04/10/2021</h3>
+	    <span class="break-on-colon">
+	      <span class="lines">lines:</span>
+	      <span>
+		<span class="linesAdded">&nbsp+58,&nbsp</span>
+		<span class="linesRemoved">-15</span>
+	      </span>
+	  </div>
+	</div>
+      </div>
+      <div class="post-summary">
+	<div>
+	  
+	  <p>There was a bug in the command line cabal-install tool that broke emacs' haskell mode on Windows.</p>
+	  
+	  <p>It was ultimately a result of two file paths being compared as strings rather than as file paths thus the comparison was sensitive to drive capitalisation. Under circumstances that I am yet to fathom the call to cwd on Windows returns "C:/...", other times it returns "c:/...", which made the bug that more bizarre and harder to pin down.</p>
+	  
+	</div>
+	<div class="item-type-and-tags">
+	  <p>
+	    
+	    <span class="NewMerge">
+	      <img src="images/merged.svg" class="svg-no-hover" />
+	      <span>Merged</span>
+	    </span>
+	    
+	  </p>
+	  <div class="item-links-and-tags">
+	    <span class="text-secondary bold small">Tags:</span>
+	    
+	    <span class="text-primary small">Haskell</span>
+	    
+	    <span class="text-primary small">Cabal</span>
+	    
+	    <span class="text-primary small">Elisp</span>
+	    
+	    <span class="text-primary small">Emacs</span>
+	    
+	    <span class="text-primary small">Windows</span>
+	    
+	    <span class="text-primary small">GHCi Debugger</span>
+	    
+	    <span class="text-primary small">Edebug</span>
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+    
+  <div class="post-item no-thumbnail">
+    <div class="post-text">
+      <div class="post-heading">
+	<a href="https://youtube.com" class="hover-underline-text-primary">
+	  
+	  <h2 class="text-primary">Bug Fix for the Haskell toolchain, specifically the cabal-install tool</h2>
+	</a>
+	<div class="DateAndLinesChanged">
+	  <div>
+	    <h3 class="with-underline">29/09/2021</h3>
+	    <span class="break-on-colon">
+	      <span class="lines">lines:</span>
+	      <span>
+		<span class="linesAdded">&nbsp+8,&nbsp</span>
+		<span class="linesRemoved">-5</span>
+	      </span>
+	  </div>
+	</div>
+      </div>
+      <div class="post-summary">
+	<div>
+	  
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	  
+	  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	  
+	</div>
+	<div class="item-type-and-tags">
+	  <p>
+	    
+	    <span class="NewPullRequest">
+	      <img src="images/pull-request.svg" class="svg-no-hover" />
+	      <span>Pull request</span>
+	    </span>
+	    
+	  </p>
+	  <div class="item-links-and-tags">
+	    <span class="text-secondary bold small">Tags:</span>
+	    
+	    <span class="text-primary small">Python</span>
+	    
+	    <span class="text-primary small">Cabal</span>
+	    
+	    <span class="text-primary small">Elisp</span>
+	    
+	    <span class="text-primary small">C++</span>
+	    
+	    <span class="text-primary small">Windows</span>
+	    
+	    <span class="text-primary small">GHCi Debugger</span>
+	    
+	    <span class="text-primary small">Edebug</span>
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+  
+  <p style="margin-top: 2rem"> End of List </p>
+</div>
+
+
+
+
+    </main>
+
+    
+    <footer>
+      <p>Site proudly generated by <a class="inline-link" href="http://jaspervdj.be/hakyll">Hakyll.</a> See the <a class="inline-link" href="https://github.com/frabrooks/hakyll-site-and-blog">full source code</a> on GitHub.</p>
+      
+    </footer>  
+  </body>
+  
+  <script src="./js/main.js"></script>
+  
+</html>

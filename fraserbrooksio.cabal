@@ -1,0 +1,38 @@
+name:               fraserbrooksio
+version:            0.1.0.0
+build-type:         Simple
+cabal-version:      >= 1.10
+
+library
+  exposed-modules:  Parsing
+  other-modules:    SiteParser
+                  , BasicParsers
+                  , SiteData
+                  , SiteDataParsers
+  hs-source-dirs:   app
+  
+  build-depends:    base == 4.*
+                  , transformers
+                  , filepath
+                  , filemanip
+                  , directory
+                  , text
+                  , time
+
+  default-language: Haskell2010
+  
+                    
+executable site
+  main-is:          site.hs
+  build-depends:    base == 4.*
+                  , hakyll == 4.13.*
+                  , hakyll-sass
+                  , binary
+                  , pandoc
+                  , filepath
+                  , directory
+                  , text
+                  , monad-loops
+                  , fraserbrooksio
+  ghc-options:      -threaded
+  default-language: Haskell2010

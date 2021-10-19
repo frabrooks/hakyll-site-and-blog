@@ -1,0 +1,196 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+%
+% (c) 2012 Scott Clark <sc932@cornell.edu> cam.cornell.edu/~sc932
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{etoolbox}
+\robustify\cftdotfill
+
+\usepackage{xcolor}
+
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+
+\newcommand{\at}{\raisebox{.5pt}{\textcolor{white}{\textcircled{\raisebox{-.9pt} {{\tiny .x \hspace{-1.2em}}\textcolor{black}{{\Large @}}}}}}}
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{1.5pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+  }\vspace{8pt}
+}
+
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\multicolumn{2}{c}{\textbf{#1}  \cftdotfill{\cftdotsep} #2} \\
+		#3 & \texttt{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+  \textbf{\Huge Fraser Brooks} & CV compiled with \LaTeX \, on: \\
+   {\Large M.Sci Computer Science Graduate} & \textbf{\today} \\
+\end{tabular*}
+
+\vspace{1em}
+
+\large
+
+\begin{tabularx}{\textwidth}{YYY}
+    +44 7740 102898  &  \;\;\;\;\;  contact\at fraserbrooks.io  \;\;\;\;\;  &  GitHub: frabrooks\\
+\end{tabularx}
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+    
+\item \ressubheading{University of Birmingham}{Birmingham, UK}{M.Sci Computer Science (1st class, 4.0 GPA)}{2021}
+
+  \vspace{10pt}
+  
+%  {\footnotesize
+%    \vspace{4pt}
+%    \begin{tabular}{l|r}
+%      \multicolumn{2}{l}{\hspace{2em} Course (Grade) \vspace{-6pt} } \\      
+%      \multicolumn{2}{l}{\hspace{2em}  \rule{0.8\textwidth}{0.5pt}} \\
+%      \hspace{2em} Masters Thesis (76\%) & Human Computer Interaction (72\%) \\
+%      \hspace{2em} Machine Learning (85\%) & Software Design Study (72\%)  \\
+%      \hspace{2em} Advanced Functional Programming (90\%) \;\;\;\;\;\;\;\;\;\;\; & Intelligent Robotics (78\%) \\
+%      \hspace{2em} Search and Optimisation (92\%) & Neural Computation (77\%) \\
+%      \hspace{2em} Intro. to Software Engineering  (85\%) & Advanced Networking (86\%) \\
+%      \hspace{2em} Intro. to Databases  (78\%) & Programming Language Principles (76\%) \\
+%      \hspace{2em} Intro. to Computer Security  (80\%) & Professional Computing (81\%) \\
+%    \end{tabular}
+%  }
+%
+ 
+{
+
+\item \ressubheading{Strode College, Street}{Somerset, UK}{ {\small
+    \begin{tabular}{l}
+      A-Level Maths (A), Software Engineering Extended Diploma (D*D*D*) \\ 
+    \end{tabular}
+  }}
+  {2016}
+}
+
+\end{itemize}
+
+\vspace{8pt}
+  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Projects / Technical Experience }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\small
+
+\def\arraystretch{1.2}
+
+  
+\begin{centering}
+\begin{tabular*}{7in}{@{\extracolsep{\fill}}rcccl@{\extracolsep{\fill}}}
+  \;\;\;\;\;\;\; & Java, Haskell, Python, C++ & Obejct-Oriented and Functional Programming & git \& Version Control & \;\;\;\;\;\;\; \\
+  \;\;\;\;\;\;\; & Machine Learning Frameworks & SQL \& Relational and Non-Relational DBMS' &  Neural Networks &  \;\;\;\;\;\;\; \\
+  \;\;\;\;\;\;\; & Unit Testing Frameworks & Continuous Integration \& Deployment &  \LaTeX\;(LaTeX) & \;\;\;\;\;\;\; \\
+  \;\;\;\;\;\;\; & Web Design \& Graphic Design & HTML5/CSS/JavaScript & AWS & \;\;\;\;\;\;\; \\  
+\end{tabular*}
+\end{centering}
+
+}
+
+
+{\small 
+
+  \begin{itemize}
+  \item Submitted and merged a patch into a large scale open-source software project --- the Haskell master branch. Specifically a bugfix, with integration test, for the cabal-install build automation \& package management tool.
+
+
+  \item Years of experience with Java \& Object Oriented Programming through writting a messaging system, a multiplayer game that was hosted on an AWS EC2 instnace, as well as several andriod apps.
+
+
+  \item Python experience via some simple games written with the PyGame library and a machine learning project.
+    
+  \item Designed a portfolio site/blog using a Haskell site generator, HTML5, SCSS, \& JavaScript, with automatic compilation \& delivery of posts to the site from .latex or .md files. Live at fraserbrooks.io via AWS amplify.
+    
+    
+\end{itemize}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Work Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\centering
+
+\def\arraystretch{1.2}
+
+\begin{tabular*}{6.6in}{p{0.1in}p{6.4in}p{0.1in}}
+
+  \multicolumn{3}{c}{\textbf{University of Birmingham, School of Comp. Sci.} - Lab Demonstrator   \cftdotfill{\cftdotsep} \texttt{2019-20}}\\
+  \, & {\small Worked as a demonstator assisting lecturers with teaching duties in the databases (2018-19) and functional programming (2019-20) courses; guiding lower year students through the course material during lab sessions. } & \, \\
+  \, & \, & \, \\
+  
+  \multicolumn{3}{c}{\textbf{Specsavers} - Optical Assistant \cftdotfill{\cftdotsep} \texttt{2016}}\\
+  \, & {\small Duties included customer service, conducting simple eye tests, and coordinating with colleagues to meet sales targets. Learnt a lot about talking and selling to customers.} & \, \\
+  \, & \, & \, \\
+
+  \multicolumn{3}{c}{\textbf{Samsung} - Sales Consultant \cftdotfill{\cftdotsep} \texttt{2015}}\\
+  \, & {\small Consistently met sales targets via negotiating with management to gain incremental sales opportunities. } & \, \\
+  \, & \, & \, \\
+
+  \multicolumn{3}{c}{\textbf{University of Birmingham,  Jiu-Jitsu Club} - Secretary then Captain \cftdotfill{\cftdotsep} \texttt{2019-21}}\\
+  \, & {\small Elected secretary then captain of the university Jiu-Jitsu club. Responsibilities across these two years included risk assessments, overseeing recruitment, budget, and our social media strategy, and organising and encouraging our club's participiation in several national competitions; as well as competing myself. } & \,
+
+
+\end{tabular*}                                                                                                                                                                                                                                                                                          
+\end{document}

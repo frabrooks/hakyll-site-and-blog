@@ -4,18 +4,15 @@
  * dynamically pointing to the .terminal-text headings as you navigate the page.
  */
 
-
-console.log("foofoo");
-
 ////////////////////////////////////////////////////////////
 // Get DOM elements
 //
 // Get terminal containers
-const t1Cont  = document.querySelector('#terminal1');
+const t1Cont  = document.querySelector('#whoami');
 const t2Cont  = document.querySelector('#terminal2');
 const t3Cont  = document.querySelector('#terminal3');
-const t4Cont  = document.querySelector('#terminal4');
-const t5Cont  = document.querySelector('#terminal5');
+const t4Cont  = document.querySelector('#projects');
+const t5Cont  = document.querySelector('#contact-me');
 // Branches
 const branch1  = document.querySelector('#branch1');
 const branch11 = document.querySelector('#branch11');
@@ -37,6 +34,38 @@ const circ1 = document.querySelector('#circle1');
 const circ2 = document.querySelector('#circle2');
 const circ3 = document.querySelector('#circle3');
 const circ4 = document.querySelector('#circle4');
+// Get page-map elems
+const pageMapRoot = document.querySelector('#page-map-root');
+const pageMapRHS  = document.querySelector('#page-map-rhs');
+
+// Get html elements and banana button for background change
+const page = document.querySelector('html');
+const main = document.querySelector('main');
+const bbtns = document.querySelectorAll('.bnnaBtn');
+const portrait  = document.querySelector('#portrait');
+
+// Banana Button Easter Egg
+bbtns.forEach(item => item.addEventListener('click', bananaDance));
+
+
+/**
+ *  Site easter-egg that temporarily changes page background 
+ *  to a gif of me dancing in a banana costume (and portrait 
+ *  to a photo of me in said costume) when banana btn clicked
+ */
+function bananaDance() {
+
+    page.classList.add('dance-banana-a-go-go');
+    portrait.classList.add('dance-banana-a-go-go');
+    main.classList.add('dance-banana-a-go-go');
+    
+    setTimeout(function () {
+        page.classList.remove('dance-banana-a-go-go');
+	portrait.classList.remove('dance-banana-a-go-go');
+	main.classList.remove('dance-banana-a-go-go');
+    }, 6825);
+    
+}
 
 
 // Display all branches (hidden by defaut)
@@ -175,7 +204,7 @@ function getVerticalStart(gap, branchNo, isAbove, h) {
  */
 function computeCircleOffset(cWidth) {
     // bw = branchWidth
-    return ((cWidth - bw) / 2) - cbw;
+    return ((cWidth - bw) / 2) - cbw - 1;
 }
 
 /**
@@ -293,9 +322,39 @@ function updateHorizontalBranch(cRect , tRect, b1 , b2, gap, branchNo) {
 }
 
 /**
- * Update all branches. Call everytime viewport is changed/move.
+ * Set the max height and position of page map (traffic-light and icon-stack) such that 
+ * they don't overlap the navbar and they appear to 'grow' out of the footer (i.e. bottom: 0
+ * unless footer is on screen in which case bottom: FOOTER-HEIGHT-VISIBLE)
  */
-function updateBranches() {
+function setBoundsOfMap() {
+
+    // Get navbar and footer for setting the bounds of above
+    navbar = document.querySelector('nav');
+    footer = document.querySelector('footer');
+    
+    fRect  = footer.getBoundingClientRect();
+    footTop = fRect.top;
+
+    pmLeftRect = pageMapRoot.getBoundingClientRect();
+    pmRightRect = pageMapRHS.getBoundingClientRect();
+
+    pmBot = pmLeftRect.bottom;
+
+
+    if (footTop < window.innerHeight) {
+	pageMapRoot.style.bottom = (window.innerHeight - footTop) + 'px';
+	pageMapRHS.style.bottom = (window.innerHeight - footTop) + 'px';
+    } else {
+	pageMapRoot.style.bottom = '0';
+	pageMapRHS.style.bottom = '0';
+    }
+    
+}
+
+/**
+ * Update all branches and set page map bounds. Call everytime viewport is changed/move.
+ */
+function updateBranchesAndSetMapBounds() {
     c1Rect = circ1.getBoundingClientRect();
     updateTopBranch(c1Rect);
 
@@ -317,16 +376,20 @@ function updateBranches() {
     updateHorizontalBranch(circ4.getBoundingClientRect(), t5Rect, branch41, branch42, gap, 4);
     
     setCurrentCircleInMap();
-    
+
+    setBoundsOfMap();
 }
+
 
 /**
  * Update branches whenever the window is resized or scrolled.
  */
 window.onload = function () {
-    updateBranches();
-    window.onscroll = updateBranches;
-    window.onresize = updateBranches;
+
+    
+    updateBranchesAndSetMapBounds();
+    window.onscroll = updateBranchesAndSetMapBounds;
+    window.onresize = updateBranchesAndSetMapBounds;
 };
 
 /**
@@ -337,7 +400,7 @@ window.onload = function () {
  */
 setInterval(function(){ 
     //code goes here that will be run every 0.25 seconds.
-    updateBranches();
+    updateBranchesAndSetMapBounds();
 }, 250); 
 
 

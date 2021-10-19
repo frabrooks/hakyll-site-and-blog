@@ -1,0 +1,179 @@
+/* merriweather-sans-regular - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("/fonts/merriweather-sans-v14-latin-regular.woff2") format("woff2"), url("/fonts/merriweather-sans-v14-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-500 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("/fonts/merriweather-sans-v14-latin-500.woff2") format("woff2"), url("/fonts/merriweather-sans-v14-latin-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-600 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("/fonts/merriweather-sans-v14-latin-600.woff2") format("woff2"), url("/fonts/merriweather-sans-v14-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-800 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local(""), url("/fonts/merriweather-sans-v14-latin-800.woff2") format("woff2"), url("/fonts/merriweather-sans-v14-latin-800.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-italic - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url("/fonts/merriweather-sans-v14-latin-italic.woff2") format("woff2"), url("/fonts/merriweather-sans-v14-latin-italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-regular - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("/fonts/fira-code-v10-latin-regular.woff2") format("woff2"), url("/fonts/fira-code-v10-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-500 - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("/fonts/fira-code-v10-latin-500.woff2") format("woff2"), url("/fonts/fira-code-v10-latin-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-700 - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("/fonts/fira-code-v10-latin-700.woff2") format("woff2"), url("/fonts/fira-code-v10-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-regular - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("/fonts/overpass-mono-v6-latin-regular.woff2") format("woff2"), url("/fonts/overpass-mono-v6-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-600 - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("/fonts/overpass-mono-v6-latin-600.woff2") format("woff2"), url("/fonts/overpass-mono-v6-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-700 - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("/fonts/overpass-mono-v6-latin-700.woff2") format("woff2"), url("/fonts/overpass-mono-v6-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+@media screen and (max-width: 84.8rem) {
+  #postplate {
+    font-size: 90%;
+    width: 60em;
+    padding: 2rem 0 2rem; } }
+
+@media screen and (max-width: 60.1rem) {
+  #postplate {
+    font-size: 75%;
+    width: 100%; } }
+
+@media screen and (max-width: 52.5rem) {
+  div.sourceCode {
+    width: 96vw;
+    margin-left: -3vw;
+    margin-right: 0;
+    padding-right: 0.5rem;
+    padding-left: 1rem; }
+  .technical.withThumbnail #headingAndMetaBox {
+    padding-top: 1rem;
+    border-right: initial;
+    border-top: 2px solid #786aa0; }
+  .technical.withThumbnail #aspectRatioContainer1 {
+    width: 100%; }
+  .technical.withThumbnail #aspectRatioContainer2 {
+    width: 40%; }
+  .non-technical.withThumbnail {
+    margin-top: 0.5rem; }
+    .non-technical.withThumbnail #authorContainer {
+      width: 45%; }
+      .non-technical.withThumbnail #authorContainer a {
+        margin: 0; }
+    .non-technical.withThumbnail #dateMetaContainer {
+      width: 45%; }
+    .non-technical.withThumbnail #headingAndMetaBox {
+      flex-direction: initial;
+      flex-wrap: wrap; }
+      .non-technical.withThumbnail #headingAndMetaBox .title h1 {
+        font-size: 250%;
+        border-top: 2px solid #786aa0;
+        margin: 0;
+        padding-top: 2rem; }
+      .non-technical.withThumbnail #headingAndMetaBox .item-links-and-tags {
+        font-size: 160%; }
+    .non-technical.withThumbnail .thumbnail {
+      border-left: initial; }
+    .non-technical.withThumbnail #aspectRatioContainer1 {
+      width: 100%; }
+    .non-technical.withThumbnail #aspectRatioContainer2 {
+      width: 80%; }
+  .thumbnail {
+    padding: 0; }
+  #postplate {
+    flex-direction: column-reverse;
+    width: 100%;
+    font-size: 70%;
+    padding-top: 0;
+    padding-left: 10vw;
+    padding-right: 2rem; }
+    #postplate a {
+      margin: 0.5em 0.75em 0.5em 0.5em; }
+  .break-on-colon {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap; }
+  #authorContainer {
+    margin-left: 0; }
+  #portrait {
+    width: 55px;
+    min-width: 55px;
+    max-width: 55px;
+    height: 55px;
+    min-height: 55px;
+    max-height: 55px; } }
+
+@media screen and (max-width: 24.6rem) {
+  .non-technical.withThumbnail #authorContainer {
+    width: 40%; }
+    .non-technical.withThumbnail #authorContainer p, .non-technical.withThumbnail #authorContainer a {
+      font-size: 100%; }
+  .non-technical.withThumbnail #dateMetaContainer {
+    width: 40%; }
+    .non-technical.withThumbnail #dateMetaContainer span {
+      font-size: 100%; }
+  #portrait {
+    width: 25px;
+    min-width: 25px;
+    max-width: 25px;
+    height: 25px;
+    min-height: 25px;
+    max-height: 25px; } }

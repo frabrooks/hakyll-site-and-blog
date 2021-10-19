@@ -1,0 +1,175 @@
+
+// SCSS imports, no css will be generated from the below imports
+// so they are safe to import at the top of all files.
+@import 'declarations/fonts';
+@import 'declarations/mixins';
+@import 'declarations/colours';
+@import 'declarations/dimens';
+@import 'declarations/backgrounds';
+
+
+///////////////////////////////////////////////////////
+/*
+      Responsive styles applied across whole site
+
+      e.g. html elements, text, 
+           sections (body, footer, .insert-blocks etc)
+ */
+///////////////////////////////////////////////////////
+
+
+
+// For 1440p screens
+@media screen and (min-width: 150rem) {
+    html {
+	font-size: 133%; // QHD = x1.33 1080p :)
+    }
+}
+
+// Above roughly 3000px width
+@include mXXLarge {
+    html {
+	font-size: 200%; // 4k = x2 1080p :)
+    }
+}
+
+// Roughly 4k
+@include mStupidLarge {
+}
+
+
+// (Widescreen) Desktop First 
+@include mXLarge {
+}
+
+// 2/3rd desktop
+@include mLarge {
+    html {
+	font-size: 90%
+    }
+
+    .insert-block {	
+	width: auto;
+	min-width: initial;
+    }
+
+    .thumbnail {
+	width: $thumbnail-width-large;
+	max-width: $thumbnail-width-large;
+	min-width: $thumbnail-width-large;
+	height: $thumbnail-height-large;
+	max-height: $thumbnail-height-large;
+	min-height: $thumbnail-height-large;
+    }
+}
+
+// Exactly half desktop
+@include mMedium {
+}
+
+// First smaller than half desktop
+// Size of some tablets
+// Navbar now 3 rows & CV button now centered:
+//
+//    HOME  |CV|    X
+//    --------------    
+//   |  1   |  2   |
+//   |     3      |
+//   |  4  |  5   |
+//   -------------
+//
+@include mSmall { // 832px w/ default font-size
+
+    .thumbnail {
+	width: $thumbnail-width-small;
+	max-width: $thumbnail-width-small;
+	min-width: $thumbnail-width-small;
+	height: $thumbnail-height-small;
+	max-height: $thumbnail-height-small;
+	min-height: $thumbnail-height-small;
+
+	margin: 1em;
+    }
+
+    .insert-block {
+	width: 100%;
+	padding-left: $indent-small-layout;
+	padding-right: 2rem;
+	// Half the top padding
+	padding-top: 1.5rem;
+    }
+
+    p {
+	// Don't need max-width now with narrow layouts
+	max-width: initial;
+    }    
+    
+    .insert-item{
+
+	.item-lhs {
+	    flex-direction: column-reverse;
+	    max-width: 80vw;
+	    padding-bottom: 1rem;
+
+	    h2 {
+		flex-grow: 1;
+		padding: 0 0.5rem 0 0.5rem;
+	    }
+
+	    .thumbnail {
+		padding: 0;
+	    }
+	}
+	
+
+
+	.item-rhs {
+
+	    .item-links-and-tags {
+		max-width: 80vw;
+	    }
+	}
+	
+    }
+    
+}
+
+// All Tablets now
+@include mXSmall { // 640px w/ default font-size (40rem)
+
+    
+}
+
+// Small screen & massive font-size only
+// Now single file:
+// i.e.
+//  |     nav-1     |
+//  ----------------
+//  |      nav-2    |
+//  ----------------
+//  |     nav-3     | 
+//  ----------------
+//         .
+//         .
+//         .
+//
+@include mXXSmall { // 480px w/ default font-size
+
+}
+
+// Ridiculously small/narrow for galaxy fold and kin
+@include mStupidSmall { // 280px w/ default font-size
+
+    html {
+	font-size: 75%;
+    }
+
+}
+
+// Galaxy Fold with very large font size 
+@include mTakingThePiss {
+    html {
+	font-size: 60%;
+    }
+}
+

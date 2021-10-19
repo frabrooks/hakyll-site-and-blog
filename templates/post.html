@@ -1,11 +1,46 @@
-<article>
-    <section class="header">
-        Posted on $date$
-        $if(author)$
-            by $author$
-        $endif$
-    </section>
-    <section>
-        $body$
-    </section>
-</article>
+<link rel="stylesheet" href="/css/syntax.css" />
+<link rel="stylesheet" href="/css/post.css" />
+<div id="postplate" class="
+		       $if(technical)$technical$else$non-technical$endif$
+		       $if(hasThumbnail)$withThumbnail$else$noThumbnail$endif$ ">
+  <div id="aspectRatioContainer1" class="aspectRatioContainer">
+    <div id="headingAndMetaBox" class="aspectRatioElem aspectRatioElem1">
+      <div class="title"><h1>$title$</h1></div>
+      <div id="authorContainer">
+	<p>Author:
+	  <a href="/" class="text-accent hover-underline-text-accent">
+	    Fraser Brooks
+	  </a>
+	  <div id="portrait"/>
+	</p>
+      </div>
+      <div id="dateMetaContainer">
+	<div>
+	  <span class="default-text break-on-colon">
+	    <span class="text-mono">Published on:</span> $date$
+	  </span>
+	</div>
+	<div>
+	  <span class="default-text break-on-colon">
+	    <span class="text-mono">Last Updated:</span> $date$
+	  </span>
+	</div>
+      </div>
+      <div class="item-links-and-tags text-mono">
+	<span class="text-secondary bold">Tags:</span>
+	$for(tags)$
+	<span class="text-primary">$tag$</span>
+	$endfor$
+      </div>
+    </div>
+  </div>
+  <div id="aspectRatioContainer2" class="aspectRatioContainer">
+    <img  src="$thumbnailPath$" class="thumbnail aspectRatioElem aspectRatioElem2">
+  </div>
+</div>
+<div class="insert-block" style="padding-top: 1.5rem">
+  <div id="body">
+    $body$
+  </div>
+</div>
+

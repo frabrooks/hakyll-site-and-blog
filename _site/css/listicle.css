@@ -1,0 +1,321 @@
+/* merriweather-sans-regular - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("/fonts/merriweather-sans-v14-latin-regular.woff2") format("woff2"), url("/fonts/merriweather-sans-v14-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-500 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("/fonts/merriweather-sans-v14-latin-500.woff2") format("woff2"), url("/fonts/merriweather-sans-v14-latin-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-600 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("/fonts/merriweather-sans-v14-latin-600.woff2") format("woff2"), url("/fonts/merriweather-sans-v14-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-800 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local(""), url("/fonts/merriweather-sans-v14-latin-800.woff2") format("woff2"), url("/fonts/merriweather-sans-v14-latin-800.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-italic - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url("/fonts/merriweather-sans-v14-latin-italic.woff2") format("woff2"), url("/fonts/merriweather-sans-v14-latin-italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-regular - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("/fonts/fira-code-v10-latin-regular.woff2") format("woff2"), url("/fonts/fira-code-v10-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-500 - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("/fonts/fira-code-v10-latin-500.woff2") format("woff2"), url("/fonts/fira-code-v10-latin-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-700 - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("/fonts/fira-code-v10-latin-700.woff2") format("woff2"), url("/fonts/fira-code-v10-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-regular - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("/fonts/overpass-mono-v6-latin-regular.woff2") format("woff2"), url("/fonts/overpass-mono-v6-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-600 - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("/fonts/overpass-mono-v6-latin-600.woff2") format("woff2"), url("/fonts/overpass-mono-v6-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-700 - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("/fonts/overpass-mono-v6-latin-700.woff2") format("woff2"), url("/fonts/overpass-mono-v6-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+.border {
+  width: 100%;
+  border-bottom: 1px solid #ffcb50; }
+
+.post-item {
+  display: flex;
+  width: 100%;
+  max-width: 71.25rem;
+  align-items: flex-start;
+  padding: 2rem 0 2rem 0;
+  border-bottom: 1px solid #786aa0; }
+  .post-item .thumbnail {
+    font-size: 90%;
+    object-fit: contain; }
+  .post-item .post-lhs .post-heading {
+    display: none; }
+  .post-item .offset-me {
+    margin-left: 2em; }
+  .post-item .post-rhs {
+    width: 100%; }
+    .post-item .post-rhs .post-heading {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      justify-content: space-between; }
+      .post-item .post-rhs .post-heading a {
+        padding-right: 1rem; }
+      .post-item .post-rhs .post-heading h3 {
+        text-align: end;
+        white-space: nowrap;
+        padding-left: 3rem; }
+    .post-item .post-rhs .post-summary {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column; }
+
+.post-item.no-thumbnail .DateAndLinesChanged {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 0.25rem; }
+  .post-item.no-thumbnail .DateAndLinesChanged .linesAdded, .post-item.no-thumbnail .DateAndLinesChanged .linesRemoved {
+    font-family: "Fira Code", monospace;
+    font-size: 1.125rem;
+    font-weight: bold; }
+  .post-item.no-thumbnail .DateAndLinesChanged .lines {
+    font-family: "Fira Code", monospace;
+    color: #8892b0; }
+  .post-item.no-thumbnail .DateAndLinesChanged .linesAdded {
+    color: #3fb950; }
+  .post-item.no-thumbnail .DateAndLinesChanged .linesRemoved {
+    color: #da3633; }
+
+.post-item.no-thumbnail .post-rhs .post-summary {
+  flex-direction: row-reverse;
+  justify-content: flex-end; }
+  .post-item.no-thumbnail .post-rhs .post-summary .item-links-and-tags {
+    font-size: 90%;
+    width: 20.8125em;
+    min-width: 20.8125em;
+    max-width: 20.8125em;
+    height: fit-content;
+    margin: 2em; }
+  .post-item.no-thumbnail .post-rhs .post-summary .NewMerge, .post-item.no-thumbnail .post-rhs .post-summary .NewPullRequest {
+    margin-left: 0.5rem; }
+
+#open-src-jrnl .post-item .post-heading {
+  display: flex;
+  justify-content: space-between; }
+
+#open-src-jrnl .post-item .post-summary {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start; }
+  #open-src-jrnl .post-item .post-summary .item-type-and-tags {
+    width: 20.8125em;
+    min-width: 20.8125em;
+    max-width: 20.8125em;
+    margin: 0 2em 2em; }
+
+/* merriweather-sans-regular - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("/fonts/merriweather-sans-v14-latin-regular.woff2") format("woff2"), url("/fonts/merriweather-sans-v14-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-500 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("/fonts/merriweather-sans-v14-latin-500.woff2") format("woff2"), url("/fonts/merriweather-sans-v14-latin-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-600 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("/fonts/merriweather-sans-v14-latin-600.woff2") format("woff2"), url("/fonts/merriweather-sans-v14-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-800 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local(""), url("/fonts/merriweather-sans-v14-latin-800.woff2") format("woff2"), url("/fonts/merriweather-sans-v14-latin-800.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* merriweather-sans-italic - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url("/fonts/merriweather-sans-v14-latin-italic.woff2") format("woff2"), url("/fonts/merriweather-sans-v14-latin-italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-regular - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("/fonts/fira-code-v10-latin-regular.woff2") format("woff2"), url("/fonts/fira-code-v10-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-500 - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("/fonts/fira-code-v10-latin-500.woff2") format("woff2"), url("/fonts/fira-code-v10-latin-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-code-700 - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("/fonts/fira-code-v10-latin-700.woff2") format("woff2"), url("/fonts/fira-code-v10-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-regular - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("/fonts/overpass-mono-v6-latin-regular.woff2") format("woff2"), url("/fonts/overpass-mono-v6-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-600 - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("/fonts/overpass-mono-v6-latin-600.woff2") format("woff2"), url("/fonts/overpass-mono-v6-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* overpass-mono-700 - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("/fonts/overpass-mono-v6-latin-700.woff2") format("woff2"), url("/fonts/overpass-mono-v6-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+@media screen and (max-width: 84.8rem) {
+  .post-item {
+    flex-direction: column; }
+    .post-item h2 {
+      font-size: 135%; }
+    .post-item.has-thumbnail .post-rhs .post-heading {
+      display: none; }
+    .post-item.has-thumbnail .post-lhs {
+      display: flex;
+      align-items: center; }
+      .post-item.has-thumbnail .post-lhs .post-heading {
+        display: initial; }
+    .post-item .item-links-and-tags {
+      justify-content: center; }
+  .post-item.no-thumbnail .post-rhs .post-heading {
+    flex-direction: row-reverse;
+    margin-left: 0;
+    align-items: center; }
+    .post-item.no-thumbnail .post-rhs .post-heading a {
+      margin-left: 0;
+      padding: 0; }
+    .post-item.no-thumbnail .post-rhs .post-heading h3 {
+      font-size: 90%;
+      width: 19.624em;
+      min-width: 19.624em;
+      max-width: 19.624em;
+      text-align: center;
+      padding: 0;
+      transform: scale(1.5); }
+  .post-item.no-thumbnail .post-rhs .post-summary {
+    flex-direction: column;
+    margin: 0; }
+    .post-item.no-thumbnail .post-rhs .post-summary .item-links-and-tags {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      margin: 0; }
+  #open-src-jrnl .post-item .DateAndLinesChanged {
+    text-align: end; }
+    #open-src-jrnl .post-item .DateAndLinesChanged .break-on-colon {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap; }
+  #open-src-jrnl .post-item .post-summary {
+    flex-direction: column-reverse;
+    align-items: center; }
+    #open-src-jrnl .post-item .post-summary .item-type-and-tags {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center; }
+      #open-src-jrnl .post-item .post-summary .item-type-and-tags .item-links-and-tags {
+        padding: 1rem; } }
+
+@media screen and (max-width: 52.5rem) {
+  .post-item h2 {
+    font-size: 110%; }
+  .post-item.no-thumbnail .post-rhs .post-heading h3 {
+    font-size: 90%;
+    width: 14.5em;
+    min-width: 14.5em;
+    max-width: 14.5em;
+    transform: scale(1.2); } }

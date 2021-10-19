@@ -1,0 +1,264 @@
+// Styling loaded for all blog posts
+
+// SCSS imports, no css will be generated from the below imports
+// so they are safe to import at the top of all files.
+@import 'declarations/fonts';
+@import 'declarations/mixins';
+@import 'declarations/colours';
+@import 'declarations/dimens';
+@import 'declarations/backgrounds';
+
+
+
+#body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#postplate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 75em; // ~ 1200px
+    
+    
+    a {
+	margin: 1em 1.5em 1em 1em;
+    }
+}
+
+// Container that maintains aspect ratio through setting width
+.aspectRatioContainer {
+    display: inline-block;
+    position: relative;
+}
+
+.thumbnail {
+    padding-left: 1em;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    margin: 0;
+}
+
+
+.technical.withThumbnail {
+
+    // Don't maintain aspect ratio of
+    // heading/meta box on technical posts
+    #aspectRatioContainer1 {
+	width: 70%;
+    }
+    .aspectRatioElem1 {
+	width: 100%;
+	height: auto;
+    }
+
+    #aspectRatioContainer2 {
+	width: 30%;
+    }
+    .aspectRatioElem2 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    }
+    #aspectRatioContainer2:before{content:"";display:block;margin-top:100%;}
+}
+
+.non-technical.withThumbnail {
+
+    margin-top: 3em;
+    margin-bottom: 3em;
+    
+    // Non-technical posts with a thumbnail
+    // so give equal space to both the
+    // heading/meta box and the thumbnail
+    // as the thumbnail is usually more
+    // important/thought out on reg posts
+    
+    .aspectRatioContainer{
+	width: 50%;
+    }
+    .aspectRatioElem{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    }
+    .aspectRatioContainer:before{content:"";display:block;margin-top:100%;}
+}
+
+.noThumbnail {
+    
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    
+    // Don't maintain aspect ratio of
+    // heading/meta box on technical posts
+    #aspectRatioContainer1 {
+	width: 100%;
+    }
+    .aspectRatioElem1 {
+	width: 100%;
+	height: auto;
+    }
+
+    #aspectRatioContainer2 {
+	display: none;
+    }
+}
+
+.non-technical.withThumbnail {
+    
+    #headingAndMetaBox {
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	justify-content: center;
+	padding-right: 1em;
+	
+	.title {
+	    display: flex;	    
+	    text-align: center;
+	    flex-grow: 2;
+	    align-items: center;
+
+	    h1 {
+		margin-top: 4em;
+	    }
+	}
+	#authorContainer {
+	    flex-grow: 0;
+	}
+	#dateMetaContainer {
+	    flex-grow: 0;
+	    margin: 1em;
+	}
+	
+	.item-links-and-tags {
+	    justify-content: center;
+	    flex-grow: 1;
+	    margin-bottom: 1em;
+	}
+	
+    }
+    img {
+	border-left: 2px solid $text-secondary;
+    }
+}
+
+.technical.withThumbnail, .noThumbnail {
+
+
+    text-align: center;
+    
+    #headingAndMetaBox {
+
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	
+	//TODO
+	//justify-content: space-around;
+	//padding-right: 1rem;
+	//padding-top: 5%;
+	//padding-bottom: 5%;
+	
+	.title {
+	    display: flex;
+	    width: 95%;
+	    text-align: center;
+	    justify-content: center;
+	    order: 1;
+	}
+	#authorContainer {
+	    order: 2;
+	    width: 45%;
+	    justify-content: center;
+	}
+	#dateMetaContainer {
+	    order: 3;
+	    width: 45%;
+	}
+	.item-links-and-tags{
+	    order: 4;
+	    justify-content: center;
+	    width: 95%;
+	}
+    }
+}
+
+.technical.withThumbnail{
+    #headingAndMetaBox {
+	border-right: 2px solid $text-secondary;
+    }
+}
+
+
+#portrait{
+    background: url(../../images/portrait.jpg);
+    background-size: cover;
+    width: 70px;
+    min-width: 70px;
+    max-width: 70px;
+    height: 70px;
+    min-height: 70px;
+    max-height: 70px;
+    border: solid 2px $text-secondary;
+    border-radius: 50%;
+}
+
+
+#authorContainer {
+    display: flex;
+    align-items: center;
+    margin: 1em;
+}
+
+
+// Post Body
+
+img {
+    width: 100%;
+    max-width: $default-text-width;
+    object-fit: contain;
+}
+
+#body{
+    p:nth-child(1){
+	margin-bottom: 3rem;
+    }
+}
+
+div.sourceCode {
+
+    code{
+	@include font-mono;
+    }
+    
+    padding-left: 2em;
+    padding-right: 4em;
+    border-left: 4px solid $text-color;
+    font-size: $default-font-size;
+    margin: 2em
+	    2em
+	    2em
+	    0;
+    background: $code-bg-color;
+}
+
+
+@import 'post-r';
+

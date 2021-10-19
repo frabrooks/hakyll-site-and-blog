@@ -1,0 +1,253 @@
+
+@import 'nav-decs';
+
+
+// Navbar container itself
+nav {
+    
+    display: flex;
+    // Main axis spacing
+    justify-content: center;
+    // Cross-axis behaviour (stretch is actually the default)
+    align-items: stretch;
+    
+    // For all text on navbar (unless overrided below)
+    p,a,span {
+	font-size: $default-font-size;
+	color: $text-color;
+	@include font-mono;
+	margin: 0;
+	// Shouldn't ever be any overflow anyway
+	overflow: hidden;
+	// Align center (only comes into effect when text wraps onto multiple lines)
+	text-align: center;
+    }
+
+    margin-left: $nav-bar-margin;
+    margin-right: $nav-bar-margin;
+
+    @include section-background;
+}
+// A segment of the nav-bar
+.nav-block {
+
+    height: $nav-block-height;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-left: $nav-block-padding;
+    padding-right: $nav-block-padding;
+}
+#home-button, #page-title {
+    p,a,span {
+	font-size: $default-large-font-size;
+	line-height: 100%;
+    }
+}
+#home-button {
+
+    a {
+	color: $cv-button-color;
+	white-space: nowrap;
+	background-image: url(../../../images/hexagon.svg);
+	background-size: cover;
+	height: $nav-block-height - 2.5rem;
+	width: $nav-block-height - 2.5rem;
+	padding: 1rem;
+	margin: 1.25rem 0 1.25rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&:hover {
+	    transform: scaleX(1.1) scaleY(1.1);
+	}
+	
+    }
+    @include separator-right;
+}
+#page-title { margin-right: auto; }
+.nav-link,#cv-link a { font-size: $default-font-size; }
+
+// nav-link: Home/Contact/Blog etc. buttons
+// Want the link to be larger than the text and background
+// color change on whole square/button)
+.nav-link {
+    // Hidden by default
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    // Overwrite padding from .nav-block
+    // and move it to inner {a}
+    padding: 0;
+
+    cursor: pointer;
+
+    // For the background :before el below
+    position: relative;
+    
+    &.show {
+	height: $nav-block-height;
+	opacity: 1;	
+	visibility: visible;
+    }
+
+    span {
+	z-index: 2;
+	padding-left: $nav-block-padding;
+	padding-right: $nav-block-padding;
+    }
+
+    // Background change on hover
+    &:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+	// Animate background of <a> elem as a different
+	// transition (easeOutNav) is applied to nav-links
+	// (height, opacity, visibilty) for slide in slide out anim
+	@include easeOutSlow;
+    }
+    &:hover:before {background-color: $nav-bar-hover-color;}
+
+    // -child version is for when the hover should be triggered
+    // by hovering over parent (i.e. the navlink) but underline
+    // should be over a child that has class .underline-me
+    @include flex-hover-underline-child($text-color, 100%);	
+}
+
+// current page (added in JS)
+.current-page-link span { color : $text-accent; }
+
+
+#cv-link {
+    
+    // Slide out to the right
+    @include easeOutWidth;
+
+    @include cv-link-animated-config;
+    
+    transition-delay: 0.6s;
+
+    flex: 0 0 auto;
+
+    // To ensure that text dissapears with width transition
+    // triggered when navlinks are shown
+    overflow: hidden;
+
+    a {		
+	@include easeOutSlow; // For background
+
+	width: 100%;
+	height: auto;
+
+	color: $cv-button-color;
+
+	padding: 0.8rem 1rem 0.8rem 1rem;
+	border-radius: 0.5rem;
+
+	@include flex-hover-underline($cv-button-color-hover, 105%); 
+    }
+    a:hover{
+	background-color: $cv-button-bg-color-hover;
+	color: $cv-button-color-hover;
+    }
+    &.hide {
+	// Need to 0 width AND padding for dissapear anim to work
+	width: 0;
+	padding: 0;
+	visibility: hidden;
+	transition-delay: 0s;
+	a {
+	    border: none;
+	}
+    }
+}
+
+// The button on the top right that shows/hides the nav-links
+#show-nav-links-button {
+
+    // The animated button is square but for the container
+    // itself to be square we need to add a lil
+    padding-left: $nav-block-padding + 0.5rem;
+    padding-right: $nav-block-padding + 0.5rem;
+    
+    @include easeOutSlow;
+    &:hover {background-color: $nav-bar-hover-color;}
+    cursor: pointer;
+    @include separator-left;
+}
+
+#show-nav-links-button div:nth-child(1) {
+
+    // has flex layout as still a nav-block
+    flex-direction: column;
+    justify-content: center;
+
+    box-sizing: initial;
+    
+    // Override/remove top/bottom padding from nav-block styling
+    // to center lines of button but keep right/left pading
+    padding-top: 0;
+    padding-bottom: 0;
+
+    width: 2.5rem;
+    
+    // To ensure above cv button on small layouts
+    z-index: 2;
+    
+    @include easeOutSlow;
+    
+    .btn-line {
+	width: 100%;
+	height: 0.416rem;
+	margin: 0 0 0.625rem 0;
+	background: $text-primary;
+	@include easeOutSlow;
+    }
+    .line-top {
+	margin-top: 0.625rem;
+    }
+}
+// Rotate Into X
+#show-nav-links-button.close div:nth-child(1) {
+    transform: rotate(180deg);	
+    .btn-line {
+	// Line 1 - Rotate
+	&:nth-child(1) {
+	    transform: translate( 0 , 1.0418rem) rotate(45deg);
+	}
+	// Line 2 - Hide
+	&:nth-child(2) {
+	    opacity: 0;
+	}
+	// Line 3 - Rotate
+	&:nth-child(3) {
+	    transform: translate(0 , -1.0418rem) rotate(-45deg);
+	}
+    }	
+}
+
+// nav-break's used to force newline in the flex layout
+// only needed on smaller layouts so display none by default
+.nav-break {
+    height: 0;
+    flex-basis: 100%;
+    display: none;
+}
+
+// Delay each nav item slide by 0.1s
+@for $x from 1 through 5 {
+    .nav-block:nth-child(#{8 - $x}){
+	@include easeOutHeight;
+	transition-delay: 0.15s + ($x * 0.1s);
+    }
+}
+
+

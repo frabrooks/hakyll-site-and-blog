@@ -36,54 +36,11 @@ $eof: $ease-out-fast;
 
 
 @mixin flex-hover-underline($color, $width) {
-    &:after {
-	content: '';	
-	height: 2px;
-	width: $width;
-	transform: scaleX(0);
-	background-color: $color;
-	transform-origin: bottom right;
-	transition: transform 0.25s ease-out;		
-    }
-    &:hover:after {
-	transform: scaleX(1);
-	transform-origin: bottom left;
-    }
-}
-
-@mixin flex-hover-underline-p($color, $width) {
     & {
-	p {	    
-	    display: flex;
-	    
-	    // Underline animation (requires flex box with vertical direction)
-	    flex-direction: column;
-	}
+	display: inline-flex;
 	
-	p:after {
-	    content: '';	
-	    height: 2px;
-	    width: $width;
-	    transform: scaleX(0);
-	    background-color: $color;
-	    transform-origin: bottom right;
-	    transition: transform 0.25s ease-out;
-	}
-    }
-	
-    &:hover {
-	p:after {
-	    transform: scaleX(1);
-	    transform-origin: bottom left;
-	}	
-    }
-}
-
-@mixin flex-hover-underline($color, $width) {
-    & {
-	display: flex;
-	
-	// Underline animation (requires flex box with vertical direction)
+	// Underline animation (requires
+	// flex box with vertical direction)
 	flex-direction: column;
     }
     &:after {
@@ -100,6 +57,38 @@ $eof: $ease-out-fast;
 	transform: scaleX(1);
 	transform-origin: bottom left;
     }	
+}
+
+
+@mixin flex-hover-underline-child($color, $width) {
+    & {
+	.underline-me {	    
+	    display: inline-flex;
+	    
+	    // Underline animation (requires
+	    // flex box with vertical direction)
+	    flex-direction: column;
+	    justify-content: center;
+	    align-items: center;
+	}
+	
+	.underline-me:after {
+	    content: '';	
+	    height: 2px;
+	    width: $width;
+	    transform: scaleX(0);
+	    background-color: $color;
+	    transform-origin: bottom right;
+	    transition: transform 0.25s ease-out;
+	}
+    }
+	
+    &:hover {
+	.underline-me:after {
+	    transform: scaleX(1);
+	    transform-origin: bottom left;
+	}	
+    }
 }
 
 
@@ -130,7 +119,7 @@ $eof: $ease-out-fast;
 
 // 2/3rd desktop
 @mixin mLarge {
-    @media screen and (max-width: 86.3rem) {
+    @media screen and (max-width: 84.8rem) {
 	@content;
     }
 }
@@ -175,7 +164,14 @@ $eof: $ease-out-fast;
 
 // Ridiculously small/narrow for galaxy fold and kin
 @mixin mStupidSmall { // 240px w/ default font-size
-    @media screen and (max-width: 17.6rem) {
+    @media screen and (max-width: 24.6rem) {
+	@content;
+    }
+}
+
+// Galaxy Fold with very large font size 
+@mixin mTakingThePiss { // AKA a techno boomer
+    @media screen and (max-width: 12rem) {
 	@content;
     }
 }
