@@ -6,7 +6,7 @@ A Constructive Formalisation of Hoare Logic within the Interactive Theorem Prove
 
 ./content/pdfs/constructive-hoare-logic.pdf
 
-https://github.com/frabrooks/hakyll-site-and-blog
+https://github.com/frabrooks/constructive-hoare-logic
 
 }#
 
