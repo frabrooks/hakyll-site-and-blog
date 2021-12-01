@@ -144,12 +144,16 @@ notP p = Parser $ \ input ->
     otherwise -> MaybeT $ return $ Nothing
 
     
-jpgORpng :: String -> IO String
-jpgORpng path = do
+getIMG :: String -> IO String
+getIMG path = do
   b <- doesFileExist (path -<.> ".jpg")
   case b of
     True -> return $ path -<.> ".jpg"
-    False -> return $ path -<.> ".png"
+    False -> do
+      b' <- doesFileExist (path -<.> ".png")
+      case b' of
+        True -> return $ path -<.> ".png"
+        False -> return $ path -<.> ".gif"
 
 
 

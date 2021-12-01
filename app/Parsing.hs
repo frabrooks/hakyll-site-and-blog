@@ -123,8 +123,9 @@ getPortfolioItems :: String -> IO [PortfolioItem]
 getPortfolioItems dir = do
   files <- listDirectory dir
   let items = sort $ filter (\ fp -> (not . (isInfixOf $ pack ".jpg") . pack) fp
-                             && (not . (isInfixOf $ pack ".png") . pack) fp) files
-  items' <- sequence $ fmap (jpgORpng . ((</>) dir)) items
+                                  && (not . (isInfixOf $ pack ".png") . pack) fp
+                                  && (not . (isInfixOf $ pack ".gif") . pack) fp) files
+  items' <- sequence $ fmap (getIMG . ((</>) dir)) items
   let items'' = zip items items'
   sequence $ fmap (\ item ->
                       unsafeParseFile
@@ -142,51 +143,6 @@ getAcademicWork = getPortfolioItems "./content/academic-work/"
 getProjects :: IO (ProjectPortfolio)
 getProjects = getPortfolioItems "./content/project-portfolio/"
 
-
---toSitePath :: FilePath -> IO FilePath
---toSitePath fp = do
---  date <- (unsafeRunParse getDateP) fp
---  contents <- readFile fp
---  meta <- (unsafeRunParse getMetaP) contents
---  title <- (unsafeRunParse getTitleP) meta
---  let formatTitle = (fmap toLower) . (replace '/' '-') . (replace ' ' '-')
---  return $ "./blog/" </> date ++ (formatTitle title) <.> ".html"
-
-
---doPostsMetaParse :: IO [BlogPostMetaData]
---doPostsMetaParse = do
---  paths <- getBlogPostPaths
---  paths' <- sequence $ fmap toSitePath paths
---  contents <- sequence $ fmap readFile paths
---  meta <- sequence $ fmap (unsafeRunParse getMetaP) contents
---  titles   <- sequence $ fmap (unsafeRunParse getTitleP) meta
---  dates <- sequence $ fmap (unsafeRunParse getDateP) paths
---  let dates' = fmap (reverse . tail . reverse) dates
---  cats <- sequence $ fmap (unsafeRunParse getCatP) meta
---  tags <- sequence $ fmap (unsafeRunParse getTagsP) meta
---  -- Maybe description, if Nothing then desc comes from
---  -- parsing with firstBodyParP for first <p>...</p>
---  mDescs <- sequence $ fmap (safeRunParse getDescP) meta
---  let splits = fmap splitFileName paths
---  let dirs = fmap fst splits
---  let postFiles = fmap snd splits
---  let jpgPaths = fmap (flip (</>) $ "thumb.jpg") dirs
---  bJpg <- sequence $ fmap doesFileExist jpgPaths
---  let jpgPaths' = zip bJpg jpgPaths
---  let pngPaths = fmap (flip (</>) $ "thumb.png") dirs
---  bPng <- sequence $ fmap doesFileExist pngPaths
---  let pngPaths' = zip bPng pngPaths
---  let mThumbnails = zipWith (\ jpg png -> if (fst png)
---                                         then Just (snd png)
---                                         else if (fst jpg)
---                                              then Just (snd jpg)
---                                              else Nothing) jpgPaths' pngPaths'
---  putStrLn $
---    "\n\n Parsed Blog Post meta data:\n\n" ++
---    intercalate "\n\n" (fmap show $
---      zipWith7 BlogPostMetaData titles dates' paths' cats mDescs mThumbnails tags)
---    ++ "\n\n"
---  return $ zipWith7 BlogPostMetaData titles dates' paths' cats mDescs mThumbnails tags
 
 
 notHidden :: SFF.FindClause Bool

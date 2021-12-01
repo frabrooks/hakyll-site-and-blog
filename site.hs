@@ -297,7 +297,7 @@ main = do
         makeItem $ styleToCss pandocCodeStyle
 
 
-    match (fromRegex "content/academic-work/.*(.jpg|.png)") $ do
+    match (fromRegex "content/academic-work/.*(.jpg|.png|.gif)") $ do
       route idRoute
       compile copyFileCompiler
 

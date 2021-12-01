@@ -127,16 +127,12 @@
   border-radius: 50%;
   border: solid 4px #786aa0; }
   #portrait.dance-banana-a-go-go {
-    width: 18em;
-    min-width: 18em;
-    height: 18em;
-    min-height: 18em;
+    width: 13.5em;
+    min-width: 13.5em;
+    height: 13.5em;
+    min-height: 13.5em;
     background: url(../../images/banana.jpg);
-    background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0; }
+    background-size: cover; }
 
 #top-text {
   display: flex;

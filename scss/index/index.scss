@@ -56,16 +56,16 @@
     height: $portrait-size;
     background: url(../../images/portrait.jpg);
     &.dance-banana-a-go-go {
-	width: $portrait-size * 2;
-	min-width: $portrait-size * 2;
-	height: $portrait-size * 2;
-	min-height: $portrait-size * 2;
+	width: $portrait-size * 1.5;
+	min-width: $portrait-size * 1.5;
+	height: $portrait-size * 1.5;
+	min-height: $portrait-size * 1.5;
 	background: url(../../images/banana.jpg);
 	background-size: cover;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
+//	margin-left: auto;
+//	margin-right: auto;
+//	left: 0;
+//	right: 0;
     }
     background-size: cover;
     border-radius: 50%;

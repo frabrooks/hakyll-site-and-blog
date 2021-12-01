@@ -1,0 +1,26 @@
+
+Simple Python sprite-based infinite runner game with Python 3.2 and pygame 1.9.1
+
+
+#{
+
+https://github.com/frabrooks/dragon-escape-game-python
+
+}#
+
+
+#{
+
+A very simple infinite-runner game I made a fair few years ago now. Nothing all that impressive code-wise but kinda fun; as is probably evident, I made all the sprites myself. Code if available through the link above but I doubt it's all that worth looking at.
+
+}#
+
+@tags{
+
+Python
+pygame
+Sprite Game
+A Bit Janky
+Dumb Stuff
+
+}@tags

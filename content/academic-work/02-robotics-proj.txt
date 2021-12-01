@@ -1,4 +1,4 @@
-Creating a Robotic Waiter using a Pioneer P3DX Robot and Particle Filtering
+Creating a Robotic Waiter using a Pioneer P3DX Robot with Localisation via Particle Filtering
 
 #{
 
@@ -10,7 +10,8 @@ https://github.com/frabrooks/hakyll-site-and-blog
 
 #{
 
-A <a class="inline-link" href="https://en.wikipedia.org/wiki/Constructivism_(philosophy_of_mathematics)">constructive</a> formalisation of <a class="inline-link" href="https://en.wikipedia.org/wiki/Hoare_logic">Hoare Logic</a> in the interactive theorem prover <a class="inline-link" href="https://en.wikipedia.org/wiki/Agda_(programming_language)">Agda</a>. The final result is a constructive formalisation of Hoare logic and an Agda library that is fit for the purpose of proving correct simple imperative-style programs using the formalised Hoare logic.
+One of the highlights of my Computer Science degree. This was a group project in which we implemented <a class="inline-link" href="https://en.wikipedia.org/wiki/Robot_navigation">robot localisation</a> via <a class="inline-link" href="https://en.wikipedia.org/wiki/Monte_Carlo_localization">particle filtering</a> in C++. For the final part of the project we basically had to do something wacky with the robot and we made a robot 'waiter' that could deliver drinks ordered via an android app once it had figured out where it was in the lower ground floor of the computer science building.
+
 
 }#
 
