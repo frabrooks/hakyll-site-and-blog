@@ -2,9 +2,9 @@ Creating a Robotic Waiter using a Pioneer P3DX Robot with Localisation via Parti
 
 #{
 
-./content/pdfs/constructive-hoare-logic.pdf
+./content/pdfs/robotics-final-report.pdf
 
-https://github.com/frabrooks/hakyll-site-and-blog
+https://github.com/frabrooks/robotic-waiter-w-pioneer-p3dx-robot
 
 }#
 

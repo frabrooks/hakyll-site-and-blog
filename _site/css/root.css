@@ -167,6 +167,7 @@ main {
     object-position: bottom; }
 
 .item-links-and-tags {
+  width: 100%;
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center; }

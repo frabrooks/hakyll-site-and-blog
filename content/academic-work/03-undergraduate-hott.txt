@@ -12,16 +12,19 @@ https://github.com/frabrooks/constructive-hoare-logic
 
 #{
 
-A <a class="inline-link" href="https://en.wikipedia.org/wiki/Constructivism_(philosophy_of_mathematics)">constructive</a> formalisation of <a class="inline-link" href="https://en.wikipedia.org/wiki/Hoare_logic">Hoare Logic</a> in the interactive theorem prover <a class="inline-link" href="https://en.wikipedia.org/wiki/Agda_(programming_language)">Agda.</a> The final result is a constructive formalisation of Hoare logic and an Agda library that is fit for the purpose of proving correct simple imperative-style programs using the formalised Hoare logic rules.
+At university I took an 'Individual Study' course. I don't remember what the original agreed-upon scope of the study was but I ended up studying Homotopy Type Theory, the Equivalence Principle, Univalent Foundations, Set Theory vs. Type Theory, and finally some Category Theory. One 16,000-word draft later, I had to take a leave absence for health reasons - spurred on by a global pandemic. This here is my attempt at repurposing that draft into something useful for future undergrads lest my efforts go to waste.
+
 
 }#
 
 @tags{
 
-Agda
-Formal Logic
+Foundations of Mathematics
+Univalence Principle
+Category Theory
+Homotopy Theory
+Set Theory
 Type Theory
-Programming Language Semantics
-Formal Proof
+Crazy Maths I Still Barely Understand
 
 }@tags
