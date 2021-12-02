@@ -1,5 +1,5 @@
 
-Univalent Foundations, and The Equivalence Principle for the Foolhardy Undergraduate (WIP)
+Univalent Foundations and The Equivalence Principle for the Foolhardy Undergraduate (WIP)
 
 #{
 

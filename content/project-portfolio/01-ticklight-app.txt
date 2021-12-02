@@ -1,0 +1,27 @@
+
+TickLight: A Planning and Habit Tracking App made with Android Room & Firebase (WIP)
+
+#{
+
+https://github.com/frabrooks/unlikely-salmon
+
+}#
+
+#{
+
+An app I've been working on for some number of years now, initially as an excuse to learn Android application development and make something that could be considered a 'full stack' application. After many things pulling me away (my master's thesis and this website to name a few) and after having written and rewritten the codebase many times, it's finally nearing completion. The images in the thumbnail are from a much earlier version.
+
+}#
+
+@tags{
+
+
+Android
+Java
+Android Room
+Firebase
+Full Stack
+
+}@tags
+
+

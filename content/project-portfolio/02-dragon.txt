@@ -19,8 +19,8 @@ A very simple infinite-runner game I made a fair few years ago now. Nothing all 
 
 Python
 pygame
-Sprite Game
-A Bit Janky
-Dumb Stuff
+Simple Games
+Very Janky
+Dumb Projects
 
 }@tags
