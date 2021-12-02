@@ -1,5 +1,5 @@
 
-Simple Python sprite-based infinite runner game with Python 3.2 and pygame 1.9.1
+Simple Python sprite-based Infinite Runner Game with Python 3.2 and pygame 1.9.1
 
 
 #{
