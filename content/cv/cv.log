@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  12 DEC 2021 03:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  20 DEC 2021 14:41
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**cv.tex
-(./cv.tex
+**f:/drive/desk/fraserbrooks.io/content/cv/cv.tex
+(f:/drive/desk/fraserbrooks.io/content/cv/cv.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (c:/texlive/2020/texmf-dist/tex/latex/base/article.cls
@@ -180,7 +179,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 121.
 
-Underfull \hbox (badness 10000) in alignment at lines 176--194
+Underfull \hbox (badness 10000) in alignment at lines 176--195
 [][][] 
  []
 
@@ -188,13 +187,13 @@ Underfull \hbox (badness 10000) in alignment at lines 176--194
 
 {c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./cv.aux) ) 
 Here is how much of TeX's memory you used:
- 2532 strings out of 479023
- 33873 string characters out of 5863350
+ 2533 strings out of 479023
+ 33994 string characters out of 5863350
  351981 words of memory out of 5000000
  20017 multiletter control sequences out of 15000+600000
  416533 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 52i,16n,60p,361b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,16n,60p,402b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:
 /texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{c:/texlive/
 2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2020/texmf
@@ -209,7 +208,7 @@ dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2020/texmf-dist/fonts
 /type1/public/cm-super/sfrm1440.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pub
 lic/cm-super/sfsx1200.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-sup
 er/sftt1200.pfb>
-Output written on cv.pdf (1 page, 166347 bytes).
+Output written on cv.pdf (1 page, 167135 bytes).
 PDF statistics:
  62 PDF objects out of 1000 (max. 8388607)
  46 compressed objects within 1 object stream
