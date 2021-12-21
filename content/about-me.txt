@@ -4,7 +4,7 @@ Brooks
 
 I'm a
 
-Full Stack Developer
+<span class="small">(Aspiring)</span> Full Stack Developer
 
 
 
@@ -14,6 +14,6 @@ contact@fraserbrooks.io
 
 <span class="text-secondary text-mono">About: </span>I'm a recent M.Sci Computer Science graduate with a history in design, a budding open-source software enthusiast, and wannabe Haskeller.
 
-I love to create beautiful and useful software and am currently looking for a job as a developer. See below for some examples of my work to get an idea of what I can do when supplied enough caffeine :) ↴
+I love to create beautiful and useful software and am currently looking for a job as a developer. See below for some examples of my work to get an idea of what I can do when supplied enough caffeine ↴
 
 }#
