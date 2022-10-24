@@ -34,7 +34,7 @@
 
 \setlength{\outerbordwidth}{1.5pt}  % Width of border outside of title bars
 \definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
-\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+\definecolor{shadecolorB}{gray}{0.98}  % Inner background color of title bars
 
 
 %-----------------------------------------------------------
@@ -57,9 +57,9 @@
 %-----------------------------------------------------------
 %Custom commands
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{\vspace{8pt}
+\newcommand{\resheading}[1]{\vspace{12pt}
   \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
-\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{2pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
   }\vspace{8pt}
 }
 
@@ -74,26 +74,109 @@
 \begin{document}
 
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-  \textbf{\Huge Fraser Brooks} & CV compiled with \LaTeX \, on: \\
-   {\Large M.Sci Computer Science Graduate} & \textbf{\today} \\
+  \textbf{\huge Fraser Brooks M.Sci} & {\Large Angular \,/ Front-End Developer} \\
 \end{tabular*}
 
-\vspace{1em}
+\vspace{1.2em}
 
 \large
 
 \begin{tabularx}{\textwidth}{YYY}
-    +44 7740 102898  &  \;\;\;\;\;  contact\at fraserbrooks.io  \;\;\;\;\;  &  GitHub: frabrooks\\
+    (+44) 07740 102898  &  \;\;\;\;\;  contact\at fraserbrooks.io  \;\;\;\;\;  &  GitHub: frabrooks\\
 \end{tabularx}
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{ Skills }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%{\small
+
+%\def\arraystretch{1.2}
+
+
+%\begin{centering}
+%\begin{tabular*}{7in}{@{\extracolsep{\fill}}rcccl@{\extracolsep{\fill}}}
+%  \;\;\;\;\;\;\; & Angular (RxJS, NgRx) & TypeScript / JavaScript & Git \& Version Control & \;\;\;\;\;\;\; \\
+%  \;\;\;\;\;\;\; & Test-Driven Development & SQL / Relational Databases &  \LaTeX,\;Word, Adobe Suite &  \;\;\;\;\;\;\; \\
+%  \;\;\;\;\;\;\; & Web Design \& Graphic Design & HTML5/CSS/JavaScript & CI, CD, AWS \& Firebase & \;\;\;\;\;\;\; \\  
+%\end{tabular*}
+%\end{centering}
+
+%}
+
+\vspace{-10pt}
+
+{\small
+  
+  \begin{itemize}
+  \item \textbf{Angular (with RxJS \& NgRx)}, building applications that are performant, scalable, and maintainable.
+  \item \textbf{HTML5/CSS3/JavaScript}, delivering best-in-class code with consideration for usability, accessibility, cross-browser support, and responsive design.
+  \item \textbf{Java, SQL \& git} via university projects as well as several Android apps and hobby projects.
+  \item Reviewing and contributing to \textbf{behaviour-driven development (BDD)} requirements.
+  \item Development within an \textbf{agile scrum} delivery process with continuous integration and deployment.
+   \item Integrating Angular applications with  \textbf{RESTful APIs} and  \textbf{.NET} back-end platforms.
+   \item Have also played around plenty with: \textbf{Docker, AWS, and Linux}.
+    
+\end{itemize}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Work Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\centering
+
+\def\arraystretch{1.2}
+
+\begin{tabular*}{6.6in}{p{0.1in}p{6.4in}p{0.1in}}
+
+
+  \multicolumn{3}{c}{\textbf{Rockpool Digital} - Angular Developer   \cftdotfill{\cftdotsep} \texttt{Jan 2022-Present}}\\
+  \multicolumn{3}{l}{\small {\it Rockpool is a digital agency helping large international clients to deliver digital transformation projects.}}\\
+  \, & {\small
+
+       \vspace{-4pt}
+       
+       Started as a junior front-end developer and hit the ground running delivering full feature stories and stretch work within my first few weeks; far exceeding the expectations usually placed upon a junior role.
+
+       \vspace{8pt}
+
+       Worked closely with product owners, UX designers, and QA testers. Always going above and beyond to support the team as evidenced by my receipt of the peer-voted `team player' quarterly award during my first quarter at the company.
+
+       \vspace{8pt}
+
+       Recently promoted to role of Angular developer and transferred to a new team serving the company's largest client where I'm helping to restore best practice to our NgRx state-managment, our front-end unit/automation testing strategy, all in preparation for a transition to continuous integration/deployment.
+
+       
+       } & \, \\
+  
+  \multicolumn{3}{c}{\textbf{\small University of Birmingham, School of Comp. Sci.} - Lab Demonstrator   \cftdotfill{\cftdotsep} \texttt{2019-20}}\\
+  \, & {\small Worked as a demonstrator assisting lecturers with teaching duties within the databases and functional programming courses after receiving top marks in those modules myself the previous year. \vspace{-12pt} } & \, \\
+  \, & \, & \, \\
+  
+  
+  \multicolumn{3}{c}{\textbf{\small University of Birmingham,  Jiu-Jitsu Club} - Secretary then Captain \cftdotfill{\cftdotsep} \texttt{2019-21}}\\
+  \, & {\small Elected Secretary then Captain of the University Jiu-Jitsu club. Responsibilities across these two years included risk assessments, overseeing recruitment, our budget, and our social media strategy. } & \, \\
+
+
+  %\multicolumn{3}{c}{\textbf{Samsung} - Sales Consultant \cftdotfill{\cftdotsep} \texttt{2016}}\\
+  %\multicolumn{3}{c}{\textbf{Specsavers} - Optical Assistant \cftdotfill{\cftdotsep} \texttt{2016}}\\
+  %\multicolumn{3}{c}{\textbf{McDonald's} - Crew Member \cftdotfill{\cftdotsep} \texttt{2015}}\\
+
+\end{tabular*}
+
+\vspace{8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Education}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-    
-\item \ressubheading{University of Birmingham}{Birmingham, UK}{M.Sci Computer Science (1st class, 4.0 GPA)}{2016-2021}
 
-  \vspace{10pt}
+{\small
+
+\ressubheading{University of Birmingham}{Birmingham, UK}{M.Sci Computer Science (1st class, 4.0 GPA)}{2016-2021}
+
+  \vspace{8pt}
   
 %  {\footnotesize
 %    \vspace{4pt}
@@ -113,7 +196,7 @@
  
 {
 
-\item \ressubheading{Strode College, Street}{Somerset, UK}{ {\small
+\ressubheading{Strode College, Street}{Somerset, UK}{ {
     \begin{tabular}{l}
       A-Level Maths (A), Software Engineering Extended Diploma (D*D*D*) \\ 
     \end{tabular}
@@ -121,77 +204,6 @@
   {2016}
 }
 
-\end{itemize}
-
-\vspace{8pt}
-  
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Projects / Technical Experience }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-{\small
-
-\def\arraystretch{1.2}
-
-  
-\begin{centering}
-\begin{tabular*}{7in}{@{\extracolsep{\fill}}rcccl@{\extracolsep{\fill}}}
-  \;\;\;\;\;\;\; & Java, Haskell, Python, C++ & OOP and Functional Programming & Git \& Version Control & \;\;\;\;\;\;\; \\
-  \;\;\;\;\;\;\; & Test-Driven Development & SQL / Relational Databases &  \LaTeX,\;Word, Adobe Suite &  \;\;\;\;\;\;\; \\
-  \;\;\;\;\;\;\; & Web Design \& Graphic Design & HTML5/CSS/JavaScript & CI, CD, AWS \& Firebase & \;\;\;\;\;\;\; \\  
-\end{tabular*}
-\end{centering}
-
 }
 
-
-{\small 
-
-  \begin{itemize}
-  \item Submitted and merged a patch into a large scale open-source software project --- the Haskell master branch. Specifically a bugfix, with integration test, for the cabal-install build automation \& package management tool.
-
-
-  \item Years of experience with Java through numerous projects including but not limited to a multiplayer game project and robotics project at university, as well as several android apps created during my spare time.
-
-
-  \item Python experience via some simple games written with the pygame library and numerous projects at university including a machine learning project and a robotics project.
-    
-  \item Designed a portfolio site/blog using HTML5, SCSS, \& TypeScript, utilising a Haskell static site generator for automatic compilation \& delivery of posts to the site. Currently live at fraserbrooks.io via AWS amplify.
-    
-    
-\end{itemize}
-
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Work Experience}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\centering
-
-\def\arraystretch{1.2}
-
-\begin{tabular*}{6.6in}{p{0.1in}p{6.4in}p{0.1in}}
-
-  \multicolumn{3}{c}{\textbf{University of Birmingham, School of Comp. Sci.} - Lab Demonstrator   \cftdotfill{\cftdotsep} \texttt{2019-20}}\\
-  \, & {\small Worked as a demonstrator assisting lecturers with teaching duties in the databases (2018-19) and functional programming (2019-20) courses; guiding lower year students through the course material during lab sessions. } & \, \\
-  \, & \, & \, \\
-  
-
-  
-  \multicolumn{3}{c}{\textbf{University of Birmingham,  Jiu-Jitsu Club} - Secretary then Captain \cftdotfill{\cftdotsep} \texttt{2019-21}}\\
-  \, & {\small Elected secretary then captain of the university Jiu-Jitsu club. Responsibilities across these two years included risk assessments, overseeing recruitment, budget, and our social media strategy, and organising and encouraging our club's participation in several national competitions --- as well as competing myself. } & \, \\
-
-  \, & \, & \,  \\
-
-  \multicolumn{3}{c}{\textbf{Samsung} - Sales Consultant \cftdotfill{\cftdotsep} \texttt{2015-16}}\\
-  \, & {\small
-       A marketing push by Samsung that had us stationed in retail phone stores across the UK following training in London. The primary responsibility was to convince customers to choose a Samsung phone for their new handset over Samsung's competitors.
-       
-       Despite an unfortunate clash of motives between myself and the retail staff - they were paid commission on iPhones but not on Samsung phones - I was able to consistently meet sales targets via negotiating with and supporting store management to gain incremental sales opportunities. } & \, \\
-  
-
-\end{tabular*}                                                                                                                                                                                                                                                                                          
 \end{document}
