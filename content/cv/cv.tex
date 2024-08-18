@@ -21,6 +21,8 @@
 \robustify\cftdotfill
 
 \usepackage{xcolor}
+\usepackage{wasysym}
+\usepackage{fontawesome}
 
 \usepackage{tabularx}
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
@@ -33,9 +35,10 @@
 %Edit these values as you see fit
 
 \setlength{\outerbordwidth}{1.5pt}  % Width of border outside of title bars
-\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolor}{gray}{1}  % Outer background color of title bars (0 = black, 1 = white)
 \definecolor{shadecolorB}{gray}{0.98}  % Inner background color of title bars
 
+\definecolor{bigstone}{RGB}{19,34,55}
 
 %-----------------------------------------------------------
 %Margin setup
@@ -47,9 +50,9 @@
 \setlength{\paperheight}{11in}
 \setlength{\paperwidth}{8.5in}
 \setlength{\tabcolsep}{0in}
-\setlength{\textheight}{9.5in}
+\setlength{\textheight}{9.8in}
 \setlength{\textwidth}{7in}
-\setlength{\topmargin}{-0.3in}
+\setlength{\topmargin}{-0.6in}
 \setlength{\topskip}{0in}
 \setlength{\voffset}{0.1in}
 
@@ -57,10 +60,20 @@
 %-----------------------------------------------------------
 %Custom commands
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{\vspace{12pt}
-  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
-\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{2pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
-  }\vspace{8pt}
+% \newcommand{\resheading}[1]{\vspace{12pt}
+%   \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+% \setlength{\fboxsep}{4pt}\fcolorbox{bigstone}{bigstone}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large \textcolor{white}{#1}} \vphantom{p\^{E}}}}}
+%   }\vspace{8pt}
+%   }
+
+\newcommand{\resheading}[1]{
+  {
+    \flushleft
+    {\Large \textbf{#1}}
+    \vspace{-6pt}
+    \par\noindent\rule{\textwidth}{0.4pt}
+    \vspace{2pt}
+  }
 }
 
 \newcommand{\ressubheading}[4]{
@@ -73,56 +86,45 @@
 
 \begin{document}
 
+\color{bigstone}
+
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-  \textbf{\huge Fraser Brooks M.Sci} & {\Large Angular \,/ Front-End Developer} \\
+  \textbf{\huge Fraser Brooks} {\huge M.Sci}& \textbf{\Large Senior Front-End Developer} \\
 \end{tabular*}
 
-\vspace{1.2em}
+\vspace{1.8em}
 
 \large
 
 \begin{tabularx}{\textwidth}{YYY}
-    (+44) 07740 102898  &  \;\;\;\;\;  contact\at fraserbrooks.io  \;\;\;\;\;  &  GitHub: frabrooks\\
+    \phone \; 07740 102898  &  \faEnvelope \;  contact\,\faAt\,fraserbrooks.io   & \faGithubSquare \; frabrooks\\
 \end{tabularx}
-  
+
+\vspace{0.8em}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{ Skills }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%{\small
-
-%\def\arraystretch{1.2}
-
-
-%\begin{centering}
-%\begin{tabular*}{7in}{@{\extracolsep{\fill}}rcccl@{\extracolsep{\fill}}}
-%  \;\;\;\;\;\;\; & Angular (RxJS, NgRx) & TypeScript / JavaScript & Git \& Version Control & \;\;\;\;\;\;\; \\
-%  \;\;\;\;\;\;\; & Test-Driven Development & SQL / Relational Databases &  \LaTeX,\;Word, Adobe Suite &  \;\;\;\;\;\;\; \\
-%  \;\;\;\;\;\;\; & Web Design \& Graphic Design & HTML5/CSS/JavaScript & CI, CD, AWS \& Firebase & \;\;\;\;\;\;\; \\  
-%\end{tabular*}
-%\end{centering}
-
-%}
-
-\vspace{-10pt}
+\vspace{-16pt}
 
 {\small
   
   \begin{itemize}
-  \item \textbf{Angular (with RxJS \& NgRx)}, building applications that are performant, scalable, and maintainable.
-  \item \textbf{HTML5/CSS3/JavaScript}, delivering best-in-class code with consideration for usability, accessibility, cross-browser support, and responsive design.
-  \item \textbf{Java, SQL \& git} via university projects as well as several Android apps and hobby projects.
-  \item Reviewing and contributing to \textbf{behaviour-driven development (BDD)} requirements.
-  \item Development within an \textbf{agile scrum} delivery process with continuous integration and deployment.
-   \item Integrating Angular applications with  \textbf{RESTful APIs} and  \textbf{.NET} back-end platforms.
-   \item Have also played around plenty with: \textbf{Docker, AWS, and Linux}.
-    
+  \item \textbf{Angular/NgRx/RxJS} and \textbf{React/Redux} to build complex and scalable enterprise web applications that remain performant, secure,  and maintainable across time.
+  \item \textbf{HTML5, CSS3, JavaScript} with a focus on accessibility, cross-browser support, and responsive design.
+  \item Leading within \textbf{Agile Scrum} teams that deliver at pace and scale via \textbf{CI/CD}.
+  \item Front-end integrations for \textbf{.NET REST APIs}, payments, maps, messaging, PDF generation, and \textbf{CMS}.
+  \item \textbf{Unit testing, integration testing} and \textbf{E2E testing} with \textbf{Jest/Karma/Playwright}.
+  \item Application monitoring via Azure's \textbf{Application Insights} and \textbf{OpenTelemetry}.    
 \end{itemize}
 
 }
 
+\vspace{-4pt}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Work Experience}
+\resheading{Professional Experience}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \centering
@@ -131,79 +133,133 @@
 
 \begin{tabular*}{6.6in}{p{0.1in}p{6.4in}p{0.1in}}
 
-
-  \multicolumn{3}{c}{\textbf{Rockpool Digital} - Angular Developer   \cftdotfill{\cftdotsep} \texttt{Jan 2022-Present}}\\
-  \multicolumn{3}{l}{\small {\it Rockpool is a digital agency helping large international clients to deliver digital transformation projects.}}\\
-  \, & {\small
-
-       \vspace{-4pt}
-       
-       Started as a junior front-end developer and hit the ground running delivering full feature stories and stretch work within my first few weeks; far exceeding the expectations usually placed upon a junior role.
-
-       \vspace{8pt}
-
-       Worked closely with product owners, UX designers, and QA testers. Always going above and beyond to support the team as evidenced by my receipt of the peer-voted `team player' quarterly award during my first quarter at the company.
-
-       \vspace{8pt}
-
-       Recently promoted to role of Angular developer and transferred to a new team serving the company's largest client where I'm helping to restore best practice to our NgRx state-managment, our front-end unit/automation testing strategy, all in preparation for a transition to continuous integration/deployment.
-
-       
-       } & \, \\
   
-  \multicolumn{3}{c}{\textbf{\small University of Birmingham, School of Comp. Sci.} - Lab Demonstrator   \cftdotfill{\cftdotsep} \texttt{2019-20}}\\
-  \, & {\small Worked as a demonstrator assisting lecturers with teaching duties within the databases and functional programming courses after receiving top marks in those modules myself the previous year. \vspace{-12pt} } & \, \\
-  \, & \, & \, \\
-  
-  
-  \multicolumn{3}{c}{\textbf{\small University of Birmingham,  Jiu-Jitsu Club} - Secretary then Captain \cftdotfill{\cftdotsep} \texttt{2019-21}}\\
-  \, & {\small Elected Secretary then Captain of the University Jiu-Jitsu club. Responsibilities across these two years included risk assessments, overseeing recruitment, our budget, and our social media strategy. } & \, \\
+  \multicolumn{3}{l}{\vspace{-24pt}}\\
 
-
-  %\multicolumn{3}{c}{\textbf{Samsung} - Sales Consultant \cftdotfill{\cftdotsep} \texttt{2016}}\\
-  %\multicolumn{3}{c}{\textbf{Specsavers} - Optical Assistant \cftdotfill{\cftdotsep} \texttt{2016}}\\
-  %\multicolumn{3}{c}{\textbf{McDonald's} - Crew Member \cftdotfill{\cftdotsep} \texttt{2015}}\\
+  \multicolumn{3}{l}{\textbf{\large Rockpool Digital}}\\
+  \multicolumn{3}{l}{\small {\it Rockpool is a digital agency delivering bespoke web applications for some of the UK's biggest brands.}\vspace{4pt}}\\
 
 \end{tabular*}
 
-\vspace{8pt}
+\begin{tabular*}{6.6in}{p{0.2in}p{6.3in}p{0in}}
+
+  \, &
+  { \textbf{\small Senior Front-End Developer}\cftdotfill{\cftdotsep} \texttt{\small Sep 2023 - Present}} &
+   \, \\
+  
+  \, &
+       {\small
+
+       Leading a team of 5 front-end developers, overseeing architecture, dependencies, and best practice  across all of our front ends. Engaged in cross-team collaboration, chairing team meetings, 1:1s, and supporting junior developers in their progression.    
+       Frequently workshopping client requirements with a focus on technical feasibility, risk mitigation, and delivery timelines.
+
+      \vspace{4pt}
+       
+       Oversaw a substantial reduction in hotfix deployments from an average of 1 per fortnight to <1 per quarter after overhauling our front-end testing approach, running workshops on Jest/Karma, and setting clear `definition of done' expectations.
+       } &
+   \, \\
+
+  
+  \multicolumn{3}{l}{\vspace{-8pt}}\\
+
+  \, &
+  { \textbf{\small Angular Developer}\cftdotfill{\cftdotsep} \texttt{\small Oct 2022 - Aug 2023}} &
+   \, \\
+
+  \, &
+  {\small
+       Turned around one of our most important projects - delivering >5x performance gains to application KPIs and making previously impossible asks possible -  by writing a one-of-a-kind JS framework that enabled us to push compute out to end user devices.
+
+      \vspace{4pt}
+       
+       Oversaw self-reported developer stress scores fall by 47\% after a herculean amount of refactoring coupled with redefining our approach to state management, earning myself the \textit{Change Catalyst} quarterly award. } &
+   \, \\
+
+  \multicolumn{3}{l}{\vspace{-8pt}}\\
+
+  \, &
+  { \textbf{\small Junior Front-End Developer}\cftdotfill{\cftdotsep} \texttt{\small Jan 2022 - Sep 2022}} &
+   \, \\
+
+  \, &
+  {\small
+     Delivered features, 3rd-party integrations, and ticket resolutions with ease, far exceeding expectations and earning myself the \textit{Team Player} quarterly award during my first quarter at the company. } &
+   \, \\
+
+  \multicolumn{3}{l}{\vspace{-20pt}}\\
+
+\end{tabular*}
+  
+  
+% \begin{tabular*}{6.6in}{p{0.1in}p{6.4in}p{0.1in}}
+
+%   \multicolumn{3}{l}{\textbf{\large University of Birmingham}}\\
+
+%   \multicolumn{3}{l}{\vspace{-12pt}}\\
+
+% \end{tabular*}
+
+% \begin{tabular*}{6.6in}{p{0.2in}p{6.3in}p{0.1in}}
+
+%   \, &
+%   { \textbf{\small Teaching Assistant / Lab Demonstrator}\cftdotfill{\cftdotsep} \texttt{\small 2019-20}} &
+%    \, \\
+  
+%   \, &
+%   {\small For the 'Databases' \& 'Functional Programming' courses after achieving top marks myself the prior year. } &
+%    \, \\
+
+%   \multicolumn{3}{l}{\vspace{-8pt}}\\
+  
+%   \, &
+%   { \textbf{\small Captain of the Jiu-Jitsu Club}\cftdotfill{\cftdotsep} \texttt{\small 2019-21}} &
+%    \, \\
+  
+%   \, &
+%   {\small Was elected Secretary then Captain of the Jiu-Jitsu club. Responsibilities across those two years mainly encompassed recruitment, budgeting, and working closely with the instructors to run the training sessions. } &
+%    \, \\
+
+%   \multicolumn{3}{l}{\vspace{-8pt}}\\ 
+
+% \end{tabular*}
+
+
+\vspace{4pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Education}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\vspace{-8pt}
+
 {\small
 
-\ressubheading{University of Birmingham}{Birmingham, UK}{M.Sci Computer Science (1st class, 4.0 GPA)}{2016-2021}
+\ressubheading{M.Sci Computer Science (1st class, 4.0 GPA)}{2016 - 2021}{University of Birmingham}{}
 
-  \vspace{8pt}
+}
+
+
+\vspace{12pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{About me}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+{\centering
+
+\begin{tabular*}{6.6in}{p{0.1in}p{6.4in}p{0.1in}}
   
-%  {\footnotesize
-%    \vspace{4pt}
-%    \begin{tabular}{l|r}
-%      \multicolumn{2}{l}{\hspace{2em} Course (Grade) \vspace{-6pt} } \\      
-%      \multicolumn{2}{l}{\hspace{2em}  \rule{0.8\textwidth}{0.5pt}} \\
-%      \hspace{2em} Masters Thesis (76\%) & Human Computer Interaction (72\%) \\
-%      \hspace{2em} Machine Learning (85\%) & Software Design Study (72\%)  \\
-%      \hspace{2em} Advanced Functional Programming (90\%) \;\;\;\;\;\;\;\;\;\;\; & Intelligent Robotics (78\%) \\
-%      \hspace{2em} Search and Optimisation (92\%) & Neural Computation (77\%) \\
-%      \hspace{2em} Intro. to Software Engineering  (85\%) & Advanced Networking (86\%) \\
-%      \hspace{2em} Intro. to Databases  (78\%) & Programming Language Principles (76\%) \\
-%      \hspace{2em} Intro. to Computer Security  (80\%) & Professional Computing (81\%) \\
-%    \end{tabular}
-%  }
-%
+  \multicolumn{3}{l}{\vspace{-24pt}}\\
+  
+    \, &
+  {\small Front-end engineer with experience working for FTSE 250 clients and a high-growth startup. My current ambition is to lead a front-end team with more impact or transition to a full-stack role with more scope. Outside of work you'll find me in the kitchen cooking something impractical, fussing over my coffee, attending local JS meetups, or at my desk tackling an eclectic and ever-growing pile of books. } &
+                              \, \\
  
-{
+\end{tabular*}
 
-\ressubheading{Strode College, Street}{Somerset, UK}{ {
-    \begin{tabular}{l}
-      A-Level Maths (A), Software Engineering Extended Diploma (D*D*D*) \\ 
-    \end{tabular}
-  }}
-  {2016}
-}
 
 }
+
 
 \end{document}
