@@ -1,5 +1,5 @@
 
-Dodo Go: A Very Simple Infinite Scroller Android Game that's Somehow Worse than Flappy Bird
+Dodo Go: Simple Android Game
 
 #{
 
@@ -10,7 +10,7 @@ https://github.com/frabrooks/dodo-go-android
 
 #{
 
-I think I need some better projects to showcase...
+I need some better projects to showcase...
 
 }#
 
@@ -18,8 +18,5 @@ I think I need some better projects to showcase...
 
 Java
 Android
-Simple Games
-Very Janky
-Dumb Projects
 
 }@tags

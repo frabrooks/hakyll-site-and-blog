@@ -23,13 +23,13 @@
 
 // FILTERS PREAMBLE
 
-$cool-grey-filter: brightness(0) saturate(100%) invert(63%) sepia(3%) saturate(2287%) hue-rotate(188deg) brightness(92%) contrast(88%);
+$cool-grey-filter: brightness(0) saturate(100%) invert(8%) sepia(19%) saturate(3415%) hue-rotate(185deg) brightness(99%) contrast(98%);
 
 $blue-bell-filter: invert(58%) sepia(69%) saturate(182%) hue-rotate(214deg) brightness(105%) contrast(83%);
 
 $dark-blue-gray-filter: invert(49%) sepia(19%) saturate(860%) hue-rotate(215deg) brightness(86%) contrast(90%);
 
-$maize-crayola-filter: invert(98%) sepia(43%) saturate(4346%) hue-rotate(316deg) brightness(101%) contrast(102%);
+$maize-crayola-filter: brightness(0) saturate(100%) invert(27%) sepia(18%) saturate(6757%) hue-rotate(332deg) brightness(87%) contrast(92%);
 
 
 $github-merge-filter: invert(48%) sepia(73%) saturate(5056%) hue-rotate(240deg) brightness(94%) contrast(90%);
@@ -39,24 +39,24 @@ $github-pull-filter: invert(26%) sepia(80%) saturate(6471%) hue-rotate(139deg) b
 
 // SITE WIDE COLOR SCHEME
 
-$oxford-blue: #0a192f;
-$bg-color: $oxford-blue;
+$oxford-blue:#0a192f;
+$bg-color: white;
 $code-bg-color: #04132b;
 
 
 $cool-grey: #8892b0;
-$text-color: $cool-grey;
+$text-color: $oxford-blue;;
 $text-color-filter: $cool-grey-filter;
 
-$blue-bell: #b2a3dd;
-$text-primary: $blue-bell;
+$blue-bell: #0a192f;
+$text-primary: $oxford-blue;
 $text-primary-filter: $blue-bell-filter;
 
 $dark-blue-gray: #786aa0;
-$text-secondary: $dark-blue-gray;
-$text-secondary-filter: $dark-blue-gray-filter;
+$text-secondary: $oxford-blue;
+$text-secondary-filter: $cool-grey-filter;
 
-$maize-crayola: #ffcb50;
+$maize-crayola: #b23438;
 $text-accent: $maize-crayola;
 $text-accent-filter: $maize-crayola-filter;
 
@@ -81,7 +81,7 @@ $nav-bar-hover-color: $map-color;
 $nav-bar-border-color: $text-secondary;
 
 $cv-button-color: $text-accent;
-$cv-button-color-hover: black;
+$cv-button-color-hover: white;
 $cv-button-bg-color-hover: $text-accent;
 
 // Page-map

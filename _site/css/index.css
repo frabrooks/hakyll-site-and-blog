@@ -125,7 +125,7 @@
   background: url(../../images/portrait.jpg);
   background-size: cover;
   border-radius: 50%;
-  border: solid 4px #786aa0; }
+  border: solid 4px #0a192f; }
   #portrait.dance-banana-a-go-go {
     width: 13.5em;
     min-width: 13.5em;
@@ -148,7 +148,7 @@
   #name-container * {
     font-size: 4.5em;
     font-weight: 500;
-    color: #b2a3dd; }
+    color: #0a192f; }
 
 #name-container, #subtitle-container {
   display: inline-flex;
@@ -167,7 +167,7 @@
   margin-bottom: 1em; }
   #subtitle-container.rhs {
     font-size: 2em;
-    color: #b2a3dd; }
+    color: #0a192f; }
 
 #spacer {
   width: 11.25em;
@@ -184,15 +184,15 @@
 
 @keyframes blinker {
   0% {
-    color: #8892b0; }
+    color: #0a192f; }
   49% {
-    color: #8892b0; }
+    color: #0a192f; }
   60% {
     color: transparent; }
   99% {
     color: transparent; }
   100% {
-    color: #8892b0; } }
+    color: #0a192f; } }
 
 #recent-activity-text {
   width: 100%;
@@ -218,14 +218,14 @@
       height: 2px;
       width: 100%;
       transform: scaleX(0);
-      background-color: #ffcb50;
+      background-color: #b23438;
       transform-origin: bottom right;
       transition: transform 0.25s ease-out; }
     #recent-activity-text .recent-activity:hover .underline-me:after {
       transform: scaleX(1);
       transform-origin: bottom left; }
   #recent-activity-text .date {
-    color: #8892b0;
+    color: #0a192f;
     font-weight: 800; }
   #recent-activity-text .type-box {
     font-size: 1.125rem;
@@ -240,7 +240,7 @@
   max-width: 66.25rem;
   padding-top: 1.25rem;
   padding-bottom: 2.5rem;
-  border-bottom: 1px solid #ffcb50; }
+  border-bottom: 1px solid #b23438; }
   .insert-item:nth-child(odd) {
     flex-direction: row-reverse; }
   .insert-item .item-links-and-tags {
@@ -254,6 +254,7 @@
     display: none; }
   .insert-item .item-rhs {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start; }
@@ -372,9 +373,9 @@
         width: 2em;
         height: 2em; }
         #top .icon-stack a .svg-icon {
-          filter: invert(49%) sepia(19%) saturate(860%) hue-rotate(215deg) brightness(86%) contrast(90%); }
+          filter: brightness(0) saturate(100%) invert(8%) sepia(19%) saturate(3415%) hue-rotate(185deg) brightness(99%) contrast(98%); }
           #top .icon-stack a .svg-icon:hover {
-            filter: invert(98%) sepia(43%) saturate(4346%) hue-rotate(316deg) brightness(101%) contrast(102%); }
+            filter: brightness(0) saturate(100%) invert(27%) sepia(18%) saturate(6757%) hue-rotate(332deg) brightness(87%) contrast(92%); }
       #top .icon-stack .map-sep {
         display: none; }
     #top #name-container {
@@ -392,7 +393,7 @@
       width: 100%;
       margin-left: 0;
       align-items: stretch;
-      border-top: 2px dashed rgba(120, 106, 160, 0.35);
+      border-top: 2px dashed rgba(10, 25, 47, 0.35);
       padding: 1rem 0 0.5rem; }
       #recent-activity-text .recent-activity .lhs {
         width: 30%;
@@ -424,9 +425,9 @@
     position: absolute;
     left: 0;
     right: 0;
-    background: rgba(120, 106, 160, 0.1);
-    border-top: 1px solid #786aa0;
-    border-bottom: 1px solid #786aa0; }
+    background: rgba(10, 25, 47, 0.1);
+    border-top: 1px solid #0a192f;
+    border-bottom: 1px solid #0a192f; }
   .insert-item {
     flex-direction: column;
     align-items: center; }

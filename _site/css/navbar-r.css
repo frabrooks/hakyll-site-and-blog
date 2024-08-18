@@ -89,7 +89,7 @@
 @media screen and (max-width: 84.8rem) {
   nav {
     flex-wrap: wrap;
-    border-bottom: 1px dashed rgba(120, 106, 160, 0.35); }
+    border-bottom: 1px dashed rgba(10, 25, 47, 0.35); }
   #nav-link1, #nav-link2, #nav-link3, #nav-link4, #nav-link5 {
     flex-grow: 1;
     flex-shrink: 1; }
@@ -126,28 +126,28 @@
       position: absolute;
       height: 80%;
       width: 3px;
-      background: #786aa0;
+      background: #0a192f;
       margin-top: 10%;
       margin-bottom: 10%;
       left: initial;
       right: -3px; }
   #page-title.show, #home-button.show {
-    border-bottom: 1.5px solid #786aa0; }
+    border-bottom: 1.5px solid #0a192f; }
   #show-nav-links-button.show {
-    border-bottom: 1.5px solid #786aa0; }
+    border-bottom: 1.5px solid #0a192f; }
   #nav-link1.show {
-    border-bottom: 1.5px solid #786aa0;
-    border-right: 1.5px solid #786aa0; }
+    border-bottom: 1.5px solid #0a192f;
+    border-right: 1.5px solid #0a192f; }
   #nav-link2.show {
-    border-bottom: 1.5px solid #786aa0; }
+    border-bottom: 1.5px solid #0a192f; }
   #nav-link3.show {
-    border-right: 1.5px solid #786aa0;
-    border-bottom: 1.5px solid #786aa0; }
+    border-right: 1.5px solid #0a192f;
+    border-bottom: 1.5px solid #0a192f; }
   #nav-link4.show {
-    border-right: 1.5px solid #786aa0;
-    border-bottom: 1.5px solid #786aa0; }
+    border-right: 1.5px solid #0a192f;
+    border-bottom: 1.5px solid #0a192f; }
   #nav-link5.show {
-    border-bottom: 1.5px solid #786aa0; } }
+    border-bottom: 1.5px solid #0a192f; } }
 
 @media screen and (max-width: 52.5rem) {
   #break2, #break3 {
@@ -162,7 +162,7 @@
       padding-right: 2rem;
       visibility: visible; }
       #cv-link.hide a {
-        border: 2px solid #ffcb50; }
+        border: 2px solid #b23438; }
   #home-button.not-home-page {
     display: initial;
     position: absolute;
@@ -200,12 +200,12 @@
   #nav-link5 {
     order: 11; }
   #nav-link1.show {
-    border-top: 3px solid #786aa0; }
+    border-top: 3px solid #0a192f; }
   #nav-link2.show {
-    border-top: 3px solid #786aa0; }
+    border-top: 3px solid #0a192f; }
   #nav-link3.show {
     border-right: initial;
-    border-bottom: 1.5px solid #786aa0; } }
+    border-bottom: 1.5px solid #0a192f; } }
 
 @media screen and (max-width: 40rem) {
   #page-title::before, #show-nav-links-button::before {
@@ -235,16 +235,16 @@
     flex-basis: 99%; }
     #nav-link3.show {
       border-right: initial;
-      border-bottom: 1.5px solid #786aa0; }
+      border-bottom: 1.5px solid #0a192f; }
   #nav-link4 {
     flex-basis: 99%; }
     #nav-link4.show {
       border-right: initial;
-      border-bottom: 1.5px solid #786aa0; }
+      border-bottom: 1.5px solid #0a192f; }
   #nav-link5 {
     flex-basis: 99%; }
     #nav-link5.show {
-      border-bottom: 1.5px solid #786aa0; } }
+      border-bottom: 1.5px solid #0a192f; } }
 
 @media screen and (max-width: 24.6rem) {
   #page-title {

@@ -12,8 +12,10 @@ contact@fraserbrooks.io
 
 #{
 
-<span class="text-secondary text-mono">About: </span>I'm a software engineer, an M.Sci Computer Science graduate, and an open-source software enthusiast. Currently employed as a senior front-end developer for a digital agency that delivers web applications for some of the UK's biggest brands.
+<span class="text-secondary text-mono">About: </span>Software engineer | M.Sci Computer Science | Front-End Developer
 
-When not coding you'll find me in the  kitchen cooking something impractical, fussing over my coffee, or at my desk tackling an eclectic and ever-growing pile of books
+Currently employed as a senior front-end developer for a digital agency that delivers web applications for some of the UK's biggest brands.
+
+Outside work you'll find me in the  kitchen cooking something impractical, fussing over my coffee, or at my desk tackling an eclectic and ever-growing pile of books.
 
 }#

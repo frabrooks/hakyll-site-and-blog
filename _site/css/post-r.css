@@ -107,7 +107,7 @@
   .technical.withThumbnail #headingAndMetaBox {
     padding-top: 1rem;
     border-right: initial;
-    border-top: 2px solid #786aa0; }
+    border-top: 2px solid #0a192f; }
   .technical.withThumbnail #aspectRatioContainer1 {
     width: 100%; }
   .technical.withThumbnail #aspectRatioContainer2 {
@@ -125,7 +125,7 @@
       flex-wrap: wrap; }
       .non-technical.withThumbnail #headingAndMetaBox .title h1 {
         font-size: 250%;
-        border-top: 2px solid #786aa0;
+        border-top: 2px solid #0a192f;
         margin: 0;
         padding-top: 2rem; }
       .non-technical.withThumbnail #headingAndMetaBox .item-links-and-tags {
