@@ -89,7 +89,7 @@
 \color{bigstone}
 
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-  \textbf{\huge Fraser Brooks} {\huge M.Sci}& \textbf{\Large Senior Front-End Developer} \\
+  \textbf{\huge Fraser Brooks} {\huge M.Sci}& \textbf{\Large Full Stack JavaScript Developer} \\
 \end{tabular*}
 
 \vspace{1.33em}
@@ -101,17 +101,16 @@
 \vspace{1.5em}
 
 
-{\small Senior front-end developer specialising in Angular with  a wealth of experience from working at a digital agency.
-
-
-\vspace{1em}
-
-I lead front-end development across two teams, one delivering an enterprise web application for a FTSE 250 client, the other serving a high-growth startup that I have had the privilege of working on from MVP through to launch.
-
+{\small Senior JavaScript developer specialising in Angular with  a wealth of experience from working at a digital agency.
 
 \vspace{1em}
 
-This startup is now turning a profit with revenues over £1 million and still growing. This has given me experience of the different stages of a product's lifecycle and the different emphases and responsibilities that those stages entail.
+I lead front-end development across two teams, one delivering an enterprise web application for a FTSE 250 client, the other serving a high-growth startup where I have had the privilege of working on the pre-launch MVP and then scaling up to thousands of users and over £1 million in revenue, giving me experience across the product lifecycle.
+
+\vspace{1em}
+
+I have deep expertise as a front-end developer but over the past year I've been moving towards a full-stack role building out applications with Express.js and contributing to .NET development around our back-end APIs.
+
 
 }
 
@@ -127,10 +126,10 @@ This startup is now turning a profit with revenues over £1 million and still gr
 {\small
   
   \begin{itemize}
-    \item Collaborating with designers, back-end developers, data engineers, product owners and stakeholders to ensure continuous delivery of high-quality software.
-   \item Leveraging \textbf{Angular, NgRx}, and \textbf{RxJS} to build enterprise SPAs that remain performant, secure, and maintainable across time while integrating with \textbf{C\# .NET} and or \textbf{GraphQL} APIs.
-     \item Building Angular applications with \textbf{server-side rendering} to maximise \textbf{SEO} performance.
-  \item Using W3C compliant \textbf{HTML, CSS, \& JS} to deliver cross-browser support, responsive design, and accessibility for our users.
+    \item Collaborating with designers, back-end developers, data engineers, product owners and stakeholders to ensure continuous delivery of high-quality software through agile development processes.
+   \item Leveraging \textbf{Angular, NgRx}, and \textbf{RxJS} to build enterprise-scale SPAs that remain performant, secure, resilient, and maintainable across time while integrating with both \textbf{REST} and \textbf{GraphQL} APIs.
+     \item Building with \textbf{Express.js} and \textbf{server-side rendering} to maximise \textbf{SEO} performance.
+  \item Using W3C compliant \textbf{HTML, CSS, \& JS} to deliver cross-browser support, responsive design, and accessibility for all of our users.
   \item Unit testing, integration testing, and \textbf{E2E testing} with \textbf{Jest/Karma/Playwright}.
   \item Application instrumentation and monitoring via \textbf{Azure}, \textbf{Application Insights}, and \textbf{OpenTelemetry}.
   \item Setting up \textbf{Google Analytics} with \textbf{GTM} to monitor user behaviour and generate insights for the business.
@@ -190,11 +189,38 @@ This startup is now turning a profit with revenues over £1 million and still gr
  \, &
        {\small
 
-      Created a new SPA with Angular 18 and an integration with Umbraco's headless CMS that enabled the growth team to double the click-through rate to our quote engine; the SPA also utilised server-side rendering and Azure Front-Door caching to improve SEO performance.
+      Created a server-side-rendered, Angular SPA; integrating with Umbraco's headless CMS via GraphQL and enabling multivariate testing through integration with configcat-js feature flag service. This enabled the growth team to improve SEO performance and double the click-through rate to our quote engine.
       
        } &
            \, \\
   
+\end{tabular*}
+
+
+\vspace{-12pt}
+
+\begin{tabular*}{6.6in}{p{0.2in}p{6.3in}p{0in}}
+  
+  \, & {\small
+
+       Created an Express.js API that serves email templates rendered from MJML markup to be consumed by our BE APIs. This eliminated the need for our BE services to create and maintain fiddly HTML templates and allowed the growth team to self-serve for campaign emails via a bespoke user interface.
+   
+       } &
+      \, \\
+
+\end{tabular*}
+
+\vspace{-12pt}
+
+\begin{tabular*}{6.6in}{p{0.2in}p{6.3in}p{0in}}
+  
+\, & {\small
+
+       Designed and rolled out a FE architecture and component library for use across the business, eliminating the diverging, emergent architectures that slowed down development and increased resistance to team members moving between projects. Since then, expectations are much clearer, confidence in what we are delivering has improved, and we've been able to do more with a smaller headcount.
+   
+       } &
+      \, \\
+
 \end{tabular*}
 
 \begin{tabular*}{6.6in}{p{0.2in}p{6.3in}p{0in}}
@@ -202,7 +228,7 @@ This startup is now turning a profit with revenues over £1 million and still gr
    \, &
        {\small
 
-        Upgraded our approach to application logging across our apps, utilising Azure's Application Insights and wiring it up to configcat-js, our feature flagging service. This enabled us to fine-tune the logging and sampling rate on the fly, targeting specific user groups if desired, while also controlling costs.
+        Upgraded our approach to application logging across our apps, utilising Azure's \textit{Application Insights} SDK and integrating it with our feature flagging service, configcat-js. This enabled us to fine-tune the logging and sampling rate on the fly, targeting specific user groups if desired, while also controlling costs.
         
        } &
    \, \\
@@ -235,39 +261,6 @@ This startup is now turning a profit with revenues over £1 million and still gr
 
 
 \begin{tabular*}{6.6in}{p{0.2in}p{6.3in}p{0in}}
-  
-  \, & {\small
-
-       Architected a Node.js Express server built on top of an Angular app that I configured to render MJML markup rather than HTML. The express server renders the generated MJML into fully rendered email templates to be consumed by our BE APIs. This eliminates the need for the BE services to create and maintain fiddly HTML templates and allowed the growth team to self-serve for campaign emails.
-   
-       } &
-      \, \\
-
-\end{tabular*}
-
-\begin{tabular*}{6.6in}{p{0.2in}p{6.3in}p{0in}}
-  
-\, & {\small
-
-       Created a suite of integration tests for a mission-critical feature utilising Jest and pixelmatch for pixel-by-pixel comparison of PDF output to ensure consistency and reduce regression bugs across changes that were previously resulting in frequent unintended consequences.
-   
-       } &
-      \, \\
-
-\end{tabular*}
-
-\begin{tabular*}{6.6in}{p{0.2in}p{6.3in}p{0in}}
-  
-\, & {\small
-
-       Defined and documented our ideal FE architecture that we now aim for across all our Angular applications. For a long time we had diverging emergent architectures across our applications that increased resistance to team members moving between projects. With the new architecture understood and accepted by the whole team, expectations are much clearer, and confidence in what we are delivering has improved.
-   
-       } &
-      \, \\
-
-\end{tabular*}
-
-\begin{tabular*}{6.6in}{p{0.2in}p{6.3in}p{0in}}
 
   \, &
   { \textbf{\small Angular Developer}\cftdotfill{\cftdotsep} \texttt{\small Oct 2022 - Aug 2023}} &
@@ -277,7 +270,7 @@ This startup is now turning a profit with revenues over £1 million and still gr
   \, &
        {\small
 
-       Led FE development for our largest client, delivering big changes and upgrades to an enterprise-scale Angular application that had suffered from a lack of FE expertise in the years prior.
+       Led front-end development for our largest client, delivering big changes and upgrades to an enterprise web application that was suffering from an accumulation of technical debt and critical performance issues.
        
        } &
    \, \\
@@ -299,17 +292,32 @@ This startup is now turning a profit with revenues over £1 million and still gr
        
   {\small
        
-       Made a huge impact by delivering a 5x performance gain to multiple application KPIs and unlocking previously unreachable functionality. The application was designed to streamline the creation of property valuation reports via an in-app editor backed by an HTML-to-PDF 3rd party dependency. However, the time it took to generate these reports was intolerably slow for use within an edit-preview-edit loop of a non-WYSIWYG editor.
-
-       \vspace{4pt}
-       
-       By writing a custom JS framework for PDF generation, I was able to improve performance across section previews and full report generations by a factor of 5 while also pushing compute out to end-user devices, reducing strain on the BE server. The performance of this framework scaled linearly with the size of the input, ensuring scalability, and also unlocked fine-toothed control over the look and layout of the complex reports being produced.
-
+       Made a huge impact by delivering a 5x performance gain to multiple application KPIs and unlocking previously unreachable functionality. The application was made to streamline the creation of professional reports via an in-app editor backed by an HTML-to-PDF 3rd party dependency. The time it took to generate these reports and previews was intolerably slow for use within the edit-preview-edit loop.
+ 
        } &
            
     \, \\  
 
 \end{tabular*}
+
+\vspace{-12pt}
+
+\begin{tabular*}{6.6in}{p{0.2in}p{6.3in}p{0in}}
+
+
+\, &
+  
+{\small
+     
+       \qquad By writing a custom JS framework for PDF generation I was able to improve performance across section previews and full report generations by a factor of 5 while also pushing compute out to end-user devices, reducing strain on the BE server. The performance of this framework scaled linearly with the size of the input, ensuring scalability, and also unlocked fine-toothed control over the look and layout of the complex reports being produced.
+
+     } &
+         \, \\
+
+\end{tabular*}
+
+
+\vspace{-4pt}
 
 \begin{tabular*}{6.6in}{p{0.2in}p{6.3in}p{0in}}
 
@@ -321,18 +329,6 @@ This startup is now turning a profit with revenues over £1 million and still gr
 
      } &
          \, \\
-
-  \end{tabular*}
-
-\begin{tabular*}{6.6in}{p{0.2in}p{6.3in}p{0in}}
-
-  \, &
-
-       {\small
-       Led the delivery of a complex front-end integration with government APIs for statutory data such as title boundaries, planning permissions, EPC data, and listed building status. This data was displayed out to users using MapBox GL for visualisation and selection of title boundaries on a map view.
-
-       } &
-   \, \\
 
   \end{tabular*}
 
@@ -383,6 +379,45 @@ This startup is now turning a profit with revenues over £1 million and still gr
 %   \multicolumn{3}{l}{\vspace{-8pt}}\\ 
 
 % \end{tabular*}
+
+
+\vspace{4pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Project Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-8pt}
+
+\begin{tabular*}{6.6in}{p{0.2in}p{6.3in}p{0in}}
+
+\, &
+  
+{\small
+
+     \textit{Experience from side projects building with technologies that I don't get to play with as part of my 9-5.}
+
+     } &
+         \, \\
+
+  \end{tabular*}
+
+\vspace{-12pt}
+  
+{\small
+  
+  \begin{itemize}
+    
+    \item Built \textbf{CI/CD} pipelines with \textbf{GitHub Actions} for an app containerised with \textbf{Docker} .
+    \item Developed native \textbf{Android} mobile applications and games with \textbf{Java} and \textbf{Android Studio}.
+    \item Experimented with \textbf{AWS}, deploying basic cloud services such as EC2 instances and Lambda functions.
+    \item Built an interactive web app with \textbf{Blazor} to explore real-time updates using \textbf{SignalR} and \textbf{SSR}.
+    \item Made an open-source contribution to \textbf{Haskell}, an advanced purely functional programming language.
+      
+\end{itemize}
+
+}
 
 
 \vspace{4pt}
